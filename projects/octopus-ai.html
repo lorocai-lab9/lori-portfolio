@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edge AI Playground · Lori Cai</title>
+  <meta name="description" content="Case study — making on-device AI instantly understandable through a focused playground experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="cs-page">
+  <header class="site-header">
+    <div class="nav-pill">
+      <nav class="nav">
+        <a href="/" class="logo">
+          <span class="logo-monogram">LC</span>
+          <span class="logo-name">Lori<span class="dot">.</span> Cai</span>
+        </a>
+        <div class="nav-center">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/designs.html">Designs</a>
+          <a href="#">Research <em style="font-style:italic;font-weight:400;">(updating)</em></a>
+        </div>
+        <div class="nav-right">
+          <a href="https://docs.google.com/document/d/1jJbd-7CLWLOGs_47IboQQAgov_4f-OBAzJMYtIVvmaY/edit?usp=sharing" target="_blank" rel="noopener" class="btn-resume">Check Resume <span class="btn-resume-arrow">→</span></a>
+          <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. HERO — sunset gradient -->
+    <section class="cs-hero">
+      <div class="cs-hero-inner cs-reveal">
+        <span class="cs-hero-eyebrow">Case Study · 2024</span>
+        <h1>Edge AI Playground</h1>
+      </div>
+    </section>
+
+    <!-- 2. PROJECT INTRO — cream with ghost watermark + mockup + scope -->
+    <section class="cs-stage">
+      <div class="cs-watermark" aria-hidden="true">Edge AI</div>
+      <div class="container">
+        <div class="cs-mockup cs-mockup-wide cs-reveal" aria-label="Hub Playground hero placeholder"></div>
+
+        <div class="cs-scope cs-reveal">
+          <h3>Scope of work</h3>
+          <dl class="cs-gantt">
+            <dt>Product</dt>
+            <dd><span class="bar">Edge AI Model Playground <span class="chip">Web App</span></span></dd>
+
+            <dt>Role</dt>
+            <dd><span class="bar shift-1">UX Designer &amp; Researcher <span class="chip">Sole</span></span></dd>
+
+            <dt>Timeline</dt>
+            <dd><span class="bar shift-2">MVP delivery <span class="chip">2 weeks</span></span></dd>
+
+            <dt>Methods</dt>
+            <dd><span class="bar shift-3">Personas · Journey Maps · Competitive · Content Strategy <span class="chip">Mixed</span></span></dd>
+
+            <dt>Outcome</dt>
+            <dd><span class="bar shift-4">Product Hunt #1 of the day <span class="chip">$10M seed</span></span></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PROBLEM STATEMENT — dark mode -->
+    <section class="cs-dark">
+      <div class="container">
+        <p class="cs-eyebrow cs-reveal">Problem Statement</p>
+        <h2 class="cs-reveal cs-reveal-delay-1">Strong differentiators. Classic adoption barriers.</h2>
+        <p class="cs-sub cs-reveal cs-reveal-delay-2">The model had real edges — speed, privacy, on-device processing — but suffered the standard AI cold-start problem: users couldn't internalize the value fast enough. Drop-off happened before activation.</p>
+
+        <div class="cs-stats">
+          <article class="cs-stat-card cs-reveal cs-reveal-delay-1">
+            <p class="label">Insight 01</p>
+            <h4>Engineers don't read papers — they open the playground.</h4>
+            <p class="big-number">3<sup>/5</sup></p>
+            <p class="stat-foot">Interviewees said this directly</p>
+          </article>
+          <article class="cs-stat-card cs-reveal cs-reveal-delay-2">
+            <p class="label">Insight 02</p>
+            <h4>Two-week MVP. One sentence in the PRD.</h4>
+            <p class="big-number">1<sup>line</sup></p>
+            <p class="stat-foot">Defined the whole product brief</p>
+          </article>
+          <article class="cs-stat-card cs-reveal cs-reveal-delay-3">
+            <p class="label">Insight 03</p>
+            <h4>Activation lost before the value showed up.</h4>
+            <p class="big-number">≤60<sup>s</sup></p>
+            <p class="stat-foot">Window before users dropped off</p>
+          </article>
+        </div>
+
+        <p class="cs-stats-foot cs-reveal">
+          A collection of insights gathered from
+          <strong>5 interviews with ML engineers familiar with model evaluation</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- 4. SOLUTION CARD — cream rounded -->
+    <section style="background: var(--cs-cream); padding: 80px 0;">
+      <div class="container">
+        <div class="cs-card cs-reveal">
+          <div>
+            <span class="cs-eyebrow">Our Solution</span>
+            <h2>A focused Playground that lets the model's speed, privacy, and locality speak through interaction — not slides.</h2>
+          </div>
+          <div class="cs-card-side">
+            A web experience designed to turn first-look curiosity into real adoption — for both business leaders and hands-on developers.
+          </div>
+        </div>
+
+        <div class="cs-card-grid">
+          <div class="cell-blob cs-reveal cs-reveal-delay-1"></div>
+          <div class="cell-mockup cs-reveal cs-reveal-delay-2">device mockup</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TILTED CARDS — design phases / model strengths -->
+    <section style="background: var(--cs-cream);">
+      <div class="container">
+        <p class="cs-eyebrow cs-reveal" style="text-align:center;">The Process</p>
+        <h2 class="cs-display cs-reveal" style="font-size:clamp(34px,4.5vw,56px); text-align:center; margin:18px 0 0; max-width:none;">Four phases, each a study in trade-offs.</h2>
+
+        <div class="cs-tilted">
+          <div class="ttile cs-reveal cs-reveal-delay-1">
+            <h4>Research</h4>
+            <ul>
+              <li>User Interviews</li>
+              <li>Data Analysis</li>
+              <li>Problem Framing</li>
+              <li>Personas</li>
+            </ul>
+          </div>
+          <div class="ttile cs-reveal cs-reveal-delay-2">
+            <h4>Concept Design</h4>
+            <ul>
+              <li>Benchmarking</li>
+              <li>Site Map</li>
+              <li>User Flow</li>
+            </ul>
+          </div>
+          <div class="ttile cs-reveal cs-reveal-delay-3">
+            <h4>Ideation</h4>
+            <ul>
+              <li>Design Principles</li>
+              <li>Functionalities</li>
+              <li>Lo-fi Wireframes</li>
+            </ul>
+          </div>
+          <div class="ttile cs-reveal cs-reveal-delay-3">
+            <h4>Solution</h4>
+            <ul>
+              <li>Prototyping</li>
+              <li>Usability Testing</li>
+              <li>UI Design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FEATURE — two-column with eyebrow + headline + mockup -->
+    <section style="background: var(--cs-cream);">
+      <div class="container">
+        <div class="cs-feature">
+          <div class="cs-feature-text cs-reveal">
+            <span class="cs-eyebrow">MVP Flow</span>
+            <h2>The simplest experience that reveals the model's edge.</h2>
+            <p>Pick an industry → browse the playground → copy a preset prompt → see the model advantages. Four steps, deliberately undone — every layer of polish would have eaten the deadline.</p>
+          </div>
+          <div class="cs-mockup cs-reveal cs-reveal-delay-1" aria-label="MVP flow mockup placeholder"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. SCATTER — chips collage with italic headline -->
+    <section style="background: var(--cs-cream); padding: 60px 0 120px;">
+      <div class="container">
+        <div class="cs-scatter">
+          <div class="cs-scatter-stage cs-reveal">
+            <span class="cs-chip purple"  style="top: 4%; left: 32%;">SCHOOL</span>
+            <span class="cs-chip peri"    style="top: 12%; left: 8%;">Tech-savvy</span>
+            <span class="cs-chip pink"    style="top: 26%; left: 20%;">Newcomer</span>
+            <span class="cs-chip yellow"  style="top: 8%; right: 8%;">Designer</span>
+            <span class="cs-chip orange"  style="top: 32%; right: 22%;">PM</span>
+            <span class="cs-chip maroon"  style="bottom: 12%; right: 30%;">Researcher</span>
+            <span class="cs-chip coral"   style="bottom: 8%; right: 6%;">Founder</span>
+            <span class="cs-chip lilac"   style="bottom: 18%; left: 4%;">Engineer</span>
+            <div class="cs-mockup" style="margin-top:60px;"></div>
+          </div>
+          <div class="cs-scatter-text cs-reveal cs-reveal-delay-1">
+            <span class="cs-eyebrow">Personas</span>
+            <h2 style="margin-top: 16px;">Two audiences, two on-ramps.</h2>
+            <p>Tech-savvy professionals wanted code-level access and deep documentation. Practical newcomers from business and design needed a no-friction first impression. The same product had to land twice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FEATURE FLIPPED — second design solution -->
+    <section style="background: var(--cs-cream);">
+      <div class="container">
+        <div class="cs-feature flip">
+          <div class="cs-feature-text cs-reveal">
+            <span class="cs-eyebrow">Iteration</span>
+            <h2>Different audiences, different on-ramps.</h2>
+            <p>For non-technical users: redesigned IA, optimized visualization, refined copy. Researched four popular industries and prototyped video scenarios showing edge-AI experiences in context.</p>
+            <p>For technical users: comprehensive documentation matching developer expectations, plus revised playground interaction logic for model selection and execution.</p>
+          </div>
+          <div class="cs-mockup cs-reveal cs-reveal-delay-1" aria-label="Documentation + revised playground mockup"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. BREATHER -->
+    <section class="cs-breather" style="background: var(--cs-cream);">
+      <div class="ghost cs-reveal">Edge AI</div>
+    </section>
+
+    <!-- 10. RESULTS — dark with periwinkle stats -->
+    <section class="cs-dark">
+      <div class="container">
+        <p class="cs-eyebrow cs-reveal">Results</p>
+        <h2 class="cs-reveal cs-reveal-delay-1">Once the value became experiential, momentum followed.</h2>
+
+        <div class="cs-stats">
+          <article class="cs-stat-card cs-reveal cs-reveal-delay-1">
+            <p class="label">Launch</p>
+            <h4>Product of the Day on Product Hunt</h4>
+            <p class="big-number">#1<sup></sup></p>
+            <p class="stat-foot">First-day ranking</p>
+          </article>
+          <article class="cs-stat-card cs-reveal cs-reveal-delay-2">
+            <p class="label">Adoption</p>
+            <h4>API calls in the first month after launch</h4>
+            <p class="big-number">10K<sup>+</sup></p>
+            <p class="stat-foot">Month one</p>
+          </article>
+          <article class="cs-stat-card cs-reveal cs-reveal-delay-3">
+            <p class="label">Funding</p>
+            <h4>Seed round closed — clarity through videos &amp; docs contributed directly</h4>
+            <p class="big-number">$10M<sup></sup></p>
+            <p class="stat-foot">Closed Q3</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. REFLECTION — quiet cream -->
+    <section style="background: var(--cs-cream); padding: 140px 0;">
+      <div class="container">
+        <div style="max-width: 720px; margin: 0 auto; text-align: center;">
+          <p class="cs-eyebrow cs-reveal">Reflection</p>
+          <h2 class="cs-display cs-reveal cs-reveal-delay-1" style="font-size: clamp(36px, 5vw, 64px); margin: 18px 0 24px;">When a technology is new, clarity matters more than completeness.</h2>
+          <p class="cs-reveal cs-reveal-delay-2" style="font-size: 18px; line-height: 1.65; color: var(--muted);">By prioritizing how users naturally evaluate models — through direct interaction — we reduced friction, accelerated team alignment, and shipped meaningful results under extreme constraints.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container">
+        <h2>See more projects.</h2>
+        <p>Each one a different shape of ambiguity.</p>
+        <a href="/designs.html" class="btn btn-primary">Back to all projects <span class="arrow">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo">LORI<span class="dot">.</span></a>
+          <p>Product designer turning complexity into clarity through human-centered, AI-native experiences.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Pages</p>
+          <ul class="footer-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/designs.html">Designs</a></li>
+            <li><a href="#">Research</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Projects</p>
+          <ul class="footer-list">
+            <li><a href="/projects/octopus-ai.html">Edge AI</a></li>
+            <li><a href="#">2C AI</a></li>
+            <li><a href="#">HMI</a></li>
+            <li><a href="#">2C Web</a></li>
+            <li><a href="#">2C App</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Connect</p>
+          <ul class="footer-list">
+            <li><a href="mailto:loricai1017@gmail.com">Email</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Resume</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="keywords">
+        <span>Human</span><span>Intent</span><span>Strategy</span><span>Focus</span><span>Scalable</span><span>Impact</span><span>Clear</span><span>Value</span><span>Efficient</span><span>Solving</span><span>Useful</span><span>Longterm</span>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Lori Cai. All rights reserved.</span>
+        <span>UW · Seattle, WA</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
