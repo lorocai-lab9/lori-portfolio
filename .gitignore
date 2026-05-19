@@ -26,9 +26,10 @@ dist/
 build/
 .cache/
 
-# 3D assets — uncompressed source models (large). Will commit optimized
-# versions (e.g. assets/robot-arm.optimized.glb) before deploy.
+# 3D assets — uncompressed source models (large). Commit optimized
+# (Draco + WebP) versions only.
 *.glb
 *.gltf
 *.fbx
 *.bin
+!assets/robot-arm.optimized.glb

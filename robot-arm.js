@@ -9,6 +9,7 @@
 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 const canvas = document.getElementById('arm-canvas');
 const stage  = canvas?.parentElement;
@@ -72,10 +73,14 @@ function initArm() {
     yaw: 0,
   };
 
-  // Load GLB
+  // Path is relative so it resolves under both the local root and the
+  // GitHub Pages project subpath (/lori-portfolio/).
+  const draco = new DRACOLoader();
+  draco.setDecoderPath('https://unpkg.com/three@0.160.0/examples/jsm/libs/draco/');
   const loader = new GLTFLoader();
+  loader.setDRACOLoader(draco);
   loader.load(
-    '/assets/robot-arm.glb',
+    'assets/robot-arm.optimized.glb',
     (gltf) => {
       const arm = gltf.scene;
 
