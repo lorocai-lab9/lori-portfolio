@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museum of Flight · UX Research · Lori Cai</title>
+  <meta name="description" content="UX research case study — Museum of Flight visitor experience field study.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* Notion embed wrapper — keeps the iframe within the cs-cream container, with rounded corners and a gentle shadow */
+    .research-embed {
+      margin: 0 auto;
+      max-width: 960px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.18);
+      border: 1px solid var(--border);
+    }
+    .research-embed iframe {
+      display: block;
+      width: 100%;
+      height: 1400px;
+      border: 0;
+      background: #fff;
+    }
+    .research-fallback {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    @media (max-width: 720px) {
+      .research-embed iframe { height: 1100px; }
+    }
+  </style>
+</head>
+<body class="cs-page">
+  <header class="site-header">
+    <div class="nav-pill">
+      <nav class="nav">
+        <a href="/" class="logo">
+          <span class="logo-monogram">LC</span>
+          <span class="logo-name">Lori<span class="dot">.</span> Cai</span>
+        </a>
+        <div class="nav-center">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/designs.html">Designs</a>
+          <a href="/research/museum-of-flight.html">Research</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <div class="nav-right">
+          <a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" class="btn-resume">Check Resume <span class="btn-resume-arrow">→</span></a>
+          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. HERO -->
+    <section class="cs-hero">
+      <div class="cs-hero-inner cs-reveal">
+        <span class="cs-hero-eyebrow">Research Case Study</span>
+        <h1>Museum of Flight</h1>
+        <p style="margin-top:24px; font-size:18px; color:var(--muted); max-width:48ch; margin-left:auto; margin-right:auto;">A UX research field study on the Seattle Museum of Flight visitor experience.</p>
+      </div>
+    </section>
+
+    <!-- 2. SCOPE -->
+    <section class="cs-stage">
+      <div class="cs-watermark" aria-hidden="true">Research</div>
+      <div class="container">
+        <div class="cs-scope cs-reveal">
+          <h3>About this study</h3>
+          <dl class="cs-gantt">
+            <dt>Type</dt>
+            <dd><span class="bar">UX Research · field study <span class="chip">In-context</span></span></dd>
+
+            <dt>Subject</dt>
+            <dd><span class="bar shift-1">Visitor experience at the Museum of Flight, Seattle <span class="chip">Cultural institution</span></span></dd>
+
+            <dt>Methods</dt>
+            <dd><span class="bar shift-2">In-context observation · visitor interviews · thematic synthesis <span class="chip">Mixed</span></span></dd>
+
+            <dt>Source</dt>
+            <dd><span class="bar shift-3">Live in Notion <a href="https://shell-crush-20a.notion.site/Museum-of-Flight-UX-Research-1929c111f1a5810f91c6c99bc8c15992" target="_blank" rel="noopener">↗</a> <span class="chip">Auto-syncs</span></span></dd>
+          </dl>
+        </div>
+
+        <div class="case-section cs-reveal" style="margin: 60px auto 0; max-width: 760px;">
+          <p>An applied research study on how visitors actually <span class="ink">move through, look at, and interact with</span> the Museum of Flight. Conducted at the museum, in context — observation paired with short interviews to surface where the planned visitor journey diverges from the lived one.</p>
+          <p>The full write-up — methodology, observation notes, visitor quotes, and recommendations — lives in Notion. It's embedded below so it stays in sync with the source document.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. EMBEDDED NOTION RESEARCH -->
+    <section style="background: var(--cs-cream); padding: 40px 0 100px;">
+      <div class="container">
+        <p class="cs-eyebrow cs-reveal" style="text-align:center; margin-bottom: 8px;">Research Document</p>
+        <h2 class="cs-display cs-reveal" style="font-size:clamp(28px,3.5vw,40px); text-align:center; margin:0 auto 40px; max-width:none;">Full study, embedded below.</h2>
+
+        <div class="research-embed cs-reveal">
+          <iframe
+            src="https://shell-crush-20a.notion.site/ebd/1929c111f1a5810f91c6c99bc8c15992"
+            title="Museum of Flight UX Research — full Notion document"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+        <p class="research-fallback cs-reveal">Trouble viewing? <a href="https://shell-crush-20a.notion.site/Museum-of-Flight-UX-Research-1929c111f1a5810f91c6c99bc8c15992" target="_blank" rel="noopener" style="color: var(--text); text-decoration: underline; text-underline-offset: 4px;">Open in Notion ↗</a></p>
+      </div>
+    </section>
+
+    <!-- 4. BREATHER -->
+    <section class="cs-breather" style="background: var(--cs-cream);">
+      <div class="ghost cs-reveal">Research</div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container">
+        <h2>See more work.</h2>
+        <p>Design projects, case studies, and ongoing experiments.</p>
+        <a href="/designs.html" class="btn btn-primary">Browse design projects <span class="arrow">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo">LORI<span class="dot">.</span></a>
+          <p>Product designer turning complexity into clarity through human-centered, AI-native experiences.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Pages</p>
+          <ul class="footer-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/designs.html">Designs</a></li>
+            <li><a href="/research/museum-of-flight.html">Research</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Projects</p>
+          <ul class="footer-list">
+            <li><a href="/projects/octopus-ai.html">Edge AI</a></li>
+            <li><a href="/projects/nexa-ai-tools.html">2C AI</a></li>
+            <li><a href="/projects/smart-brook.html">HMI</a></li>
+            <li><a href="/projects/mentorup.html">2C Web</a></li>
+            <li><a href="/projects/espoirer.html">2C App</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Connect</p>
+          <ul class="footer-list">
+            <li><a href="mailto:loricai1017@gmail.com">Email</a></li>
+            <li><a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Resume</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="keywords">
+        <span>Human</span><span>Intent</span><span>Strategy</span><span>Focus</span><span>Scalable</span><span>Impact</span><span>Clear</span><span>Value</span><span>Efficient</span><span>Solving</span><span>Useful</span><span>Longterm</span>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Lori Cai. All rights reserved.</span>
+        <span>UW · Seattle, WA</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

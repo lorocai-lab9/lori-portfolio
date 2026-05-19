@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexa AI Tools · Lori Cai</title>
+  <meta name="description" content="Case study — A search-first AI tool finding web app that helps users clarify intent, reduce cognitive load, and confidently navigate AI tool discovery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="cs-page theme-nexa">
+  <header class="site-header">
+    <div class="nav-pill">
+      <nav class="nav">
+        <a href="/" class="logo">
+          <span class="logo-monogram">LC</span>
+          <span class="logo-name">Lori<span class="dot">.</span> Cai</span>
+        </a>
+        <div class="nav-center">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/designs.html">Designs</a>
+          <a href="/research/museum-of-flight.html">Research</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <div class="nav-right">
+          <a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" class="btn-resume">Check Resume <span class="btn-resume-arrow">→</span></a>
+          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO — purple wash + decorative search bar -->
+    <section class="nexa-hero">
+      <div class="nexa-hero-inner cs-reveal">
+        <p class="cs-eyebrow" style="margin-bottom: 28px;">Case Study · 2024</p>
+        <h1>Designing for <em>how people&nbsp;think</em>, not how tools are categorized.</h1>
+        <p class="tagline">Nexa — a <span class="ink">search-first</span> web app that helps users clarify intent, reduce cognitive load, and confidently navigate AI tool discovery.</p>
+
+        <div class="nexa-hero-bar" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span class="placeholder">"What are you trying to do?"</span>
+          <span class="kbd">⏎</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL PRODUCT SHOWCASE -->
+    <section class="nexa-product-shot">
+      <div class="container">
+        <div class="nexa-product-shot-frame cs-reveal">
+          <img src="/assets/projects/nexa-ai-tools/Homepage-AI_tools_tab-normal_AI_tools.png" alt="Nexa AI Tools · live homepage" loading="lazy">
+        </div>
+        <p class="nexa-product-caption cs-reveal cs-reveal-delay-1">Live · 5M+ monthly visits</p>
+      </div>
+    </section>
+
+    <!-- INTRO — compact scope strip + opening narrative -->
+    <section style="background: var(--cs-cream); padding: 100px 0 80px;">
+      <div class="container">
+        <div class="cs-scope cs-reveal" style="margin-top: 0;">
+          <h3>Scope of work</h3>
+          <dl class="cs-gantt">
+            <dt>Product</dt>
+            <dd><span class="bar">AI Tool Finding Web App <span class="chip">Web</span></span></dd>
+
+            <dt>Role</dt>
+            <dd><span class="bar shift-1">Project Design Intern <span class="chip">Designer</span></span></dd>
+
+            <dt>Timeline</dt>
+            <dd><span class="bar shift-2">January – April 2024 <span class="chip">4 months</span></span></dd>
+
+            <dt>Methods</dt>
+            <dd><span class="bar shift-3">User Surveys · Personas · Competitive · Journey Maps · Content Strategy <span class="chip">Mixed</span></span></dd>
+
+            <dt>Deliverables</dt>
+            <dd><span class="bar shift-4">Core flows · Prioritized features · Hi-fi prototypes · Design System <span class="chip">Shipped</span></span></dd>
+          </dl>
+        </div>
+
+        <div class="nexa-opening cs-reveal">
+          <span class="nexa-opening-mark" aria-hidden="true">“</span>
+          <p>When I entered the team, the product had just released its first MVP. My role began with understanding its <span class="ink">real-world performance</span> — reviewing analytic data, observing user behaviors, and interviewing early adopters.</p>
+          <p class="nexa-opening-attr">Lori Cai · Project Design Intern · Jan – Apr 2024</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- I. RESEARCH PROCESS · 1.1 MVP CRITIQUE — dark, with critique findings -->
+    <section class="cs-dark">
+      <div class="container">
+        <p class="cs-eyebrow cs-reveal">I · Research Process · 1.1 MVP Critique</p>
+        <h2 class="cs-reveal cs-reveal-delay-1">Although the product successfully aggregated thousands of AI tools, <span class="ink">users didn't know how to navigate or express what they needed.</span></h2>
+        <p class="cs-sub cs-reveal cs-reveal-delay-2">My first task was examining how users actually interacted with the MVP across web and mobile. The critique surfaced <strong>five categorical issues</strong> — none about the catalog itself, all about the gap between user intent and system behavior.</p>
+
+        <div class="nexa-mvp-platforms cs-reveal cs-reveal-delay-2">
+          <figure class="nexa-mvp-platform">
+            <span class="nexa-mvp-label">Web MVP</span>
+            <div class="nexa-mvp-frame nexa-mvp-frame--web">
+              <img src="/assets/projects/nexa-ai-tools/Homepage2.png" alt="Nexa MVP — original web homepage" loading="lazy">
+            </div>
+          </figure>
+          <figure class="nexa-mvp-platform">
+            <span class="nexa-mvp-label">Mobile MVP</span>
+            <div class="nexa-mvp-frame nexa-mvp-frame--mobile">
+              <img src="/assets/projects/nexa-ai-tools/iPhone_14_15_Pro_-_399.png" alt="Nexa MVP — original mobile experience" loading="lazy">
+            </div>
+          </figure>
+        </div>
+
+        <ol class="nexa-critique-list cs-reveal cs-reveal-delay-3" aria-label="Five MVP critique findings">
+          <li>
+            <span class="nexa-crit-num">01</span>
+            <div class="nexa-crit-body">
+              <h4>Navigation Overload</h4>
+              <p>The top navigation exposed too much content — creating noise and making it unclear where users should begin.</p>
+            </div>
+            <span class="nexa-crit-tag">Noise</span>
+          </li>
+          <li>
+            <span class="nexa-crit-num">02</span>
+            <div class="nexa-crit-body">
+              <h4>Ineffective Search</h4>
+              <p>The search bar had low usage. Users didn't know what to type, and the system didn't support vague queries.</p>
+            </div>
+            <span class="nexa-crit-tag">Low usage</span>
+          </li>
+          <li>
+            <span class="nexa-crit-num">03</span>
+            <div class="nexa-crit-body">
+              <h4>Data First, Not User</h4>
+              <p>Filters were generated by popularity — resulting in random, unhelpful options that didn't match how users thought about tasks.</p>
+            </div>
+            <span class="nexa-crit-tag">Data ≠ user</span>
+          </li>
+          <li>
+            <span class="nexa-crit-num">04</span>
+            <div class="nexa-crit-body">
+              <h4>Space Constraints</h4>
+              <p>Limited space for showing info, but balancing different user needs was hard. Users had to click into every tool to evaluate it.</p>
+            </div>
+            <span class="nexa-crit-tag">Click-heavy</span>
+          </li>
+          <li>
+            <span class="nexa-crit-num">05</span>
+            <div class="nexa-crit-body">
+              <h4>Inconsistent Mobile</h4>
+              <p>On mobile, filters and UI patterns were misaligned with the rest of the system — further hurting clarity and usability.</p>
+            </div>
+            <span class="nexa-crit-tag">Off-system</span>
+          </li>
+        </ol>
+
+        <p class="cs-stats-foot cs-reveal" style="margin-top: 56px;">
+          Reframed as an HMW —
+          <strong><em>"How might we</em> create an intuitive, intent-aware discovery experience that helps users start easily, refine confidently, and evaluate tools with minimal effort?"</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- 1.2 INDUSTRY CONTEXT — turning point + ecosystem framing -->
+    <section class="nexa-industry">
+      <div class="container">
+        <div class="nexa-industry-grid">
+          <div class="nexa-industry-lede cs-reveal">
+            <p class="cs-eyebrow">1.2 · Understand the Industry</p>
+            <h2>2024 — when people stopped <span class="ink">searching</span> and started <em>asking</em>.</h2>
+          </div>
+          <div class="nexa-industry-body">
+            <p class="cs-reveal cs-reveal-delay-1">2024 marked a turning point in how people interacted with AI. As large language models became mainstream, users grew more comfortable expressing needs in <strong>natural language</strong> — but far less comfortable navigating categories, keywords, or technical terminology.</p>
+            <p class="cs-reveal cs-reveal-delay-2">Most users knew what they wanted to <em>achieve</em>, but not what kind of AI tool, GPT, or API could help them do it. Meanwhile, the ecosystem expanded faster than user literacy: thousands of tools, overlapping features, inconsistent naming, and unclear differentiation.</p>
+          </div>
+        </div>
+
+        <div class="nexa-industry-pulse cs-reveal cs-reveal-delay-2" aria-hidden="true">
+          <div class="nexa-pulse-row">
+            <span class="nexa-pulse-bar" style="--w: 28%; --d: 0s;"></span>
+            <span class="nexa-pulse-label">User literacy</span>
+          </div>
+          <div class="nexa-pulse-row">
+            <span class="nexa-pulse-bar nexa-pulse-bar--accent" style="--w: 92%; --d: .15s;"></span>
+            <span class="nexa-pulse-label">AI tool count</span>
+          </div>
+          <div class="nexa-pulse-row">
+            <span class="nexa-pulse-bar" style="--w: 64%; --d: .3s;"></span>
+            <span class="nexa-pulse-label">Naming overlap</span>
+          </div>
+          <div class="nexa-pulse-row">
+            <span class="nexa-pulse-bar" style="--w: 80%; --d: .45s;"></span>
+            <span class="nexa-pulse-label">Differentiation gap</span>
+          </div>
+          <p class="nexa-pulse-foot">Relative growth, 2022 → 2024 · directional, not measured</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLES — numbered ladder, not tilted cards -->
+    <section class="nexa-principles">
+      <div class="container">
+        <p class="cs-eyebrow cs-reveal" style="text-align:center;">1.3 · Six AI Product Design Principles</p>
+        <h2 class="cs-display cs-reveal" style="font-size:clamp(34px,4.5vw,56px); text-align:center; margin:18px auto 0; max-width:20ch;">By aligning model strengths with market needs, I shaped the value proposition that became the <span class="ink">north star of every design decision.</span></h2>
+
+        <div class="nexa-principles-grid">
+          <article class="nexa-principle cs-reveal">
+            <span class="num">01 ·  Anchor on user nature</span>
+            <h4>Align with how people <span class="ink">actually think</span> — not how tools are categorized.</h4>
+            <p>Users think in goals, tasks, and situations. The interface starts with natural language input and structures it into meaningful intent dimensions.</p>
+          </article>
+          <article class="nexa-principle cs-reveal cs-reveal-delay-1">
+            <span class="num">02 ·  Make the system visible</span>
+            <h4>Every step — intent extraction, categorization, reasoning — should be <span class="ink">legible</span>.</h4>
+            <p>The system's interpretation of text is exposed so users can validate and correct it. No black box.</p>
+          </article>
+          <article class="nexa-principle cs-reveal cs-reveal-delay-2">
+            <span class="num">03 ·  Reduce cognitive load</span>
+            <h4>Guide momentum forward instead of presenting dozens of filters.</h4>
+            <p>Light-touch refinement steps, recommended categories, and curated results — designed for forward motion, not analysis paralysis.</p>
+          </article>
+          <article class="nexa-principle cs-reveal cs-reveal-delay-3">
+            <span class="num">04 ·  Design for ambiguity</span>
+            <h4>User input is often vague, incomplete, or incorrect.</h4>
+            <p>Handle ambiguity gracefully — ask clarifying questions, offer suggestions, never punish unclear input.</p>
+          </article>
+          <article class="nexa-principle cs-reveal">
+            <span class="num">05 ·  Curate with context</span>
+            <h4>Show <span class="ink">why</span> a tool matches, what makes it different, how it solves the goal.</h4>
+            <p>Results aren't just listed — they're framed by the user's intent, so each entry feels like a recommendation, not a search hit.</p>
+          </article>
+          <article class="nexa-principle cs-reveal cs-reveal-delay-1">
+            <span class="num">06 ·  Structural integrity</span>
+            <h4>Discovery feels consistent on desktop or mobile.</h4>
+            <p>Layouts and refinement steps follow shared logic even as presentation adapts — same product, different surface.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1.4 USER SCENARIOS + 1.5 INFORMATION ARCHITECTURE -->
+    <section class="nexa-scenarios">
+      <div class="container">
+        <div class="nexa-scenarios-head cs-reveal">
+          <p class="cs-eyebrow">1.4 · User Scenario Analysis</p>
+          <h2>Three entry points, <span class="ink">one architecture.</span></h2>
+          <p class="nexa-scenarios-lede">While defining the value story, I interviewed potential users recruited from <strong>Hugging Face</strong> and <strong>LinkedIn</strong> — mainly engineers familiar with evaluating new models. From their stories, the product clearly needed to support <em>multiple entry points</em>, not a single search bar.</p>
+        </div>
+
+        <div class="nexa-scenario-grid">
+          <article class="nexa-scenario cs-reveal">
+            <span class="nexa-scenario-glyph" aria-hidden="true">◇</span>
+            <p class="nexa-scenario-tag">Entry · A</p>
+            <h4>Exploration without a clear goal</h4>
+            <p>"I'm just curious what's out there." The user is browsing, not committing — wants to graze categories, see what's trending, leave with vocabulary they didn't have before.</p>
+            <p class="nexa-scenario-need">Needs: discoverability · low-stakes browsing · trending signals</p>
+          </article>
+          <article class="nexa-scenario cs-reveal cs-reveal-delay-1">
+            <span class="nexa-scenario-glyph" aria-hidden="true">→</span>
+            <p class="nexa-scenario-tag">Entry · B</p>
+            <h4>Task-driven discovery</h4>
+            <p>"I have a job to do — find me a tool for it." The user knows the outcome but not the category. Comes with a vague goal, leaves with a shortlist they can act on.</p>
+            <p class="nexa-scenario-need">Needs: intent parsing · curated comparison · decision-ready info</p>
+          </article>
+          <article class="nexa-scenario cs-reveal cs-reveal-delay-2">
+            <span class="nexa-scenario-glyph" aria-hidden="true">⌖</span>
+            <p class="nexa-scenario-tag">Entry · C</p>
+            <h4>Feature-specific queries</h4>
+            <p>"I want a tool that does <em>this exact thing</em>." Already mid-evaluation — comparing against alternatives, sometimes looking for an API or specific capability.</p>
+            <p class="nexa-scenario-need">Needs: precise filters · capability search · API-level depth</p>
+          </article>
+        </div>
+
+        <div class="nexa-ia cs-reveal cs-reveal-delay-2">
+          <p class="cs-eyebrow">1.5 · Information Architecture</p>
+          <h3>I translated these needs into an architecture that balanced <span class="ink">flexibility with clarity</span> — keeping AI-driven suggestions at the heart of every entry.</h3>
+          <div class="nexa-ia-diagram" aria-label="Information architecture overview">
+            <div class="nexa-ia-col">
+              <span class="nexa-ia-pill nexa-ia-pill--entry">Exploration</span>
+              <span class="nexa-ia-pill nexa-ia-pill--entry">Task-driven</span>
+              <span class="nexa-ia-pill nexa-ia-pill--entry">Feature-specific</span>
+              <span class="nexa-ia-col-label">Entries</span>
+            </div>
+            <span class="nexa-ia-arrow" aria-hidden="true">→</span>
+            <div class="nexa-ia-col">
+              <span class="nexa-ia-pill nexa-ia-pill--core">Intent Parser</span>
+              <span class="nexa-ia-col-label">Shared core</span>
+            </div>
+            <span class="nexa-ia-arrow" aria-hidden="true">→</span>
+            <div class="nexa-ia-col">
+              <span class="nexa-ia-pill">AI Tools</span>
+              <span class="nexa-ia-pill">GPTs</span>
+              <span class="nexa-ia-pill">APIs</span>
+              <span class="nexa-ia-pill">Collections</span>
+              <span class="nexa-ia-col-label">Result surfaces</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE SIGNATURE INTERACTION — Search demo -->
+    <section class="nexa-demo-section">
+      <div class="container">
+        <p class="cs-eyebrow cs-reveal" style="text-align:center;">Principle 02 in action</p>
+        <h2 class="cs-display cs-reveal" style="font-size:clamp(30px,4.2vw,48px); text-align:center; margin:18px auto 12px; max-width:22ch;">Watch the system <span class="ink">show its understanding</span>.</h2>
+        <p class="cs-reveal cs-reveal-delay-1" style="text-align:center; color: var(--muted); max-width: 56ch; margin: 0 auto;">Click a prompt below — Nexa parses your vague intent into structured dimensions you can validate or correct. The interface speaks back.</p>
+
+        <div class="nexa-demo cs-reveal cs-reveal-delay-2"
+             data-prompts='[
+               {"text":"I need to write blog posts faster","goal":"Speed up content production","task":"Long-form writing","situation":"Solo creator · weekly cadence","tools":"Jasper · Notion AI · Lex"},
+               {"text":"Summarize my meeting notes automatically","goal":"Reduce post-meeting overhead","task":"Audio + text summarization","situation":"Remote team · daily standups","tools":"Otter.ai · Fireflies · Tactiq"},
+               {"text":"Design social posts that match my brand","goal":"Maintain visual consistency at scale","task":"Templated graphics generation","situation":"Marketer · multi-channel · brand kit","tools":"Canva Magic Design · Adobe Express · Beautiful.ai"}
+             ]'>
+
+          <div class="nexa-demo-bar">
+            <span class="icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            </span>
+            <span class="nexa-demo-input"></span><span class="caret"></span>
+          </div>
+
+          <div class="nexa-demo-suggestions">
+            <button type="button" class="suggestion">"Write blog posts faster"</button>
+            <button type="button" class="suggestion">"Summarize meeting notes"</button>
+            <button type="button" class="suggestion">"Design on-brand social posts"</button>
+          </div>
+
+          <div class="nexa-demo-cards" aria-live="polite"></div>
+
+          <p class="nexa-demo-foot">Live mock — click another prompt to see the system re-parse the intent.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- II. DESIGN ITERATION · 2.1 LAYOUT EXPLORATIONS — grouped by axis -->
+    <section class="nexa-layouts">
+      <div class="container">
+        <div class="head cs-reveal">
+          <div>
+            <p class="cs-eyebrow">II · Design Iteration · 2.1 Overall Layout &amp; Searching</p>
+            <h2>Twelve directions. <span class="ink">One survived contact with reality.</span></h2>
+          </div>
+          <p class="meta">Grouped by spatial axis ↓<br>Scroll each row →</p>
+        </div>
+
+        <div class="nexa-layout-group cs-reveal">
+          <div class="nexa-layout-group-head">
+            <span class="nexa-layout-group-tag">Group A</span>
+            <h3>Left ⇄ Right</h3>
+            <p>AI assistance docked beside the result feed.</p>
+          </div>
+          <ol class="nexa-layout-track" aria-label="Left-right layout explorations">
+            <li><span class="num">01</span><div class="wireframe w-side"></div><span class="label">Side-Docked AI Suggestions Panel</span></li>
+            <li><span class="num">02</span><div class="wireframe w-search"></div><span class="label">Search-First + Conversational AI</span></li>
+            <li><span class="num">03</span><div class="wireframe w-stack"></div><span class="label">Search-Enhanced AI + Result Feed</span></li>
+          </ol>
+        </div>
+
+        <div class="nexa-layout-group cs-reveal cs-reveal-delay-1">
+          <div class="nexa-layout-group-head">
+            <span class="nexa-layout-group-tag">Group B</span>
+            <h3>Top ⇅ Bottom</h3>
+            <p>Conversation flows vertically; results fall beneath the input.</p>
+          </div>
+          <ol class="nexa-layout-track" aria-label="Top-bottom layout explorations">
+            <li><span class="num">04</span><div class="wireframe w-stack"></div><span class="label">Vertical Stack: Conversational Search</span></li>
+            <li><span class="num">05</span><div class="wireframe w-history"></div><span class="label">Search Bar with Inline History + Card Feed</span></li>
+            <li><span class="num">06</span><div class="wireframe w-guided"></div><span class="label">Guided Search: Category Prompts + Result</span></li>
+          </ol>
+        </div>
+
+        <div class="nexa-layout-group cs-reveal cs-reveal-delay-2">
+          <div class="nexa-layout-group-head">
+            <span class="nexa-layout-group-tag">Group C</span>
+            <h3>Full Screen</h3>
+            <p>Edge-to-edge launchers — preset prompts as the entry surface.</p>
+          </div>
+          <ol class="nexa-layout-track" aria-label="Full-screen layout explorations">
+            <li><span class="num">07</span><div class="wireframe w-launch"></div><span class="label">Preset Prompt Launcher</span></li>
+            <li><span class="num">08</span><div class="wireframe w-launch"></div><span class="label">Search Expectations &amp; Category Prompts</span></li>
+            <li><span class="num">09</span><div class="wireframe w-three"></div><span class="label">Three-Panels: Output + Contextual Cards</span></li>
+          </ol>
+        </div>
+
+        <div class="nexa-layout-group cs-reveal cs-reveal-delay-3">
+          <div class="nexa-layout-group-head">
+            <span class="nexa-layout-group-tag">Group D</span>
+            <h3>Other</h3>
+            <p>Inline, hover, and density-first variants — and the one we shipped.</p>
+          </div>
+          <ol class="nexa-layout-track" aria-label="Other layout explorations">
+            <li><span class="num">10</span><div class="wireframe w-inline"></div><span class="label">Inline Search Cards Within Conversation</span></li>
+            <li><span class="num">11</span><div class="wireframe w-hover"></div><span class="label">Persistent Bottom-Right Hover Agent</span></li>
+            <li class="is-shipped"><span class="num">12</span><div class="wireframe w-ship"></div><span class="label">Card-Only Mode for Max Result Density</span><span class="shipped-flag">Shipped</span></li>
+          </ol>
+        </div>
+
+        <p class="cs-reveal cs-reveal-delay-3" style="max-width: 64ch; margin: 32px auto 0; text-align: center; color: var(--muted); font-size: 15px; font-style: italic;">"Visually rich and conversational layouts improved engagement during exploration, but introduced unnecessary cognitive overhead for search-driven tasks — and were intentionally deprioritized in the final design."</p>
+      </div>
+    </section>
+
+    <!-- 2.2 INFORMATION CARD EXPLORATIONS -->
+    <section class="nexa-cards-section">
+      <div class="container">
+        <div class="nexa-cards-head cs-reveal">
+          <p class="cs-eyebrow">2.2 · Information Card</p>
+          <h2>How much of a tool can <span class="ink">one card</span> tell you about?</h2>
+          <p>Once layout was settled, the next question was the atom of the result feed: the card itself. Each direction below makes a different bet about what users need first — visual, action, comparison, or context.</p>
+        </div>
+
+        <div class="nexa-cards-grid">
+          <article class="nexa-card-mock cs-reveal" data-variant="avatar">
+            <div class="nexa-card-mock-frame">
+              <span class="nexa-card-avatar"></span>
+              <div class="nexa-card-lines">
+                <span class="nexa-card-line nexa-card-line--title"></span>
+                <span class="nexa-card-line nexa-card-line--meta"></span>
+              </div>
+            </div>
+            <p class="nexa-card-mock-tag">A · Minimal</p>
+            <h4>Avatar-Led Summary</h4>
+            <p>Lowest visual weight — works at scale, but every comparison demands a click.</p>
+          </article>
+
+          <article class="nexa-card-mock cs-reveal cs-reveal-delay-1" data-variant="visual">
+            <div class="nexa-card-mock-frame nexa-card-mock-frame--visual">
+              <span class="nexa-card-image"></span>
+              <span class="nexa-card-line nexa-card-line--title"></span>
+            </div>
+            <p class="nexa-card-mock-tag">B · Discovery</p>
+            <h4>Visual-Rich</h4>
+            <p>Best for browsing. Visuals carry the meaning, but result density takes a hit.</p>
+          </article>
+
+          <article class="nexa-card-mock cs-reveal cs-reveal-delay-2" data-variant="action">
+            <div class="nexa-card-mock-frame">
+              <div class="nexa-card-lines">
+                <span class="nexa-card-line nexa-card-line--title"></span>
+                <span class="nexa-card-line nexa-card-line--meta"></span>
+              </div>
+              <span class="nexa-card-cta">Open →</span>
+            </div>
+            <p class="nexa-card-mock-tag">C · Action-First</p>
+            <h4>Direct-Access</h4>
+            <p>Fastest path to "use the tool." Removes everything that isn't the verb.</p>
+          </article>
+
+          <article class="nexa-card-mock cs-reveal" data-variant="editorial">
+            <div class="nexa-card-mock-frame nexa-card-mock-frame--editorial">
+              <span class="nexa-card-line nexa-card-line--title"></span>
+              <span class="nexa-card-line"></span>
+              <span class="nexa-card-line nexa-card-line--short"></span>
+            </div>
+            <p class="nexa-card-mock-tag">D · Editorial</p>
+            <h4>Editorial Style</h4>
+            <p>Reads like a recommendation. Higher trust, slower scan.</p>
+          </article>
+
+          <article class="nexa-card-mock cs-reveal cs-reveal-delay-1" data-variant="compare">
+            <div class="nexa-card-mock-frame nexa-card-mock-frame--compare">
+              <span class="nexa-card-bar" style="--w: 80%"></span>
+              <span class="nexa-card-bar" style="--w: 60%"></span>
+              <span class="nexa-card-bar" style="--w: 45%"></span>
+            </div>
+            <p class="nexa-card-mock-tag">E · Comparison</p>
+            <h4>Relevance-Driven</h4>
+            <p>Surfaces match strength. Great for shortlists; heavy on cognitive load.</p>
+          </article>
+
+          <article class="nexa-card-mock cs-reveal cs-reveal-delay-2" data-variant="usecase">
+            <div class="nexa-card-mock-frame">
+              <span class="nexa-card-tag">For: copywriting</span>
+              <span class="nexa-card-line nexa-card-line--title"></span>
+              <span class="nexa-card-line nexa-card-line--meta"></span>
+            </div>
+            <p class="nexa-card-mock-tag">F · Use-Case</p>
+            <h4>Use-Case Driven</h4>
+            <p>Frames a tool by the job it's hired for, not by category.</p>
+          </article>
+
+          <article class="nexa-card-mock nexa-card-mock--wide is-final cs-reveal" data-variant="horizontal">
+            <div class="nexa-card-mock-frame nexa-card-mock-frame--wide">
+              <span class="nexa-card-image nexa-card-image--small"></span>
+              <div class="nexa-card-lines">
+                <span class="nexa-card-line nexa-card-line--title"></span>
+                <span class="nexa-card-line nexa-card-line--meta"></span>
+                <span class="nexa-card-line nexa-card-line--short"></span>
+              </div>
+              <span class="nexa-card-cta">Open →</span>
+            </div>
+            <p class="nexa-card-mock-tag">G · Final direction</p>
+            <h4>Horizontal — info <em>and</em> visual, balanced</h4>
+            <p>The shipped card. Holds enough imagery to differentiate at a glance, enough copy to be decision-ready, and enough density to keep the feed scannable.</p>
+            <span class="nexa-card-final-flag">Shipped</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.3 FINAL DESIGN — bridge from layout/cards into the ecosystem chapter -->
+    <section class="nexa-bridge">
+      <div class="container">
+        <div class="nexa-bridge-inner cs-reveal">
+          <p class="cs-eyebrow">2.3 · Final Design</p>
+          <h2>We landed on a <em>search-first</em> design that surfaces <span class="ink">decision-ready information</span> while intentionally minimizing visual distraction.</h2>
+          <p>At that point, the core search experience had reached a level of clarity and stability that no longer benefited from incremental UX tuning.</p>
+          <p>The design challenge expanded — beyond usability, toward <strong>long-term platform sustainability and growth.</strong> Supporting creators, encouraging contribution, and accommodating advanced usage beyond UI-based tools.</p>
+        </div>
+
+        <ol class="nexa-bridge-arc cs-reveal cs-reveal-delay-1" aria-label="Scope expansion across phases">
+          <li>
+            <span class="nexa-bridge-step">Phase 1</span>
+            <p>Search experience</p>
+            <span class="nexa-bridge-meta">Usability</span>
+          </li>
+          <li>
+            <span class="nexa-bridge-step">Phase 2</span>
+            <p>Card &amp; result density</p>
+            <span class="nexa-bridge-meta">Decision-readiness</span>
+          </li>
+          <li class="is-current">
+            <span class="nexa-bridge-step">Phase 3</span>
+            <p>Creators · Submissions · APIs</p>
+            <span class="nexa-bridge-meta">Ecosystem</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- III. BUILD AI · BUILD ECOSYSTEM — three modules with explicit Why framing -->
+    <section class="nexa-ecosystem">
+      <div class="container">
+        <div class="nexa-ecosystem-head">
+          <p class="cs-eyebrow cs-reveal" style="text-align:center;">III · Build AI · Build Ecosystem</p>
+          <h2 class="cs-display cs-reveal cs-reveal-delay-1" style="font-size:clamp(32px,4.5vw,52px); text-align:center; margin:18px 0 0;">Three modules to <span class="ink">turn aggregation into an ecosystem.</span></h2>
+          <p class="cs-reveal cs-reveal-delay-2" style="text-align:center; max-width: 60ch; margin: 24px auto 0; color: var(--muted); font-size: 16px;">Each module is anchored by an explicit <em>Why?</em> — the constraint that justified building it, not just the feature itself.</p>
+        </div>
+
+        <div class="cs-card-grid" style="grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 60px;">
+          <article class="nexa-eco-card cs-reveal">
+            <img src="/assets/projects/nexa-ai-tools/My_Collections.png" alt="Nexa · creator collections page" loading="lazy">
+            <div class="nexa-eco-card-body">
+              <p class="cs-eyebrow">3.1 · Public Profiles</p>
+              <h3>Creator pages &amp; collections</h3>
+              <p class="nexa-eco-why"><span class="nexa-eco-why-tag">Why?</span> As the platform grows, <strong>trust, attribution, and continuity</strong> become increasingly important — especially for expert creators contributing tools over time.</p>
+              <ul class="nexa-eco-points">
+                <li>Persistent identity across submissions</li>
+                <li>Curated collections as a first-class object</li>
+                <li>Attribution surfaced wherever a tool appears</li>
+              </ul>
+            </div>
+          </article>
+          <article class="nexa-eco-card cs-reveal cs-reveal-delay-1">
+            <img src="/assets/projects/nexa-ai-tools/Submit.png" alt="Nexa · creator submission flow" loading="lazy">
+            <div class="nexa-eco-card-body">
+              <p class="cs-eyebrow">3.2 · Submissions</p>
+              <h3>Direct contribution model</h3>
+              <p class="nexa-eco-why"><span class="nexa-eco-why-tag">Why?</span> Nexa already aggregated AI tools from open sources, but creators remained <strong>disconnected from the platform itself</strong>. Without a direct contribution model, tools exist as isolated entries.</p>
+              <ul class="nexa-eco-points">
+                <li>Submission workflow with state management</li>
+                <li>Verification + ownership claim</li>
+                <li>Status visibility from draft → live</li>
+              </ul>
+            </div>
+          </article>
+          <article class="nexa-eco-card cs-reveal cs-reveal-delay-2">
+            <img src="/assets/projects/nexa-ai-tools/Generated_API.png" alt="Nexa · downloadable API packages" loading="lazy">
+            <div class="nexa-eco-card-body">
+              <p class="cs-eyebrow">3.3 · API Packages</p>
+              <h3>Composability for advanced users</h3>
+              <p class="nexa-eco-why"><span class="nexa-eco-why-tag">Why?</span> Fully built tools meet most discovery needs — but advanced users often require <strong>deeper control, composability, and integration</strong> into existing workflows.</p>
+              <ul class="nexa-eco-points">
+                <li>Workflow: <em>Choose → Build → Generated API</em></li>
+                <li>Downloadable, reusable packages</li>
+                <li>Surfaces parity with UI tools, not buried below them</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS & IMPACTS -->
+    <section class="cs-dark">
+      <div class="container">
+        <p class="cs-eyebrow cs-reveal">Reflection · Results &amp; Impacts</p>
+        <h2 class="cs-reveal cs-reveal-delay-1">The platform operates at <span class="ink">meaningful scale</span> — providing real-world constraints and validation context for design decisions.</h2>
+
+        <div class="cs-stats">
+          <article class="cs-stat-card cs-reveal cs-reveal-delay-1">
+            <p class="label">Reach</p>
+            <h4>Monthly visits with balanced desktop and mobile audience</h4>
+            <p class="big-number">5M<sup>+</sup></p>
+            <p class="stat-foot">Per month</p>
+          </article>
+          <article class="cs-stat-card cs-reveal cs-reveal-delay-2">
+            <p class="label">Engagement</p>
+            <h4>Average visit duration — sustained engagement, not bounce</h4>
+            <p class="big-number">3<sup>min+</sup></p>
+            <p class="stat-foot">Per visit</p>
+          </article>
+          <article class="cs-stat-card cs-reveal cs-reveal-delay-3">
+            <p class="label">Depth</p>
+            <h4>Pages per visit — multi-step exploration behavior</h4>
+            <p class="big-number">4.2<sup></sup></p>
+            <p class="stat-foot">Pages / visit</p>
+          </article>
+        </div>
+
+        <p class="cs-stats-foot cs-reveal">
+          From the analysis, over 60% of users accessed via mobile —
+          <strong>so we improved mobile-end responsive design as a direct consequence.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- REFLECTION · THOUGHTS -->
+    <section class="nexa-reflection">
+      <div class="container">
+        <div class="nexa-reflection-grid">
+          <div class="nexa-reflection-lede cs-reveal">
+            <p class="cs-eyebrow">Thoughts</p>
+            <h2>"When to stop optimizing individual interactions and start designing for <span class="ink">system-level sustainability</span>."</h2>
+          </div>
+          <div class="nexa-reflection-body">
+            <p class="cs-reveal cs-reveal-delay-1">One key reflection was recognizing the moment to shift focus. Establishing a search-first foundation clarified user intent and reduced cognitive load — but long-term value depended on enabling <strong>identity, contribution, and advanced usage</strong> beyond search.</p>
+            <p class="cs-reveal cs-reveal-delay-2">By introducing public creator profiles, creator submissions, and API packages, the platform shifted from <em>passive aggregation</em> toward an ecosystem that connects creators, users, and expert workflows.</p>
+            <blockquote class="nexa-reflection-quote cs-reveal cs-reveal-delay-3">
+              <p>If continued, the next phase would focus on validating these platform extensions through <strong>creator engagement metrics, API adoption signals, and behavioral indicators of long-term retention</strong> — while carefully managing the trade-offs between simplicity, governance, and scalability.</p>
+              <footer>— Next steps</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container">
+        <h2>See more projects.</h2>
+        <p>Each one a different shape of ambiguity.</p>
+        <a href="/designs.html" class="btn btn-primary">Back to all projects <span class="arrow">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo">LORI<span class="dot">.</span></a>
+          <p>Product designer turning complexity into clarity through human-centered, AI-native experiences.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Pages</p>
+          <ul class="footer-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/designs.html">Designs</a></li>
+            <li><a href="/research/museum-of-flight.html">Research</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Projects</p>
+          <ul class="footer-list">
+            <li><a href="/projects/octopus-ai.html">Edge AI</a></li>
+            <li><a href="/projects/nexa-ai-tools.html">2C AI</a></li>
+            <li><a href="/projects/smart-brook.html">HMI</a></li>
+            <li><a href="/projects/mentorup.html">2C Web</a></li>
+            <li><a href="/projects/espoirer.html">2C App</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Connect</p>
+          <ul class="footer-list">
+            <li><a href="mailto:loricai1017@gmail.com">Email</a></li>
+            <li><a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Resume</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="keywords">
+        <span>Human</span><span>Intent</span><span>Strategy</span><span>Focus</span><span>Scalable</span><span>Impact</span><span>Clear</span><span>Value</span><span>Efficient</span><span>Solving</span><span>Useful</span><span>Longterm</span>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Lori Cai. All rights reserved.</span>
+        <span>UW · Seattle, WA</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

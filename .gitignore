@@ -25,3 +25,10 @@ node_modules/
 dist/
 build/
 .cache/
+
+# 3D assets — uncompressed source models (large). Will commit optimized
+# versions (e.g. assets/robot-arm.optimized.glb) before deploy.
+*.glb
+*.gltf
+*.fbx
+*.bin

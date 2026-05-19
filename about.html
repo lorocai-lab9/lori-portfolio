@@ -7,10 +7,11 @@
   <meta name="description" content="About Lori Cai — product designer working at the intersection of AI, systems thinking, and human-centered research.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="aboutos">
+  <!-- Floating pill (kept for mobile fallback; hidden on desktop via CSS) -->
   <header class="site-header">
     <div class="nav-pill">
       <nav class="nav">
@@ -22,153 +23,478 @@
           <a href="/">Home</a>
           <a href="/about.html">About</a>
           <a href="/designs.html">Designs</a>
-          <a href="#">Research <em style="font-style:italic;font-weight:400;">(updating)</em></a>
+          <a href="/research/museum-of-flight.html">Research</a>
+          <a href="/contact.html">Contact</a>
         </div>
         <div class="nav-right">
-          <a href="https://docs.google.com/document/d/1jJbd-7CLWLOGs_47IboQQAgov_4f-OBAzJMYtIVvmaY/edit?usp=sharing" target="_blank" rel="noopener" class="btn-resume">Check Resume <span class="btn-resume-arrow">→</span></a>
-          <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span></button>
+          <a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" class="btn-resume">Check Resume <span class="btn-resume-arrow">→</span></a>
+          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
         </div>
       </nav>
     </div>
   </header>
 
+  <!-- macOS-style menu bar (desktop only) -->
+  <div class="aboutos-menubar" role="navigation" aria-label="Primary">
+    <div class="menu-left">
+      <span class="logo-mini" aria-hidden="true">LC</span>
+      <a href="/" class="menu-item">Portfolio</a>
+      <span class="menu-item is-app is-active">About</span>
+      <a href="/designs.html" class="menu-item">Designs</a>
+      <a href="/research/museum-of-flight.html" class="menu-item">Research</a>
+      <span class="menu-item">File</span>
+      <span class="menu-item">Edit</span>
+      <span class="menu-item">View</span>
+      <span class="menu-item">Window</span>
+      <span class="menu-item">Help</span>
+    </div>
+    <div class="menu-right">
+      <span class="clock">Loading…</span>
+      <a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" class="menu-item">Resume ↗</a>
+    </div>
+  </div>
+
   <main>
-    <section class="hero">
+
+    <!-- HERO -->
+    <section class="aboutos-hero">
       <div class="container">
-        <p class="eyebrow hero-eyebrow">About Lori</p>
-        <h1>A designer who works <em>where ambiguity</em> lives.</h1>
-        <p class="hero-intro">I work best in complex, constraint-heavy environments — early-stage products and system redesigns where the real challenge is uncertainty, cross-functional trade-offs, and shaping something scalable from a blurry start.</p>
+        <h1 class="cs-reveal">Hi, I'm Lori — <em>welcome to my desk.</em></h1>
+        <p class="cs-reveal cs-reveal-delay-1">A few folders are scattered across the cream. Open any one to take a <span class="ink">closer look</span> — background, skills, what I'm exploring now, and the things that shaped how I think.</p>
       </div>
     </section>
 
-    <section class="banner">
-      <div class="container">
-        <div class="banner-art" aria-hidden="true"></div>
-      </div>
-    </section>
+    <p class="aboutos-hint cs-reveal cs-reveal-delay-2"><span class="arrow">↓</span> Click any folder to open · <kbd>Esc</kbd> to close</p>
 
-    <section class="section">
-      <div class="container">
-        <p class="eyebrow">Approach</p>
-        <h2 class="section-title">Why product, design, and research all matter.</h2>
-        <div class="about-grid">
-          <div class="profile-img" aria-hidden="true"></div>
-          <div>
-            <p class="bio-lead">Working across these three disciplines reshaped how I make design decisions — leaning on problem framing and evidence over taste alone.</p>
-            <ul class="cred-list">
-              <li>Product mindset keeps the work tied to outcomes — not just artifacts.</li>
-              <li>Research keeps the work honest — assumptions get tested before they harden into features.</li>
-              <li>Design holds it all together — translating constraints into something people actually want to use.</li>
-            </ul>
+    <!-- FOLDER GRID -->
+    <div class="aboutos-folders cs-reveal cs-reveal-delay-2">
+      <button type="button" class="aboutos-folder" data-folder="background" aria-controls="window-background">
+        <div class="folder-icon">
+          <svg viewBox="0 0 84 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 14 a4 4 0 0 1 4-4 H30 l5 5 H78 a4 4 0 0 1 4 4 V58 a4 4 0 0 1-4 4 H6 a4 4 0 0 1-4-4 z" fill="#DCFEE2"/>
+            <path d="M2 14 a4 4 0 0 1 4-4 H30 l5 5 H78 a4 4 0 0 1 4 4 V20 H2 z" fill="#68FF7E"/>
+          </svg>
+        </div>
+        <span class="folder-label">Background</span>
+      </button>
+
+      <button type="button" class="aboutos-folder" data-folder="skills" aria-controls="window-skills">
+        <div class="folder-icon">
+          <svg viewBox="0 0 84 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 14 a4 4 0 0 1 4-4 H30 l5 5 H78 a4 4 0 0 1 4 4 V58 a4 4 0 0 1-4 4 H6 a4 4 0 0 1-4-4 z" fill="#DCFEE2"/>
+            <path d="M2 14 a4 4 0 0 1 4-4 H30 l5 5 H78 a4 4 0 0 1 4 4 V20 H2 z" fill="#68FF7E"/>
+          </svg>
+        </div>
+        <span class="folder-label">Skills</span>
+      </button>
+
+      <button type="button" class="aboutos-folder" data-folder="now" aria-controls="window-now">
+        <div class="folder-icon">
+          <svg viewBox="0 0 84 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 14 a4 4 0 0 1 4-4 H30 l5 5 H78 a4 4 0 0 1 4 4 V58 a4 4 0 0 1-4 4 H6 a4 4 0 0 1-4-4 z" fill="#DCFEE2"/>
+            <path d="M2 14 a4 4 0 0 1 4-4 H30 l5 5 H78 a4 4 0 0 1 4 4 V20 H2 z" fill="#68FF7E"/>
+          </svg>
+        </div>
+        <span class="folder-label">Currently exploring</span>
+      </button>
+
+      <button type="button" class="aboutos-folder" data-folder="recommendations" aria-controls="window-recommendations">
+        <div class="folder-icon">
+          <svg viewBox="0 0 84 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 14 a4 4 0 0 1 4-4 H30 l5 5 H78 a4 4 0 0 1 4 4 V58 a4 4 0 0 1-4 4 H6 a4 4 0 0 1-4-4 z" fill="#DCFEE2"/>
+            <path d="M2 14 a4 4 0 0 1 4-4 H30 l5 5 H78 a4 4 0 0 1 4 4 V20 H2 z" fill="#68FF7E"/>
+          </svg>
+        </div>
+        <span class="folder-label">Recommendations</span>
+      </button>
+
+      <button type="button" class="aboutos-folder" data-folder="recognitions" aria-controls="window-recognitions">
+        <div class="folder-icon">
+          <svg viewBox="0 0 84 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 14 a4 4 0 0 1 4-4 H30 l5 5 H78 a4 4 0 0 1 4 4 V58 a4 4 0 0 1-4 4 H6 a4 4 0 0 1-4-4 z" fill="#DCFEE2"/>
+            <path d="M2 14 a4 4 0 0 1 4-4 H30 l5 5 H78 a4 4 0 0 1 4 4 V20 H2 z" fill="#68FF7E"/>
+          </svg>
+        </div>
+        <span class="folder-label">Recognitions</span>
+      </button>
+
+      <button type="button" class="aboutos-folder" data-folder="readings" aria-controls="window-readings">
+        <div class="folder-icon">
+          <svg viewBox="0 0 84 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 14 a4 4 0 0 1 4-4 H30 l5 5 H78 a4 4 0 0 1 4 4 V58 a4 4 0 0 1-4 4 H6 a4 4 0 0 1-4-4 z" fill="#DCFEE2"/>
+            <path d="M2 14 a4 4 0 0 1 4-4 H30 l5 5 H78 a4 4 0 0 1 4 4 V20 H2 z" fill="#68FF7E"/>
+          </svg>
+        </div>
+        <span class="folder-label">Readings</span>
+      </button>
+    </div>
+
+    <!-- WINDOWS (one per folder) -->
+
+    <div class="aboutos-window" id="window-background" data-folder="background" role="region" aria-label="Background">
+      <div class="aboutos-window-bar">
+        <div class="traffic">
+          <button type="button" class="red" aria-label="Close"></button>
+          <button type="button" class="yellow" aria-label="Minimize"></button>
+          <button type="button" class="green" aria-label="Maximize"></button>
+        </div>
+        <div class="title">Background.txt</div>
+        <div class="spacer"></div>
+      </div>
+      <div class="aboutos-window-body">
+        <h3>A designer who works <em style="font-style:italic; color:var(--cs-accent); font-weight:400;">where ambiguity</em> lives.</h3>
+        <p class="lead">I work best in complex, constraint-heavy environments — early-stage products and system redesigns where the real challenge is uncertainty, cross-functional trade-offs, and shaping something scalable from a blurry start.</p>
+        <p>Advertising → business development → HCI → UX design. Each stop reframed the previous one — and pointed me at the question I'm still asking: how do we make intelligent systems more human-centered?</p>
+
+        <div class="aboutos-trajectory">
+          <div class="aboutos-trajectory-row">
+            <div class="stage">Advertising</div>
+            <div class="desc"><strong>Stories carry meaning</strong>How narrative shapes adoption — the difference between a product people understand and one they only see.</div>
+          </div>
+          <div class="aboutos-trajectory-row">
+            <div class="stage">Biz Dev</div>
+            <div class="desc"><strong>Value meets metrics</strong>How to align user value with the metrics that actually keep a product alive past the demo.</div>
+          </div>
+          <div class="aboutos-trajectory-row">
+            <div class="stage">HCI</div>
+            <div class="desc"><strong>Intuition becomes evidence</strong>How research turns design instinct into something testable — and how systems behave at scale.</div>
+          </div>
+          <div class="aboutos-trajectory-row">
+            <div class="stage">UX · Now</div>
+            <div class="desc"><strong>Human-centered intelligence</strong>Translating constraints into things people actually want to use — currently focused on AI-native experiences.</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="section">
-      <div class="container">
-        <p class="eyebrow">Principles</p>
-        <h2 class="section-title">What I care about when design gets hard.</h2>
-        <div class="principles">
-          <div class="principle">
+    <div class="aboutos-window" id="window-skills" data-folder="skills" role="region" aria-label="Skills">
+      <div class="aboutos-window-bar">
+        <div class="traffic">
+          <button type="button" class="red" aria-label="Close"></button>
+          <button type="button" class="yellow" aria-label="Minimize"></button>
+          <button type="button" class="green" aria-label="Maximize"></button>
+        </div>
+        <div class="title">Skills · principles &amp; tools</div>
+        <div class="spacer"></div>
+      </div>
+      <div class="aboutos-window-body">
+        <h3>What I care about when design <span class="ink">gets hard.</span></h3>
+        <p class="lead">Six principles I keep coming back to — earned across product, research, and design.</p>
+
+        <div class="aboutos-skills-grid">
+          <div class="aboutos-skill-card">
             <p class="num">01</p>
-            <h4>Clarifying the Core</h4>
-            <p>Prioritize the few decisions that actually move the product forward — and let the rest follow.</p>
+            <h5>Clarifying the core</h5>
+            <p>Prioritize the few decisions that move the product forward — let the rest follow.</p>
           </div>
-          <div class="principle">
+          <div class="aboutos-skill-card">
             <p class="num">02</p>
-            <h4>Embracing Constraints</h4>
-            <p>Focus on the high-frequency actions. The 80% the user does every day matters more than the 20% they might do once.</p>
+            <h5>Embracing constraints</h5>
+            <p>Focus on the high-frequency actions. The 80% the user does daily matters more than the 20% they might do once.</p>
           </div>
-          <div class="principle">
+          <div class="aboutos-skill-card">
             <p class="num">03</p>
-            <h4>Intentional Partnership</h4>
+            <h5>Intentional partnership</h5>
             <p>Use prototypes — not opinions — to align stakeholders. Show the trade-off, then decide.</p>
           </div>
-          <div class="principle">
+          <div class="aboutos-skill-card">
             <p class="num">04</p>
-            <h4>System-Level Thinking</h4>
-            <p>Favor scalable patterns over one-off fixes. The interaction you design today is the foundation for tomorrow's feature.</p>
+            <h5>System-level thinking</h5>
+            <p>Favor scalable patterns over one-off fixes. Today's interaction is tomorrow's foundation.</p>
           </div>
-          <div class="principle">
+          <div class="aboutos-skill-card">
             <p class="num">05</p>
-            <h4>Iteration as Risk Reduction</h4>
+            <h5>Iteration as risk reduction</h5>
             <p>Test the riskiest assumption first. Cheap iterations early prevent expensive ones later.</p>
           </div>
-          <div class="principle">
+          <div class="aboutos-skill-card">
             <p class="num">06</p>
-            <h4>Designing for Transitions</h4>
+            <h5>Designing for transitions</h5>
             <p>State changes are where users get lost. Pay attention to the seams between flows, not just the screens.</p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container">
-        <p class="eyebrow">Trust</p>
-        <h2 class="section-title">How people who've worked with Lori describe her.</h2>
-        <div class="testimonials">
-          <div class="testimonial">
-            <blockquote>“[Add testimonial text from Blake.]”</blockquote>
-            <cite><strong>Blake Tian</strong><br>CEO, MentorUp</cite>
+        <h3 style="margin-top: 56px; font-size: clamp(22px, 2.6vw, 28px);">Tools &amp; methods</h3>
+
+        <p style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cs-accent); font-weight: 700; margin: 24px 0 12px;">Fluent · daily</p>
+        <div class="aboutos-tags">
+          <span class="tag">Figma</span>
+          <span class="tag">FigJam</span>
+          <span class="tag">Notion</span>
+          <span class="tag">Miro</span>
+          <span class="tag">Design systems</span>
+          <span class="tag">Prototyping</span>
+          <span class="tag">Information architecture</span>
+          <span class="tag">User research</span>
+          <span class="tag">Journey mapping</span>
+          <span class="tag">Storyboarding</span>
+        </div>
+
+        <p style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin: 28px 0 12px;">Comfortable · regular</p>
+        <div class="aboutos-tags">
+          <span class="tag">Photoshop</span>
+          <span class="tag">Illustrator</span>
+          <span class="tag">Webflow</span>
+          <span class="tag">Contextual inquiry</span>
+          <span class="tag">A/B testing</span>
+        </div>
+
+        <p style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin: 28px 0 12px;">Currently exploring</p>
+        <div class="aboutos-tags">
+          <span class="tag">Framer</span>
+          <span class="tag">Spline</span>
+          <span class="tag">After Effects</span>
+          <span class="tag">Cursor</span>
+          <span class="tag">Three.js</span>
+        </div>
+
+        <p style="font-size: 12px; color: var(--muted); margin-top: 24px; font-style: italic;">Buckets reflect today's working state — recategorize as proficiency shifts.</p>
+      </div>
+    </div>
+
+    <div class="aboutos-window" id="window-now" data-folder="now" role="region" aria-label="Currently exploring">
+      <div class="aboutos-window-bar">
+        <div class="traffic">
+          <button type="button" class="red" aria-label="Close"></button>
+          <button type="button" class="yellow" aria-label="Minimize"></button>
+          <button type="button" class="green" aria-label="Maximize"></button>
+        </div>
+        <div class="title">Now.txt — updated daily</div>
+        <div class="spacer"></div>
+      </div>
+      <div class="aboutos-window-body">
+        <h3>What's <span class="ink">on the desk</span> right now.</h3>
+        <p class="lead">A snapshot of where my attention sits this season.</p>
+
+        <div class="aboutos-now">
+          <div class="aboutos-now-row">
+            <div>
+              <strong>Founding designer at Nestify</strong>
+              <span>Building 0→1 — product strategy + design system + the first ten flows.</span>
+            </div>
+            <span class="badge">Current</span>
           </div>
-          <div class="testimonial">
-            <blockquote>“[Add testimonial text from Yiwei.]”</blockquote>
-            <cite><strong>Yiwei Xu</strong><br>Associate Professor, UMD</cite>
+          <div class="aboutos-now-row">
+            <div>
+              <strong>Researching robotics interactions</strong>
+              <span>How do humans build trust with a robot arm? What does a "good handoff" feel like?</span>
+            </div>
+            <span class="badge">Side</span>
           </div>
-          <div class="testimonial">
-            <blockquote>“[Add testimonial text from Alan.]”</blockquote>
-            <cite><strong>Alan Zhu</strong><br>Product Lead, Nexa.AI</cite>
+          <div class="aboutos-now-row">
+            <div>
+              <strong>Shipped 8+ AI products to date</strong>
+              <span>Edge AI, conversational search, autonomous HMI, mentorship, last-mile delivery.</span>
+            </div>
+            <span class="badge">Done</span>
           </div>
-          <div class="testimonial">
-            <blockquote>“[Add testimonial text from Yuan.]”</blockquote>
-            <cite><strong>Yuan Tan</strong><br>Startup Partner</cite>
-          </div>
-          <div class="testimonial">
-            <blockquote>“[Add testimonial text from Joanna.]”</blockquote>
-            <cite><strong>Joanna Yang</strong><br>Marketing Manager, Govee</cite>
-          </div>
-          <div class="testimonial">
-            <blockquote>“[Add testimonial text from LD.]”</blockquote>
-            <cite><strong>LD Cabezas</strong><br>PM, Sevco</cite>
-          </div>
-          <div class="testimonial">
-            <blockquote>“[Add testimonial text from Chang.]”</blockquote>
-            <cite><strong>Chang Liu</strong><br>Senior Product Designer, Articulate</cite>
-          </div>
-          <div class="testimonial">
-            <blockquote>“[Add testimonial text from Mandy.]”</blockquote>
-            <cite><strong>Mandy Faber</strong><br>Exhibit Designer, MoF</cite>
+          <div class="aboutos-now-row">
+            <div>
+              <strong>Studying — UW MS HCDE</strong>
+              <span>Research methods, evaluative studies, AI ethics. Seattle, WA.</span>
+            </div>
+            <span class="badge">Ongoing</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="section">
-      <div class="container">
-        <p class="eyebrow">Trajectory</p>
-        <h2 class="section-title">How my thinking has evolved.</h2>
-        <div class="about-grid">
-          <div class="profile-img" data-tone="sage" aria-hidden="true" style="background:linear-gradient(135deg,#C9D2C0,#B8704D);"></div>
-          <div>
-            <p class="bio-lead">Advertising → business development → HCI → UX design. Each stop reframed the previous one.</p>
-            <ul class="cred-list">
-              <li>From advertising: how stories carry meaning, and why narrative shapes adoption.</li>
-              <li>From business development: how to align user value with the metrics that keep a product alive.</li>
-              <li>From HCI: how research turns intuition into evidence — and how systems behave at scale.</li>
-              <li>Where it points now: making intelligent systems more human-centered.</li>
-            </ul>
+    <div class="aboutos-window" id="window-recommendations" data-folder="recommendations" role="region" aria-label="Recommendations">
+      <div class="aboutos-window-bar">
+        <div class="traffic">
+          <button type="button" class="red" aria-label="Close"></button>
+          <button type="button" class="yellow" aria-label="Minimize"></button>
+          <button type="button" class="green" aria-label="Maximize"></button>
+        </div>
+        <div class="title">Recommendations · 8 letters</div>
+        <div class="spacer"></div>
+      </div>
+      <div class="aboutos-window-body">
+        <h3>What people who've worked with me <span class="ink">actually said.</span></h3>
+        <p class="lead">From founders, PMs, professors, and the designers I've shipped with.</p>
+
+        <div class="aboutos-recs">
+          <div class="aboutos-rec">
+            <div class="aboutos-rec-head">
+              <div class="photo" aria-hidden="true"></div>
+              <div class="name"><strong>Blake Tian</strong><span>CEO, MentorUp</span></div>
+              <div class="quote-mark" aria-hidden="true">”</div>
+            </div>
+            <div class="aboutos-rec-divider"></div>
+            <p class="aboutos-rec-text">Lori has one of the strongest ownership mindsets I've seen. She never waits to be told what to do — she anticipates needs, brings solutions, and follows through with impressive reliability. You can trust her with ambiguous problems!</p>
+          </div>
+
+          <div class="aboutos-rec">
+            <div class="aboutos-rec-head">
+              <div class="photo" aria-hidden="true"></div>
+              <div class="name"><strong>Yiwei Xu</strong><span>Associate Prof, UMD</span></div>
+              <div class="quote-mark" aria-hidden="true">”</div>
+            </div>
+            <div class="aboutos-rec-divider"></div>
+            <p class="aboutos-rec-text">"Lori is someone you can trust with ambiguous problems. She doesn't wait for direction — she clarifies the problem, proposes thoughtful options, and follows through with consistency."</p>
+          </div>
+
+          <div class="aboutos-rec">
+            <div class="aboutos-rec-head">
+              <div class="photo" aria-hidden="true"></div>
+              <div class="name"><strong>Alan Zhu</strong><span>Product Lead, Nexa.AI</span></div>
+              <div class="quote-mark" aria-hidden="true">”</div>
+            </div>
+            <div class="aboutos-rec-divider"></div>
+            <p class="aboutos-rec-text">Working with Lori was an absolute pleasure. She doesn't just 'design screens'; she deeply understands the product vision and strategy behind them. Her design system became the foundation for all our future features.</p>
+          </div>
+
+          <div class="aboutos-rec">
+            <div class="aboutos-rec-head">
+              <div class="photo" aria-hidden="true"></div>
+              <div class="name"><strong>Yuan Tan</strong><span>Startup Partner</span></div>
+              <div class="quote-mark" aria-hidden="true">”</div>
+            </div>
+            <div class="aboutos-rec-divider"></div>
+            <p class="aboutos-rec-text">Lori is the kind of person people naturally follow. She's kind, smart, reliable, and steady under pressure. She makes the team feel safe to experiment and fail, and motivated to work hard. Even back then, it was clear she was going to build an exceptional career.</p>
+          </div>
+
+          <div class="aboutos-rec">
+            <div class="aboutos-rec-head">
+              <div class="photo" aria-hidden="true"></div>
+              <div class="name"><strong>Joanna Yang</strong><span>MKT Manager, Govee</span></div>
+              <div class="quote-mark" aria-hidden="true">”</div>
+            </div>
+            <div class="aboutos-rec-divider"></div>
+            <p class="aboutos-rec-text">Lori is the kind of collaborator who elevates everyone's work. She asks smart questions, challenges assumptions respectfully, and always finds elegant ways to make research insights tangible through design.</p>
+          </div>
+
+          <div class="aboutos-rec">
+            <div class="aboutos-rec-head">
+              <div class="photo" aria-hidden="true"></div>
+              <div class="name"><strong>LD Cabezas</strong><span>PM, Sevco</span></div>
+              <div class="quote-mark" aria-hidden="true">”</div>
+            </div>
+            <div class="aboutos-rec-divider"></div>
+            <p class="aboutos-rec-text">What stood out most was Lori's system-level thinking. The design foundations she set up continued to support new features long after the initial release.</p>
+          </div>
+
+          <div class="aboutos-rec">
+            <div class="aboutos-rec-head">
+              <div class="photo" aria-hidden="true"></div>
+              <div class="name"><strong>Chang Liu</strong><span>Sr. PD, Articulate</span></div>
+              <div class="quote-mark" aria-hidden="true">”</div>
+            </div>
+            <div class="aboutos-rec-divider"></div>
+            <p class="aboutos-rec-text">Working with Lori feels steady. Even under pressure, she stays clear-headed, makes sound decisions, and helps the team move forward without panic. Her clarity of thought and execution is inspiring.</p>
+          </div>
+
+          <div class="aboutos-rec">
+            <div class="aboutos-rec-head">
+              <div class="photo" aria-hidden="true"></div>
+              <div class="name"><strong>Mandy Faber</strong><span>Exhibit Designer, MoF</span></div>
+              <div class="quote-mark" aria-hidden="true">”</div>
+            </div>
+            <div class="aboutos-rec-divider"></div>
+            <p class="aboutos-rec-text">Lori doesn't just design interfaces, she understands the product intent behind them. Her design decisions consistently strengthen the product.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="cta-strip">
+    <div class="aboutos-window" id="window-recognitions" data-folder="recognitions" role="region" aria-label="Recognitions">
+      <div class="aboutos-window-bar">
+        <div class="traffic">
+          <button type="button" class="red" aria-label="Close"></button>
+          <button type="button" class="yellow" aria-label="Minimize"></button>
+          <button type="button" class="green" aria-label="Maximize"></button>
+        </div>
+        <div class="title">Recognitions.txt</div>
+        <div class="spacer"></div>
+      </div>
+      <div class="aboutos-window-body">
+        <h3>Awards, features, <span class="ink">and other small wins.</span></h3>
+        <p class="lead">A running log of work I'm proud of and the moments that marked it.</p>
+
+        <div class="aboutos-recognitions">
+          <div class="aboutos-recognition">
+            <span class="year">2026</span>
+            <div class="what"><strong>iF Design Award 2026 · ×2</strong>Recognized for an AI autonomous trucking platform (driver HMI, operator dashboard, fleet analytics) and an AI pregnancy diagnostic app.</div>
+            <span class="where">iF Design</span>
+          </div>
+          <div class="aboutos-recognition">
+            <span class="year">2026</span>
+            <div class="what"><strong>Founding Designer, Nestify</strong>Shipped two App Store releases through the seed funding round as sole designer and de-facto PM.</div>
+            <span class="where">Nestify</span>
+          </div>
+          <div class="aboutos-recognition">
+            <span class="year">2026</span>
+            <div class="what"><strong>Amazon Business · Capstone Sponsor</strong>Selected for the UW HCDE capstone project sponsored by Amazon Business.</div>
+            <span class="where">UW HCDE × Amazon</span>
+          </div>
+          <div class="aboutos-recognition">
+            <span class="year">2025</span>
+            <div class="what"><strong>New York Product Design Award</strong>Recognized for product design work in AI &amp; complex systems.</div>
+            <span class="where">NY Product Design</span>
+          </div>
+          <div class="aboutos-recognition">
+            <span class="year">2025</span>
+            <div class="what"><strong>MUSE Design Award · Silver</strong>International design recognition for AI product work.</div>
+            <span class="where">MUSE Design Awards</span>
+          </div>
+          <div class="aboutos-recognition">
+            <span class="year">2025</span>
+            <div class="what"><strong>AI Design Award · Bronze</strong>Honored for design contribution to AI-driven product experiences.</div>
+            <span class="where">AI Design Awards</span>
+          </div>
+          <div class="aboutos-recognition">
+            <span class="year">2025</span>
+            <div class="what"><strong>MentorUp 0→1 launch</strong>Shipped to 500+ registered users as founding PM &amp; designer — vision, MVP scope, end-to-end execution.</div>
+            <span class="where">MentorUp</span>
+          </div>
+          <div class="aboutos-recognition">
+            <span class="year">2024</span>
+            <div class="what"><strong>UW Medicine GIBHS Grant · $24K+</strong>Lead designer-researcher on AI-mediated mental health communication study.</div>
+            <span class="where">UW Medicine</span>
+          </div>
+          <div class="aboutos-recognition">
+            <span class="year">2024</span>
+            <div class="what"><strong>#1 Product of the Day, Product Hunt</strong>Led first-run UX redesign for NEXA.AI's conversational search — 35K+ new registrations.</div>
+            <span class="where">Product Hunt</span>
+          </div>
+          <div class="aboutos-recognition">
+            <span class="year">2024</span>
+            <div class="what"><strong>$10M+ investment decisions</strong>Produced 4 high-fidelity prototypes that anchored NEXA.AI's funding pitches.</div>
+            <span class="where">NEXA.AI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="aboutos-window" id="window-readings" data-folder="readings" role="region" aria-label="Writing">
+      <div class="aboutos-window-bar">
+        <div class="traffic">
+          <button type="button" class="red" aria-label="Close"></button>
+          <button type="button" class="yellow" aria-label="Minimize"></button>
+          <button type="button" class="green" aria-label="Maximize"></button>
+        </div>
+        <div class="title">Writing · essays</div>
+        <div class="spacer"></div>
+      </div>
+      <div class="aboutos-window-body">
+        <h3>Essays I've written <span class="ink">while making sense of AI.</span></h3>
+        <p class="lead">A small but growing shelf — more on the way.</p>
+
+        <div class="aboutos-readings">
+          <a class="aboutos-reading" href="https://medium.com/@lcai9/explore-agents-of-two-worlds-what-i-learned-diving-into-us-vs-china-ai-agents-a4e693cf4cc7" target="_blank" rel="noopener">
+            <span class="icon">E</span>
+            <div class="title-row"><strong>Agents of Two Worlds</strong><span>Medium · Lori Cai</span></div>
+            <span class="why">What I learned diving into US vs China AI agents.</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section class="cta-strip" style="margin-top: 80px;">
       <div class="container">
         <h2>Want to know more about my work?</h2>
         <p>Check out my resume to see how I bridge product thinking, research, and design across teams.</p>
-        <a href="https://docs.google.com/document/d/1jJbd-7CLWLOGs_47IboQQAgov_4f-OBAzJMYtIVvmaY/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">Check Lori's resume <span class="arrow">→</span></a>
+        <a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" class="btn btn-primary">Check Lori's resume <span class="arrow">→</span></a>
       </div>
     </section>
   </main>
@@ -186,25 +512,24 @@
             <li><a href="/">Home</a></li>
             <li><a href="/contact.html">Contact</a></li>
             <li><a href="/designs.html">Designs</a></li>
-            <li><a href="#">Research</a></li>
+            <li><a href="/research/museum-of-flight.html">Research</a></li>
           </ul>
         </div>
         <div>
           <p class="footer-heading">Projects</p>
           <ul class="footer-list">
             <li><a href="/projects/octopus-ai.html">Edge AI</a></li>
-            <li><a href="#">2C AI</a></li>
-            <li><a href="#">HMI</a></li>
-            <li><a href="#">2C Web</a></li>
-            <li><a href="#">2C App</a></li>
+            <li><a href="/projects/nexa-ai-tools.html">2C AI</a></li>
+            <li><a href="/projects/smart-brook.html">HMI</a></li>
+            <li><a href="/projects/mentorup.html">2C Web</a></li>
+            <li><a href="/projects/espoirer.html">2C App</a></li>
           </ul>
         </div>
         <div>
           <p class="footer-heading">Connect</p>
           <ul class="footer-list">
             <li><a href="mailto:loricai1017@gmail.com">Email</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Resume</a></li>
+            <li><a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Resume</a></li>
           </ul>
         </div>
       </div>

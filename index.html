@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lori Cai · Product Designer</title>
   <meta name="description" content="Product designer turning complexity into clarity through human-centered, AI-native experiences.">
+
+  <!-- Open Graph / social share -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lori Cai · Product Designer">
+  <meta property="og:description" content="Product designer turning complexity into clarity through human-centered, AI-native experiences.">
+  <meta property="og:image" content="/assets/about/lori.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lori Cai · Product Designer">
+  <meta name="twitter:description" content="Product designer turning complexity into clarity through human-centered, AI-native experiences.">
+  <meta name="twitter:image" content="/assets/about/lori.jpg">
+
+  <link rel="icon" href="/assets/about/lori.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
@@ -22,11 +34,12 @@
           <a href="/">Home</a>
           <a href="/about.html">About</a>
           <a href="/designs.html">Designs</a>
-          <a href="#">Research <em style="font-style:italic;font-weight:400;">(updating)</em></a>
+          <a href="/research/museum-of-flight.html">Research</a>
+          <a href="/contact.html">Contact</a>
         </div>
         <div class="nav-right">
-          <a href="https://docs.google.com/document/d/1jJbd-7CLWLOGs_47IboQQAgov_4f-OBAzJMYtIVvmaY/edit?usp=sharing" target="_blank" rel="noopener" class="btn-resume">Check Resume <span class="btn-resume-arrow">→</span></a>
-          <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span></button>
+          <a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" class="btn-resume">Check Resume <span class="btn-resume-arrow">→</span></a>
+          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
         </div>
       </nav>
     </div>
@@ -35,26 +48,48 @@
   <main>
     <section class="hero">
       <div class="container">
-        <p class="eyebrow hero-eyebrow">Product · UX Designer</p>
-        <h1 aria-label="I design AI products that are alive, clear, human centered, and yours.">I design <em>AI products</em> that <span class="rotator"><span class="word">alive</span><span class="word">clear</span><span class="word">human centered</span><span class="word">yours</span></span></h1>
-        <p class="hero-intro">Hi — I'm Lori. I craft intelligent, human-centered experiences built on insight, empathy, and systems thinking.</p>
-        <div class="cta-row">
-          <a href="https://docs.google.com/document/d/1jJbd-7CLWLOGs_47IboQQAgov_4f-OBAzJMYtIVvmaY/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">View Resume <span class="arrow">→</span></a>
-          <a href="/designs.html" class="btn btn-secondary">See Projects <span class="arrow">→</span></a>
-        </div>
+        <div class="hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow hero-eyebrow">Product · UX Designer</p>
+            <h1 aria-label="I design AI products that are alive, clear, human centered, and yours.">I design<br><span class="nowrap"><em>AI products</em> that</span><br><span class="rotator"><span class="word">alive</span><span class="word">clear</span><span class="word">human centered</span><span class="word">yours</span></span></h1>
+            <p class="hero-intro">Hi — I'm Lori. I ship AI products that earn user trust at the edge of model capability — across <span class="ink">On-device AI</span>, autonomous HMI, conversational search, mentorship, and last-mile delivery.</p>
+            <div class="cta-row">
+              <a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" class="btn btn-primary">View Resume <span class="arrow">→</span></a>
+              <a href="/designs.html" class="btn btn-secondary">See Projects <span class="arrow">→</span></a>
+            </div>
 
-        <div class="now-strip">
-          <span class="now-eyebrow">Now</span>
-          <span>Designing for AI agents at <strong>Nexa.AI</strong></span>
-          <span class="sep">·</span>
-          <span>Day <span data-counter-since="2024-04-01">—</span> since shipping <strong>Edge AI Playground</strong></span>
+            <div class="now-strip">
+              <span class="now-eyebrow">Now</span>
+              <span>Founding designer at <strong>Nestify</strong> · <span data-counter-since="2025-12-30">—</span> days</span>
+              <span class="sep">·</span>
+              <span>Built <strong>8+</strong> AI products</span>
+              <span class="sep">·</span>
+              <span>Currently exploring <strong>robotics</strong><svg class="now-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="16" height="11" rx="2"/><path d="M12 9V6"/><circle cx="12" cy="4" r="1.5"/><circle cx="9" cy="14" r="0.8" fill="currentColor"/><circle cx="15" cy="14" r="0.8" fill="currentColor"/></svg></span>
+            </div>
+          </div>
+          <div class="arm-stage" aria-hidden="true">
+            <canvas id="arm-canvas"></canvas>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="banner">
       <div class="container">
-        <div class="banner-art" aria-hidden="true"></div>
+        <header class="banner-head">
+          <p class="eyebrow">Tiny nudge</p>
+          <h2 class="section-title">Scratch a little. <span class="ink">Get a push.</span></h2>
+        </header>
+        <div class="banner-art">
+          <p class="banner-quote" aria-live="polite">—</p>
+          <canvas class="banner-canvas" aria-hidden="true"></canvas>
+          <span class="banner-hint" aria-hidden="true">scratch the surface <span class="banner-hint-mark">✦</span></span>
+          <button type="button" class="banner-clear" aria-label="New nudge">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -63,8 +98,15 @@
         <p class="eyebrow">About</p>
         <h2 class="section-title">Who's behind the work?</h2>
         <div class="about-grid">
-          <div class="profile-img" aria-label="Profile photo placeholder"></div>
-          <div>
+          <figure class="profile-card" aria-label="Lori Cai">
+            <div class="profile-frame">
+              <img src="assets/about/lori.jpg" alt="Portrait of Lori Cai" class="profile-photo" loading="eager" fetchpriority="high" decoding="async">
+              <span class="profile-ring" aria-hidden="true"></span>
+              <span class="profile-glow" aria-hidden="true"></span>
+            </div>
+            <span class="profile-tag" aria-hidden="true">say hi <span class="profile-tag-arrow">↗</span></span>
+          </figure>
+          <div class="bio-stack">
             <p class="bio-lead">I'm Lori Cai — a product designer who blends AI thinking, system design, and empathy to turn complex problems into clear, usable products.</p>
             <ul class="cred-list">
               <li>4 years of experience in UX / Product design — also active as a researcher in AI &amp; Robotics.</li>
@@ -83,31 +125,53 @@
         <h2 class="section-title scramble">A few selected projects.</h2>
         <div class="projects">
           <a href="/projects/octopus-ai.html" class="project" data-cursor="View →">
-            <div class="project-cover" data-tone="sand"></div>
+            <div class="project-cover" data-tone="sand">
+              <img src="/assets/projects/octopus-ai/cover.jpg" alt="Octopus AI · marketing site, documentation, and mobile playground" loading="lazy" decoding="async">
+            </div>
             <span class="project-tag">On-device AI</span>
             <h3>Making On-device AI Instantly Understandable</h3>
             <p>Rebuild product in 2 weeks to align with a new business direction.</p>
+            <p class="project-stats"><strong>Product Hunt #1</strong><span class="sep">·</span><strong>$10M seed</strong><span class="sep">·</span><strong>2-week MVP</strong></p>
             <span class="more">View project <span class="arrow">→</span></span>
           </a>
-          <a href="#" class="project" data-cursor="View →">
-            <div class="project-cover" data-tone="sage"></div>
-            <span class="project-tag">B2C</span>
-            <h3>On-Device AI Product</h3>
-            <p>Reimagine software interaction as natural human language — fast, private, on-device.</p>
+          <a href="/projects/mentorup.html" class="project" data-cursor="View →">
+            <div class="project-cover" data-tone="sage">
+              <img src="/assets/projects/mentorup/cover.jpg" alt="MentorUp · mentor profile screen" loading="lazy" decoding="async">
+            </div>
+            <span class="project-tag">B2C Web · 0→1</span>
+            <h3>MentorUp — Better Mentorship for STEMs</h3>
+            <p>Founding designer for a 0→1 mentorship platform with an AI emotional companion.</p>
+            <p class="project-stats"><strong>0→1 founding designer</strong><span class="sep">·</span><strong>500+ early users</strong></p>
             <span class="more">View project <span class="arrow">→</span></span>
           </a>
-          <a href="#" class="project" data-cursor="View →">
-            <div class="project-cover" data-tone="terracotta"></div>
+          <a href="/projects/smart-brook.html" class="project" data-cursor="View →">
+            <div class="project-cover" data-tone="terracotta">
+              <img src="/assets/projects/smart-brook/cover.jpg" alt="Smart Brook · redefining safety travel in autonomous vehicles" loading="lazy" decoding="async">
+            </div>
             <span class="project-tag">AI + HMI</span>
-            <h3>Autonomous Cab Riding System Design</h3>
-            <p>Redesign in-car AI and interactions to empower the autonomous riding experience.</p>
+            <h3>Smart Brook — Autonomous Cab Riding System</h3>
+            <p>Redesign in-car AI to reveal how the vehicle thinks — built for trust, not just convenience.</p>
+            <p class="project-stats"><strong>Multimodal HMI</strong><span class="sep">·</span><strong>4-person team</strong><span class="sep">·</span><strong>10 interviews · 50+ surveys</strong></p>
             <span class="more">View project <span class="arrow">→</span></span>
           </a>
-          <a href="#" class="project" data-cursor="View →">
-            <div class="project-cover" data-tone="cream"></div>
+          <a href="/projects/espoirer.html" class="project" data-cursor="View →">
+            <div class="project-cover" data-tone="cream">
+              <img src="/assets/projects/espoirer/cover.jpg" alt="Espoirer · last-mile delivery app" loading="lazy" decoding="async">
+            </div>
             <span class="project-tag">B2C Japan</span>
-            <h3>Espoirer Mobile App Design</h3>
-            <p>A 0–1 delivery app streamlining logistics for Espoirer's drivers.</p>
+            <h3>Espoirer — 0→1 Driver App</h3>
+            <p>Last-mile delivery app for Japanese couriers.</p>
+            <p class="project-stats"><strong>92% → 97% delivery success</strong><span class="sep">·</span><strong>2× order volume</strong></p>
+            <span class="more">View project <span class="arrow">→</span></span>
+          </a>
+          <a href="/projects/nexa-ai-tools.html" class="project" data-cursor="View →">
+            <div class="project-cover" data-tone="slate">
+              <img src="/assets/projects/nexa-ai-tools/cover.jpg" alt="Nexa AI Tools · search-first AI discovery" loading="lazy" decoding="async">
+            </div>
+            <span class="project-tag">B2C AI · Web</span>
+            <h3>Nexa — Search-First AI Tool Discovery</h3>
+            <p>Web app helping users clarify intent and confidently navigate AI tool discovery.</p>
+            <p class="project-stats"><strong>Live</strong><span class="sep">·</span><strong>5M+ monthly visits</strong></p>
             <span class="more">View project <span class="arrow">→</span></span>
           </a>
         </div>
@@ -118,14 +182,14 @@
       <div class="container">
         <h2>Want to know more about my work?</h2>
         <p>Check out my resume to see how I bridge product thinking, research, and design across teams.</p>
-        <a href="https://docs.google.com/document/d/1jJbd-7CLWLOGs_47IboQQAgov_4f-OBAzJMYtIVvmaY/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">Check Lori's resume <span class="arrow">→</span></a>
+        <a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" class="btn btn-primary">Check Lori's resume <span class="arrow">→</span></a>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
         <p class="eyebrow">Contact</p>
-        <h2 class="section-title">Feel free to reach out for anything you're curious about.</h2>
+        <h2 class="section-title">Feel free to reach out — for collaborations, questions, or anything you're curious about.</h2>
         <div class="contact-grid">
           <div class="contact-item">
             <p class="label">General enquiries</p>
@@ -151,27 +215,27 @@
           <p class="footer-heading">Pages</p>
           <ul class="footer-list">
             <li><a href="/">Home</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/about.html">About</a></li>
             <li><a href="/designs.html">Designs</a></li>
-            <li><a href="#">Research</a></li>
+            <li><a href="/research/museum-of-flight.html">Research</a></li>
+            <li><a href="/contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
           <p class="footer-heading">Projects</p>
           <ul class="footer-list">
-            <li><a href="/projects/octopus-ai.html">Edge AI</a></li>
-            <li><a href="#">2C AI</a></li>
-            <li><a href="#">HMI</a></li>
-            <li><a href="#">2C Web</a></li>
-            <li><a href="#">2C App</a></li>
+            <li><a href="/projects/octopus-ai.html">On-device AI</a></li>
+            <li><a href="/projects/nexa-ai-tools.html">2C AI</a></li>
+            <li><a href="/projects/smart-brook.html">HMI</a></li>
+            <li><a href="/projects/mentorup.html">2C Web</a></li>
+            <li><a href="/projects/espoirer.html">2C App</a></li>
           </ul>
         </div>
         <div>
           <p class="footer-heading">Connect</p>
           <ul class="footer-list">
             <li><a href="mailto:loricai1017@gmail.com">Email</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Resume</a></li>
+            <li><a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Resume</a></li>
           </ul>
         </div>
       </div>
@@ -185,6 +249,17 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
+
+  <!-- Three.js (ES module via importmap) + robot-arm widget -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="robot-arm.js"></script>
 </body>
 </html>

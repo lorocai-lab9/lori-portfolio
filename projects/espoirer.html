@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espoirer · Lori Cai</title>
+  <meta name="description" content="Case study — Designing a 0→1 driver app to improve last-mile delivery accuracy in Japan. 92% → 97% delivery success.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="cs-page">
+  <header class="site-header">
+    <div class="nav-pill">
+      <nav class="nav">
+        <a href="/" class="logo">
+          <span class="logo-monogram">LC</span>
+          <span class="logo-name">Lori<span class="dot">.</span> Cai</span>
+        </a>
+        <div class="nav-center">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/designs.html">Designs</a>
+          <a href="/research/museum-of-flight.html">Research</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <div class="nav-right">
+          <a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" class="btn-resume">Check Resume <span class="btn-resume-arrow">→</span></a>
+          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. HERO — clean white, 2-col with phone showing the redesigned card -->
+    <section class="esp-hero">
+      <div class="container">
+        <div class="esp-hero-grid">
+          <div class="cs-reveal">
+            <p class="eyebrow">Case Study · Mobile · 0 → 1 · Japan</p>
+            <h1>Designing a driver app for <em>scan, memorize, act.</em></h1>
+            <p class="lede">A 0→1 last-mile delivery app for Espoirer's Japanese couriers — built for drivers who don't read the screen, they <span class="ink">glance</span> at it.</p>
+            <div class="meta-strip">
+              <span><strong>iOS &amp; Android</strong> · launched</span>
+              <span><strong>92% → 97%</strong> delivery success</span>
+              <span><strong>2×</strong> order volume</span>
+            </div>
+          </div>
+
+          <div class="esp-phone cs-reveal cs-reveal-delay-1" aria-label="Espoirer driver app — redesigned card view">
+            <div class="esp-phone-screen">
+              <div class="head"><span>Today · 12 stops</span><span class="badge">8 left</span></div>
+              <div class="esp-card">
+                <div class="num-bg">12</div>
+                <div class="info">
+                  <div class="who">Tanaka-san</div>
+                  <div class="addr">渋谷区 桜丘 4-2-1 · 302</div>
+                </div>
+                <div class="pkg">3 pkg</div>
+              </div>
+              <div class="esp-card">
+                <div class="num-bg">13</div>
+                <div class="info">
+                  <div class="who">Sato Office</div>
+                  <div class="addr">渋谷区 桜丘 4-2-1 · 405</div>
+                </div>
+                <div class="pkg">1 pkg</div>
+              </div>
+              <div class="esp-card">
+                <div class="num-bg">14</div>
+                <div class="info">
+                  <div class="who">Yamamoto-san</div>
+                  <div class="addr">渋谷区 桜丘 4-2-3 · 101</div>
+                </div>
+                <div class="pkg">2 pkg</div>
+              </div>
+              <div class="esp-card">
+                <div class="num-bg">15</div>
+                <div class="info">
+                  <div class="who">Mori Café</div>
+                  <div class="addr">渋谷区 桜丘 4-3-7</div>
+                </div>
+                <div class="pkg">5 pkg</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SCOPE -->
+    <section style="background: #FAFAFA; padding: 0 0 80px;">
+      <div class="container">
+        <div class="cs-scope cs-reveal" style="margin-top: 0;">
+          <h3>Scope of work</h3>
+          <dl class="cs-gantt">
+            <dt>Product</dt>
+            <dd><span class="bar">0→1 driver-facing delivery app <span class="chip">iOS &amp; Android</span></span></dd>
+
+            <dt>Role</dt>
+            <dd><span class="bar shift-1">Design Lead in team <span class="chip">Lead</span></span></dd>
+
+            <dt>Methods</dt>
+            <dd><span class="bar shift-2">Contextual Inquiry · Task Analysis · Card Sorting · Cognitive Walkthrough · MVP Planning <span class="chip">Mixed</span></span></dd>
+
+            <dt>Focus</dt>
+            <dd><span class="bar shift-3">Package list &amp; map views for high-volume delivery <span class="chip">Core flow</span></span></dd>
+
+            <dt>Outcome</dt>
+            <dd><span class="bar shift-4">92% → 97% delivery success · 2× order volume <span class="chip">Shipped</span></span></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CENTERPIECE INSIGHT -->
+    <section class="esp-insight">
+      <div class="container">
+        <p class="eyebrow cs-reveal">Key insight · 8 contextual interviews</p>
+        <blockquote class="cs-reveal cs-reveal-delay-1">
+          Drivers <em>don't read</em> the app — they scan, memorize, and act.
+        </blockquote>
+        <p class="attr cs-reveal cs-reveal-delay-2">Field observation · ride-along with 8 Japanese couriers</p>
+      </div>
+    </section>
+
+    <!-- 4. SIGNATURE 1 · Before / After comparison with annotations -->
+    <section class="esp-comparison">
+      <div class="container">
+        <div class="head">
+          <p class="eyebrow cs-reveal">The redesign</p>
+          <h2 class="cs-reveal cs-reveal-delay-1">From a paper-equivalent screen to a <span class="ink">scannable hierarchy.</span></h2>
+        </div>
+
+        <div class="esp-comparison-grid">
+          <!-- BEFORE side -->
+          <div class="esp-side before cs-reveal">
+            <div class="label">
+              <span class="tag">Before</span>
+              <h4>The original list — paper translated to phone</h4>
+            </div>
+
+            <div class="esp-phone" style="border-color: #ccc;">
+              <div class="esp-phone-screen" style="background: #fff; gap: 4px;">
+                <div class="head" style="margin-bottom: 4px;">
+                  <span style="color: #777;">Deliveries (47)</span>
+                </div>
+                <div class="esp-row-before">12 · 渋谷区桜丘4-2-1-302 · TANAKA · 3pcs · pending · scan to confirm <div class="small">2024-01-15 09:34 · 003-2849-2934</div></div>
+                <div class="esp-row-before">13 · 渋谷区桜丘4-2-1-405 · SATO · 1pcs · pending · scan to confirm <div class="small">2024-01-15 09:34 · 003-2849-2935</div></div>
+                <div class="esp-row-before">14 · 渋谷区桜丘4-2-3-101 · YAMAMOTO · 2pcs · pending · scan <div class="small">2024-01-15 09:34 · 003-2849-2936</div></div>
+                <div class="esp-row-before">15 · 渋谷区桜丘4-3-7 · MORI CAFE · 5pcs · pending · scan <div class="small">2024-01-15 09:34 · 003-2849-2937</div></div>
+                <div class="esp-row-before">16 · 渋谷区桜丘4-3-9-203 · ITO · 1pcs · pending · scan <div class="small">2024-01-15 09:34 · 003-2849-2938</div></div>
+                <div class="esp-row-before">17 · 渋谷区桜丘4-4-2 · NAKAMURA · 4pcs · pending · scan <div class="small">2024-01-15 09:34 · 003-2849-2939</div></div>
+                <div class="esp-row-before">18 · 渋谷区桜丘4-5-1-708 · WATANABE · 2pcs · pending · scan <div class="small">2024-01-15 09:34 · 003-2849-2940</div></div>
+              </div>
+            </div>
+
+            <div class="annotations">
+              <div class="anno"><span class="marker">A</span><div class="text"><strong>No visual hierarchy</strong>Order number, recipient, and address all weighted the same — drivers can't scan in &lt;1 second.</div></div>
+              <div class="anno"><span class="marker">B</span><div class="text"><strong>Wasted density</strong>Timestamps and phone numbers compete for attention but are never used at the door.</div></div>
+              <div class="anno"><span class="marker">C</span><div class="text"><strong>Status as sentence</strong>"Pending · scan to confirm" is text — not a state. Hard to read while moving.</div></div>
+            </div>
+          </div>
+
+          <!-- AFTER side -->
+          <div class="esp-side after cs-reveal cs-reveal-delay-1">
+            <div class="label">
+              <span class="tag">After</span>
+              <h4>Scannable cards built around the driver's eye-path</h4>
+            </div>
+
+            <div class="esp-phone">
+              <div class="esp-phone-screen">
+                <div class="head"><span>Today · 12 stops</span><span class="badge">8 left</span></div>
+                <div class="esp-card">
+                  <div class="num-bg">12</div>
+                  <div class="info"><div class="who">Tanaka-san</div><div class="addr">渋谷区 桜丘 4-2-1 · 302</div></div>
+                  <div class="pkg">3 pkg</div>
+                </div>
+                <div class="esp-card">
+                  <div class="num-bg">13</div>
+                  <div class="info"><div class="who">Sato Office</div><div class="addr">渋谷区 桜丘 4-2-1 · 405</div></div>
+                  <div class="pkg">1 pkg</div>
+                </div>
+                <div class="esp-card">
+                  <div class="num-bg">14</div>
+                  <div class="info"><div class="who">Yamamoto-san</div><div class="addr">渋谷区 桜丘 4-2-3 · 101</div></div>
+                  <div class="pkg">2 pkg</div>
+                </div>
+                <div class="esp-card">
+                  <div class="num-bg">15</div>
+                  <div class="info"><div class="who">Mori Café</div><div class="addr">渋谷区 桜丘 4-3-7</div></div>
+                  <div class="pkg">5 pkg</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="annotations">
+              <div class="anno"><span class="marker">A</span><div class="text"><strong>Order number anchors the scan</strong>Big black tile, top-left of every card. Drivers map order numbers to physical sequence in seconds.</div></div>
+              <div class="anno"><span class="marker">B</span><div class="text"><strong>Recipient + address only</strong>Everything else is one tap away. Cards carry only what's needed at the door.</div></div>
+              <div class="anno"><span class="marker">C</span><div class="text"><strong>Package count as a chip</strong>Color + count, not text. Glanceable while walking.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SIGNATURE 2 · Nested data hierarchy visualization -->
+    <section class="esp-hierarchy-section">
+      <div class="container">
+        <div class="head">
+          <div class="cs-reveal">
+            <p class="eyebrow">Information architecture</p>
+            <h2>The <span class="ink">nested complexity</span> behind each delivery.</h2>
+          </div>
+          <p class="sub cs-reveal cs-reveal-delay-1">A single order isn't an order — it's a chain. Different recipients within the same room, different rooms within the same building, different buildings within the same area, all needing to resolve to one card the driver can act on.</p>
+        </div>
+
+        <div class="esp-hierarchy cs-reveal cs-reveal-delay-2">
+          <div class="esp-h-row">
+            <div class="level"><span class="num">01</span>Area</div>
+            <div class="items"><span class="item is-key">渋谷区 桜丘</span></div>
+          </div>
+          <div class="esp-h-row">
+            <div class="level"><span class="num">02</span>Building</div>
+            <div class="items">
+              <span class="item">4-2-1</span>
+              <span class="item is-key">4-2-3</span>
+              <span class="item">4-3-7</span>
+              <span class="item">4-4-2</span>
+              <span class="item">4-5-1</span>
+            </div>
+          </div>
+          <div class="esp-h-row">
+            <div class="level"><span class="num">03</span>Room</div>
+            <div class="items">
+              <span class="item">101</span>
+              <span class="item is-key">203</span>
+              <span class="item">302</span>
+              <span class="item">405</span>
+              <span class="item">708</span>
+            </div>
+          </div>
+          <div class="esp-h-row">
+            <div class="level"><span class="num">04</span>Recipient</div>
+            <div class="items">
+              <span class="item">Tanaka-san</span>
+              <span class="item">Sato Office</span>
+              <span class="item is-key">Yamamoto-san</span>
+              <span class="item">Mori Café</span>
+            </div>
+          </div>
+          <div class="esp-h-row">
+            <div class="level"><span class="num">05</span>Package</div>
+            <div class="items">
+              <span class="item">PKG-001</span>
+              <span class="item is-key">PKG-002</span>
+              <span class="item is-key">PKG-003</span>
+              <span class="item">PKG-004</span>
+              <span class="item">PKG-005</span>
+              <span class="item">+ 18 more</span>
+            </div>
+          </div>
+        </div>
+        <p class="esp-h-foot">Highlighted nodes show one driver's actual delivery to <strong>Yamamoto-san at building 4-2-3, room 203</strong> — two of the five packages routed to the same physical address.</p>
+      </div>
+    </section>
+
+    <!-- 5b. REAL SCREENS GALLERY -->
+    <section class="esp-gallery">
+      <div class="container">
+        <div class="head">
+          <p class="eyebrow cs-reveal">In production</p>
+          <h2 class="cs-reveal cs-reveal-delay-1">Screens drivers actually use, every shift.</h2>
+        </div>
+
+        <div class="esp-gallery-grid">
+          <figure class="cs-reveal">
+            <img src="/assets/projects/espoirer/Group_1000004620.png" alt="Espoirer · main delivery list" loading="lazy">
+            <figcaption>Delivery list · main</figcaption>
+          </figure>
+          <figure class="cs-reveal cs-reveal-delay-1">
+            <img src="/assets/projects/espoirer/Route_planning_after_scanning.png" alt="Espoirer · route planning after scanning" loading="lazy">
+            <figcaption>Route planning</figcaption>
+          </figure>
+          <figure class="cs-reveal cs-reveal-delay-2">
+            <img src="/assets/projects/espoirer/image_402.png" alt="Espoirer · driver app screen" loading="lazy">
+            <figcaption>Map view</figcaption>
+          </figure>
+          <figure class="cs-reveal cs-reveal-delay-3">
+            <img src="/assets/projects/espoirer/Library_1.png" alt="Espoirer · library / settings" loading="lazy">
+            <figcaption>Library &amp; settings</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. LOCALIZATION -->
+    <section class="esp-loc">
+      <div class="container">
+        <div class="esp-loc-grid">
+          <div class="cs-reveal">
+            <p class="eyebrow">Localization</p>
+            <h2>Built around <span class="ink">how Japanese addresses actually work.</span></h2>
+            <p>Japan's addresses go area → block → building → room — the opposite hierarchy from Western "house number, street". Forcing Western patterns onto a Japanese delivery list breaks every driver's mental model.</p>
+            <p>Address rendering, typography balancing kanji + Latin glyphs, and a card system that treats the building as the primary anchor — not the street.</p>
+          </div>
+
+          <div class="esp-loc-cards cs-reveal cs-reveal-delay-1">
+            <div class="esp-loc-card">
+              <p class="label">Western pattern</p>
+              <p class="addr">123 Main Street, Apt 4B<br>Brooklyn, NY 11201</p>
+            </div>
+            <div class="esp-loc-card" style="background: var(--cs-accent-soft); border-color: var(--cs-accent);">
+              <p class="label" style="color: var(--text);">Japanese pattern · used by Espoirer</p>
+              <p class="addr">渋谷区 桜丘 4-2-3 · 203<br><span style="font-size: 13px; color: var(--muted);">Shibuya-ku · Sakuragaoka · Block 4-2-3 · Room 203</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. RESULTS -->
+    <section class="esp-results">
+      <div class="container">
+        <p class="eyebrow cs-reveal">Results</p>
+        <h2 class="cs-reveal cs-reveal-delay-1">Measurable impact on <span class="ink">daily operations and growth.</span></h2>
+
+        <div class="esp-results-row">
+          <div class="esp-result cs-reveal">
+            <span class="num">+5<em>%</em></span>
+            <p class="label">Delivery success<br>92% → 97%</p>
+          </div>
+          <div class="esp-result cs-reveal cs-reveal-delay-1">
+            <span class="num">2×<em>+</em></span>
+            <p class="label">Order volume<br>more than doubled</p>
+          </div>
+          <div class="esp-result cs-reveal cs-reveal-delay-2">
+            <span class="num">102<em></em></span>
+            <p class="label">Steps in the complete<br>end-to-end user flow</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. REFLECTION -->
+    <section class="esp-reflection">
+      <div class="container">
+        <div style="max-width: 760px; margin: 0 auto;">
+          <p class="cs-eyebrow cs-reveal" style="text-align:center;">Takeaways</p>
+          <h2 class="cs-display cs-reveal cs-reveal-delay-1" style="font-size: clamp(30px, 4.4vw, 50px); margin: 18px 0 36px; text-align:center;">2B internal logic is a <span class="ink">different shape of complexity.</span></h2>
+          <p class="cs-reveal cs-reveal-delay-2" style="font-size: 17px; line-height: 1.7; color: var(--muted); margin-bottom: 20px;">"The internal business logic of 2B products is very complex, with many intersection points. The hard part is ensuring data and process correctness end-to-end — even when each team is responsible for a different feature set."</p>
+          <p class="cs-reveal cs-reveal-delay-3" style="font-size: 17px; line-height: 1.7; color: var(--muted); margin-bottom: 20px;"><em>Example —</em> when scanning packages before delivery, if the driver scans several in a certain range in advance, location accuracy drops and an error fires. Should the system judge the error after the delivery method, or give the driver authority to override? Decisions like this don't sit in any wireframe.</p>
+          <p class="cs-reveal cs-reveal-delay-3" style="font-size: 17px; line-height: 1.7; color: var(--muted);">"To design a 0→1 product, you also design the seams between feature sets owned by other groups. The synchronous design considers smooth flow of connection — not just your own surface."</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container">
+        <h2>See more projects.</h2>
+        <p>Each one a different shape of ambiguity.</p>
+        <a href="/designs.html" class="btn btn-primary">Back to all projects <span class="arrow">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo">LORI<span class="dot">.</span></a>
+          <p>Product designer turning complexity into clarity through human-centered, AI-native experiences.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Pages</p>
+          <ul class="footer-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/designs.html">Designs</a></li>
+            <li><a href="/research/museum-of-flight.html">Research</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Projects</p>
+          <ul class="footer-list">
+            <li><a href="/projects/octopus-ai.html">Edge AI</a></li>
+            <li><a href="/projects/nexa-ai-tools.html">2C AI</a></li>
+            <li><a href="/projects/smart-brook.html">HMI</a></li>
+            <li><a href="/projects/mentorup.html">2C Web</a></li>
+            <li><a href="/projects/espoirer.html">2C App</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Connect</p>
+          <ul class="footer-list">
+            <li><a href="mailto:loricai1017@gmail.com">Email</a></li>
+            <li><a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Resume</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="keywords">
+        <span>Human</span><span>Intent</span><span>Strategy</span><span>Focus</span><span>Scalable</span><span>Impact</span><span>Clear</span><span>Value</span><span>Efficient</span><span>Solving</span><span>Useful</span><span>Longterm</span>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Lori Cai. All rights reserved.</span>
+        <span>UW · Seattle, WA</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

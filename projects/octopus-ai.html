@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edge AI Playground · Lori Cai</title>
-  <meta name="description" content="Case study — making on-device AI instantly understandable through a focused playground experience.">
+  <title>Octopus AI Model · Lori Cai</title>
+  <meta name="description" content="Case study — Making on-device AI instantly understandable through a focused playground experience. Product Hunt #1, $10M seed.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body class="cs-page">
+<body class="cs-page theme-octo">
   <header class="site-header">
     <div class="nav-pill">
       <nav class="nav">
@@ -22,11 +22,12 @@
           <a href="/">Home</a>
           <a href="/about.html">About</a>
           <a href="/designs.html">Designs</a>
-          <a href="#">Research <em style="font-style:italic;font-weight:400;">(updating)</em></a>
+          <a href="/research/museum-of-flight.html">Research</a>
+          <a href="/contact.html">Contact</a>
         </div>
         <div class="nav-right">
-          <a href="https://docs.google.com/document/d/1jJbd-7CLWLOGs_47IboQQAgov_4f-OBAzJMYtIVvmaY/edit?usp=sharing" target="_blank" rel="noopener" class="btn-resume">Check Resume <span class="btn-resume-arrow">→</span></a>
-          <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span></button>
+          <a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" class="btn-resume">Check Resume <span class="btn-resume-arrow">→</span></a>
+          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
         </div>
       </nav>
     </div>
@@ -34,204 +35,446 @@
 
   <main>
 
-    <!-- 1. HERO — sunset gradient -->
-    <section class="cs-hero">
-      <div class="cs-hero-inner cs-reveal">
-        <span class="cs-hero-eyebrow">Case Study · 2024</span>
-        <h1>Edge AI Playground</h1>
+    <!-- Editorial intro -->
+    <section class="octo-editorial-section">
+      <div class="container">
+        <div class="octo-hero-meta cs-reveal">
+          <span class="meta-left"><span class="dot-accent"></span>Case study · 2024</span>
+          <a class="meta-right" href="https://nexa.ai/" target="_blank" rel="noopener">NEXA.AI <span class="arrow">↗</span></a>
+        </div>
+
+        <h1 class="octo-hero-title cs-reveal cs-reveal-delay-1">Making On-device AI <em>Instantly Understandable</em> and Impressive.</h1>
+
+        <div class="octo-hero-body">
+          <p class="octo-hero-lead cs-reveal cs-reveal-delay-2">
+            Early 2024 — NEXA.AI had just shipped a breakthrough on-device model, then pivoted from a consumer app to a B2B platform. I joined as the sole designer, with one job: turn a raw technical achievement into a product enterprises could understand in seconds.
+          </p>
+          <p class="octo-hero-aside cs-reveal cs-reveal-delay-3">
+            <span class="aside-rule"></span>
+            This wasn't a polish project. It was rapid ideation, structuring ambiguity, and shipping a product that didn't yet exist — starting from a one-sentence PRD and a two-week runway.
+          </p>
+        </div>
+
+        <dl class="octo-hero-stats cs-reveal cs-reveal-delay-3">
+          <div>
+            <dt>Product</dt>
+            <dd>Octopus <span class="mute">· Edge AI</span></dd>
+          </div>
+          <div>
+            <dt>Timeline</dt>
+            <dd>2 <span class="mute">weeks</span></dd>
+          </div>
+          <div>
+            <dt>PRD</dt>
+            <dd>1 <span class="mute">sentence</span></dd>
+          </div>
+          <div>
+            <dt>Role</dt>
+            <dd>Sole <span class="mute">designer</span></dd>
+          </div>
+        </dl>
       </div>
     </section>
 
-    <!-- 2. PROJECT INTRO — cream with ghost watermark + mockup + scope -->
-    <section class="cs-stage">
-      <div class="cs-watermark" aria-hidden="true">Edge AI</div>
+    <!-- Final design showcase -->
+    <section class="octo-overview">
       <div class="container">
-        <div class="cs-mockup cs-mockup-wide cs-reveal" aria-label="Hub Playground hero placeholder"></div>
+        <p class="eyebrow cs-reveal">Final design</p>
+        <h2 class="cs-reveal cs-reveal-delay-1">A Playground users can experience <span class="ink">in seconds.</span></h2>
+        <p class="sub cs-reveal cs-reveal-delay-2">A complex on-device model, reframed as a hands-on Playground — built to drive trial starts, activation, and a first <em>"oh, it really is that fast"</em> moment.</p>
 
+        <div class="octo-tablets cs-reveal cs-reveal-delay-2">
+          <div class="tablet t1"><img src="/assets/projects/octopus-ai/Hub-Playground-2.png" alt="Octopus AI · live playground" loading="lazy"></div>
+          <div class="tablet t2"><img src="/assets/projects/octopus-ai/landing_page.png" alt="Octopus AI · marketing landing page" loading="lazy"></div>
+          <div class="tablet t3"><img src="/assets/projects/octopus-ai/Doc-Overview.png" alt="Octopus AI · developer documentation" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information / scope -->
+    <section class="octo-info-section">
+      <div class="container">
         <div class="cs-scope cs-reveal">
-          <h3>Scope of work</h3>
+          <h3>Information</h3>
           <dl class="cs-gantt">
             <dt>Product</dt>
             <dd><span class="bar">Edge AI Model Playground <span class="chip">Web App</span></span></dd>
 
-            <dt>Role</dt>
-            <dd><span class="bar shift-1">UX Designer &amp; Researcher <span class="chip">Sole</span></span></dd>
+            <dt>Platform</dt>
+            <dd><span class="bar shift-1">Web App <span class="chip">Desktop · Mobile · Tablet</span></span></dd>
 
-            <dt>Timeline</dt>
-            <dd><span class="bar shift-2">MVP delivery <span class="chip">2 weeks</span></span></dd>
+            <dt>My Role</dt>
+            <dd><span class="bar shift-2">UX Designer &amp; Researcher <span class="chip">Sole under leadership</span></span></dd>
 
             <dt>Methods</dt>
-            <dd><span class="bar shift-3">Personas · Journey Maps · Competitive · Content Strategy <span class="chip">Mixed</span></span></dd>
+            <dd><span class="bar shift-3">MVP Design · Personas · Competitive Analysis · Journey Maps · Content Strategy Map <span class="chip">Mixed</span></span></dd>
 
-            <dt>Outcome</dt>
-            <dd><span class="bar shift-4">Product Hunt #1 of the day <span class="chip">$10M seed</span></span></dd>
+            <dt>Visit</dt>
+            <dd><span class="bar shift-4"><a href="https://nexa.ai/" target="_blank" rel="noopener">NEXA.AI ↗</a> <span class="chip">Live</span></span></dd>
           </dl>
         </div>
       </div>
     </section>
 
-    <!-- 3. PROBLEM STATEMENT — dark mode -->
+    <!-- 01 — Define the problem -->
     <section class="cs-dark">
       <div class="container">
-        <p class="cs-eyebrow cs-reveal">Problem Statement</p>
-        <h2 class="cs-reveal cs-reveal-delay-1">Strong differentiators. Classic adoption barriers.</h2>
-        <p class="cs-sub cs-reveal cs-reveal-delay-2">The model had real edges — speed, privacy, on-device processing — but suffered the standard AI cold-start problem: users couldn't internalize the value fast enough. Drop-off happened before activation.</p>
+        <p class="cs-eyebrow cs-reveal">01 — Define the problem</p>
+        <h2 class="cs-reveal cs-reveal-delay-1">The model had real edges. The product had a classic <span class="ink">AI adoption problem.</span></h2>
+        <p class="cs-sub cs-reveal cs-reveal-delay-2">Fast, private, truly on-device — the technical case was strong. The adoption case wasn't. Users stalled in browsing and signup, dropping off before a single inference. Without a "first successful run," speed and privacy stayed abstract.</p>
+        <p class="cs-sub cs-sub-stack cs-reveal cs-reveal-delay-2">So the real challenge wasn't adding more features. It was:</p>
 
-        <div class="cs-stats">
-          <article class="cs-stat-card cs-reveal cs-reveal-delay-1">
-            <p class="label">Insight 01</p>
-            <h4>Engineers don't read papers — they open the playground.</h4>
-            <p class="big-number">3<sup>/5</sup></p>
-            <p class="stat-foot">Interviewees said this directly</p>
-          </article>
-          <article class="cs-stat-card cs-reveal cs-reveal-delay-2">
-            <p class="label">Insight 02</p>
-            <h4>Two-week MVP. One sentence in the PRD.</h4>
-            <p class="big-number">1<sup>line</sup></p>
-            <p class="stat-foot">Defined the whole product brief</p>
-          </article>
-          <article class="cs-stat-card cs-reveal cs-reveal-delay-3">
-            <p class="label">Insight 03</p>
-            <h4>Activation lost before the value showed up.</h4>
-            <p class="big-number">≤60<sup>s</sup></p>
-            <p class="stat-foot">Window before users dropped off</p>
-          </article>
-        </div>
-
-        <p class="cs-stats-foot cs-reveal">
-          A collection of insights gathered from
-          <strong>5 interviews with ML engineers familiar with model evaluation</strong>
-        </p>
+        <h2 class="cs-display-question cs-reveal cs-reveal-delay-3">How might we help users <span class="ink">experience the value</span> in the shortest time with the least friction?</h2>
       </div>
     </section>
 
-    <!-- 4. SOLUTION CARD — cream rounded -->
-    <section style="background: var(--cs-cream); padding: 80px 0;">
+    <!-- 02 — Understanding the model -->
+    <section class="octo-section">
       <div class="container">
-        <div class="cs-card cs-reveal">
+        <div class="head cs-reveal">
+          <span class="num">02 — Understanding the model</span>
+          <h2>Before any feature work, <span class="ink">I needed clarity</span> on what made the model worth designing for.</h2>
+          <p class="lead">I sat with the ML team to translate early technical conversations into a product direction. Four characteristics anchored everything that followed:</p>
+        </div>
+
+        <div class="octo-strengths">
+          <article class="octo-strength cs-reveal">
+            <span class="num">01</span>
+            <h4>Low-latency inference</h4>
+            <p>Responses in milliseconds, no round-trip to the cloud.</p>
+          </article>
+          <article class="octo-strength cs-reveal cs-reveal-delay-1">
+            <span class="num">02</span>
+            <h4>On-device privacy</h4>
+            <p>Data never leaves the user's machine — a real story for regulated industries.</p>
+          </article>
+          <article class="octo-strength cs-reveal cs-reveal-delay-2">
+            <span class="num">03</span>
+            <h4>Multimodal by design</h4>
+            <p>Text, image, and structured input handled by a single runtime.</p>
+          </article>
+          <article class="octo-strength cs-reveal cs-reveal-delay-3">
+            <span class="num">04</span>
+            <h4>Small &amp; efficient</h4>
+            <p>Sized to deploy on laptops, phones, and embedded devices.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 — Understanding the market -->
+    <section class="octo-section octo-section-alt">
+      <div class="container">
+        <div class="head cs-reveal">
+          <span class="num">03 — Understanding the market</span>
+          <h2>Three trends shaped <span class="ink">where our model naturally fit.</span></h2>
+          <p class="lead">In parallel, I mapped how enterprises were actually adopting AI in 2024 — and where the gravity was already moving.</p>
+        </div>
+
+        <div class="octo-trends">
+          <article class="octo-trend cs-reveal">
+            <span class="num">01</span>
+            <h4>Smaller, efficient models</h4>
+            <p>Rising cloud costs and hardware shortages pushed enterprises toward leaner, cheaper-to-run models.</p>
+          </article>
+          <article class="octo-trend cs-reveal cs-reveal-delay-1">
+            <span class="num">02</span>
+            <h4>Multimodal AI</h4>
+            <p>Demand was shifting from text-only to systems that process text, image, and structured data together.</p>
+          </article>
+          <article class="octo-trend cs-reveal cs-reveal-delay-2">
+            <span class="num">03</span>
+            <h4>Stronger NLP</h4>
+            <p>Models were getting noticeably better at understanding intent and generating natural-feeling language.</p>
+          </article>
+        </div>
+
+        <p class="octo-trends-bridge cs-reveal cs-reveal-delay-3">The opportunity was real — but more importantly, the model's four strengths mapped almost one-to-one onto where the market was already heading. That alignment became the north star for every design decision.</p>
+      </div>
+    </section>
+
+    <!-- 04 — User insight -->
+    <section class="octo-insight">
+      <div class="container">
+        <p class="label cs-reveal">04 — User insight</p>
+        <p class="stat cs-reveal cs-reveal-delay-1">3<sup>/5</sup></p>
+        <blockquote class="cs-reveal cs-reveal-delay-2">interviewees said <em>"the fastest way to understand a new model is simply to try it."</em></blockquote>
+        <p class="attr cs-reveal cs-reveal-delay-3">Recruited from Hugging Face &amp; LinkedIn · engineers familiar with model evaluation</p>
+        <p class="octo-insight-bridge cs-reveal cs-reveal-delay-3">That settled the direction. Instead of bolting a chatbot onto an old flow, we'd make the <em>experience itself</em> the message — a focused Playground where users run the model in their first session, with minimal friction.</p>
+      </div>
+    </section>
+
+    <!-- 05 — MVP design -->
+    <section class="octo-flow-section">
+      <div class="container">
+        <div class="head cs-reveal">
+          <span class="num">05 — MVP design</span>
+          <h2>A focused model / API Playground.</h2>
+          <p class="lead">Two weeks, one sentence of PRD. The question I held the whole sprint: <em>what's the simplest experience that lets the model prove itself?</em> The answer was interaction-first — let users feel speed, privacy, and local inference inside the first minute, then layer everything else around that moment.</p>
+        </div>
+
+        <p class="octo-flow-note cs-reveal">Not polished, not complete — built to land the value, not the brand. Four steps to a first successful run, plus the supporting surfaces enterprises actually pay through.</p>
+
+        <div class="octo-mvp-flow">
+          <article class="octo-mvp-step cs-reveal">
+            <img src="/assets/projects/octopus-ai/Playground_Change_model.png" alt="Octopus AI · pick an industry" loading="lazy">
+            <div class="octo-mvp-step-body">
+              <span class="num">Step 01</span>
+              <h5>Pick an industry</h5>
+            </div>
+          </article>
+          <article class="octo-mvp-step cs-reveal cs-reveal-delay-1">
+            <img src="/assets/projects/octopus-ai/Hub-Playground-1.png" alt="Octopus AI · browse the playground" loading="lazy">
+            <div class="octo-mvp-step-body">
+              <span class="num">Step 02</span>
+              <h5>Browse the main playground</h5>
+            </div>
+          </article>
+          <article class="octo-mvp-step cs-reveal cs-reveal-delay-2">
+            <img src="/assets/projects/octopus-ai/Playground_Try_it_out_2.png" alt="Octopus AI · explore and copy a preset prompt" loading="lazy">
+            <div class="octo-mvp-step-body">
+              <span class="num">Step 03</span>
+              <h5>Explore and copy a preset prompt</h5>
+            </div>
+          </article>
+          <article class="octo-mvp-step cs-reveal cs-reveal-delay-3">
+            <img src="/assets/projects/octopus-ai/Playground_Description-1.png" alt="Octopus AI · check the model advantages" loading="lazy">
+            <div class="octo-mvp-step-body">
+              <span class="num">Step 04</span>
+              <h5>Check the model advantages</h5>
+            </div>
+          </article>
+        </div>
+
+        <div class="octo-mvp-extras">
+          <article class="octo-mvp-extra cs-reveal">
+            <img src="/assets/projects/octopus-ai/Billing-1.png" alt="Octopus AI · billing information management" loading="lazy">
+            <div class="octo-mvp-extra-body">
+              <span class="num">Supporting · 01</span>
+              <h5>Billing &amp; account management</h5>
+            </div>
+          </article>
+          <article class="octo-mvp-extra cs-reveal cs-reveal-delay-1">
+            <img src="/assets/projects/octopus-ai/Pricing.png" alt="Octopus AI · pricing plan for API calls" loading="lazy">
+            <div class="octo-mvp-extra-body">
+              <span class="num">Supporting · 02</span>
+              <h5>Pricing plans for API calls</h5>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 — Design iteration -->
+    <section class="octo-iteration">
+      <div class="container">
+        <span class="num cs-reveal">06 — Design iteration</span>
+        <h2 class="cs-reveal cs-reveal-delay-1">Then post-launch, we hit a <em>substantial disconnect</em> between what we were saying and what users were hearing.</h2>
+        <p class="cs-reveal cs-reveal-delay-2">Engagement was thin. API trials were lower than we modeled. Conversion to paid — the actions that actually fund a B2B platform — barely moved. The MVP had shipped, but the value wasn't landing.</p>
+        <p class="octo-iteration-stack cs-reveal cs-reveal-delay-3">So I pulled the personas back open and split our primary audience into two — because the people stalling weren't a single user. They were <strong>non-technical buyers</strong> (marketing leads, designers, cross-functional staff) and <strong>technical evaluators</strong> (engineers, ML practitioners) reading the same page in completely different ways.</p>
+      </div>
+    </section>
+
+    <!-- 07 — Personas -->
+    <section class="octo-section">
+      <div class="container">
+        <div class="head cs-reveal">
+          <span class="num">07 — Personas</span>
+          <h2>Two audiences. <span class="ink">Two on-ramps.</span></h2>
+        </div>
+
+        <div class="octo-personas">
+          <article class="octo-persona cs-reveal">
+            <div class="octo-persona-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="8 6 3 12 8 18"></polyline>
+                <polyline points="16 6 21 12 16 18"></polyline>
+              </svg>
+            </div>
+            <span class="label">Persona 01</span>
+            <h4>Tech-savvy AI professional</h4>
+            <p>Engineers and ML practitioners. They evaluate models by running them. They want docs depth, code-level access, and a clear path from <code>pip install</code> to first inference — not marketing copy.</p>
+            <ul class="octo-persona-meta">
+              <li><strong>Wants</strong> · code snippets, latency numbers, model specs</li>
+              <li><strong>Stalls on</strong> · vague claims, hidden technical detail</li>
+            </ul>
+          </article>
+          <article class="octo-persona cs-reveal cs-reveal-delay-1">
+            <div class="octo-persona-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18h6"></path>
+                <path d="M10 22h4"></path>
+                <path d="M12 2a7 7 0 0 0-4 12.7c.9.8 1.5 1.8 1.5 2.9V18h5v-.4c0-1.1.6-2.1 1.5-2.9A7 7 0 0 0 12 2z"></path>
+              </svg>
+            </div>
+            <span class="label">Persona 02</span>
+            <h4>Practical AI newcomer</h4>
+            <p>Business, marketing, and cross-functional staff exploring AI for their team. They need to understand the value without technical context. Plain language, visual demos, and industry-relevant examples land harder than docs.</p>
+            <ul class="octo-persona-meta">
+              <li><strong>Wants</strong> · "what could this do for my work?"</li>
+              <li><strong>Stalls on</strong> · jargon, abstract benchmarks</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="octo-personas-question cs-reveal cs-reveal-delay-2">
+          <h3>How might we turn first‑look curiosity into real adoption — for both <span class="ink">business buyers</span> and <span class="ink">hands‑on developers</span>?</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 — Design solutions -->
+    <section class="octo-solutions-block">
+      <div class="container">
+        <div class="head cs-reveal">
+          <span class="num">08 — Design solutions</span>
+          <h2>Different audiences, <span class="ink">different on-ramps.</span></h2>
+          <p class="lead">Two persona tracks, two parallel design responses — each tuned to how that audience actually evaluates a new AI product.</p>
+        </div>
+
+        <!-- Bridge strip — gives the eye an anchor before the tall landing-page screenshot -->
+        <aside class="octo-solution-bridge cs-reveal">
+          <span class="bridge-marker">Track 01</span>
+          <p>The loud problem was the <strong>front door</strong>. A marketing lead had to grasp the value of an on-device model in roughly fifteen seconds — before they ever touched the Playground, opened a doc, or saw the speed and privacy proof for themselves. So the landing page had to do that work alone, top to bottom.</p>
+        </aside>
+
+        <div class="octo-solution octo-solution-sticky cs-reveal">
           <div>
-            <span class="cs-eyebrow">Our Solution</span>
-            <h2>A focused Playground that lets the model's speed, privacy, and locality speak through interaction — not slides.</h2>
-          </div>
-          <div class="cs-card-side">
-            A web experience designed to turn first-look curiosity into real adoption — for both business leaders and hands-on developers.
-          </div>
-        </div>
-
-        <div class="cs-card-grid">
-          <div class="cell-blob cs-reveal cs-reveal-delay-1"></div>
-          <div class="cell-mockup cs-reveal cs-reveal-delay-2">device mockup</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. TILTED CARDS — design phases / model strengths -->
-    <section style="background: var(--cs-cream);">
-      <div class="container">
-        <p class="cs-eyebrow cs-reveal" style="text-align:center;">The Process</p>
-        <h2 class="cs-display cs-reveal" style="font-size:clamp(34px,4.5vw,56px); text-align:center; margin:18px 0 0; max-width:none;">Four phases, each a study in trade-offs.</h2>
-
-        <div class="cs-tilted">
-          <div class="ttile cs-reveal cs-reveal-delay-1">
-            <h4>Research</h4>
+            <span class="label">For non-technical users</span>
+            <h3>Rebuild what they see first — make the value visible without the jargon.</h3>
+            <p>I tore down the landing page IA and rebuilt it around plain-language value, refined visual hierarchy, and a story a marketing lead could follow without reading any docs.</p>
             <ul>
-              <li>User Interviews</li>
-              <li>Data Analysis</li>
-              <li>Problem Framing</li>
-              <li>Personas</li>
+              <li>New information architecture for the landing page</li>
+              <li>Plain-language value props, refined visual hierarchy</li>
+              <li>Industry-specific story patterns layered onto the same surface</li>
             </ul>
           </div>
-          <div class="ttile cs-reveal cs-reveal-delay-2">
-            <h4>Concept Design</h4>
+          <div class="octo-solution-image">
+            <img src="/assets/projects/octopus-ai/landing_page.png" alt="Octopus AI · redesigned landing page for non-technical users" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Video prototypes — 4 imagined "agent" use cases, 2024 -->
+        <div class="octo-videos cs-reveal">
+          <div class="octo-videos-intro">
+            <span class="label">Video prototypes · 2024</span>
+            <h3>Imagining <em>"agents"</em> before the word existed.</h3>
+            <p>The landing redesign was the deliverable. The video prototypes were the <em>story</em>. In 2024 — before "AI agent" became a category — I picked four industries already brushing up against on-device intelligence and storyboarded what a user's day could look like when the model is simply <em>there</em>: anticipating intent, acting on context, working ahead of the prompt. These ended up being the most-cited artifact in our enterprise conversations.</p>
+          </div>
+
+          <div class="octo-video-rail-hint" aria-hidden="true">
+            <span>Scroll</span>
+            <span class="arrow">→</span>
+          </div>
+
+          <div class="octo-video-rail">
+            <div class="octo-video-rail-track">
+              <article class="octo-video">
+                <div class="octo-video-frame">
+                  <iframe src="https://www.youtube.com/embed/_FR7qaEncnk?rel=0" title="Octopus AI · Travel agent visualization" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="octo-video-cap">
+                  <span class="industry">01 · Travel</span>
+                  <h4>A trip planned around the traveler.</h4>
+                </div>
+              </article>
+
+              <article class="octo-video">
+                <div class="octo-video-frame">
+                  <iframe src="https://www.youtube.com/embed/qeBuPHQzraA?rel=0" title="Octopus AI · Shopping agent visualization" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="octo-video-cap">
+                  <span class="industry">02 · Shopping</span>
+                  <h4>Discovery that anticipates intent.</h4>
+                </div>
+              </article>
+
+              <article class="octo-video">
+                <div class="octo-video-frame">
+                  <iframe src="https://www.youtube.com/embed/Ole79rhl_uE?rel=0" title="Octopus AI · Video Conference agent visualization" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="octo-video-cap">
+                  <span class="industry">03 · Video conference</span>
+                  <h4>Meetings the model has already prepared for.</h4>
+                </div>
+              </article>
+
+              <article class="octo-video">
+                <div class="octo-video-frame">
+                  <iframe src="https://www.youtube.com/embed/Z9aUWcoFOlc?rel=0" title="Octopus AI · Streaming agent visualization" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="octo-video-cap">
+                  <span class="industry">04 · Streaming</span>
+                  <h4>A library that curates around your context.</h4>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bridge strip — switches from non-technical to technical track -->
+        <aside class="octo-solution-bridge octo-solution-bridge-switch cs-reveal">
+          <span class="bridge-marker">Track 02</span>
+          <p>The quiet problem was the <strong>back door</strong>. Engineers don't read marketing — they evaluate by running. So the second track moved the value proof onto their surfaces: code, docs, and a Quick Start that gets them to a first inference inside a few minutes.</p>
+        </aside>
+
+        <div class="octo-solution flip cs-reveal">
+          <div class="octo-solution-image">
+            <img src="/assets/projects/octopus-ai/Doc-Overview.png" alt="Octopus AI · developer documentation overview" loading="lazy">
+          </div>
+          <div>
+            <span class="label">For technical users</span>
+            <h3>Meet them where they already evaluate — code, docs, and a fast first run.</h3>
+            <p>For engineers, the marketing page is the wrong surface. We added a full documentation layer and rewrote the playground logic so model selection, parameters, and execution mirrored the mental model they already use.</p>
             <ul>
-              <li>Benchmarking</li>
-              <li>Site Map</li>
-              <li>User Flow</li>
+              <li>Comprehensive documentation page (overview, API, examples)</li>
+              <li>Revised playground logic for model selection &amp; execution</li>
+              <li>Code-first defaults aligned with developer expectations</li>
             </ul>
           </div>
-          <div class="ttile cs-reveal cs-reveal-delay-3">
-            <h4>Ideation</h4>
-            <ul>
-              <li>Design Principles</li>
-              <li>Functionalities</li>
-              <li>Lo-fi Wireframes</li>
-            </ul>
+        </div>
+
+        <div class="octo-solution octo-solution-last cs-reveal">
+          <div>
+            <span class="label">Documentation deep-dive</span>
+            <h3>Quick Start for the first inference. Reference for everything after.</h3>
+            <p>Two reading modes on one surface: a scannable Quick Start so a developer is running the model within minutes, and a deeper reference for the ongoing integration work that follows.</p>
           </div>
-          <div class="ttile cs-reveal cs-reveal-delay-3">
-            <h4>Solution</h4>
-            <ul>
-              <li>Prototyping</li>
-              <li>Usability Testing</li>
-              <li>UI Design</li>
-            </ul>
+          <div class="octo-solution-image">
+            <img src="/assets/projects/octopus-ai/Doc-Quick_Start.png" alt="Octopus AI · documentation quick start" loading="lazy">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. FEATURE — two-column with eyebrow + headline + mockup -->
-    <section style="background: var(--cs-cream);">
+    <!-- 09 — Responsive design -->
+    <section class="octo-responsive">
       <div class="container">
-        <div class="cs-feature">
-          <div class="cs-feature-text cs-reveal">
-            <span class="cs-eyebrow">MVP Flow</span>
-            <h2>The simplest experience that reveals the model's edge.</h2>
-            <p>Pick an industry → browse the playground → copy a preset prompt → see the model advantages. Four steps, deliberately undone — every layer of polish would have eaten the deadline.</p>
-          </div>
-          <div class="cs-mockup cs-reveal cs-reveal-delay-1" aria-label="MVP flow mockup placeholder"></div>
+        <div class="head">
+          <span class="num cs-reveal">09 — Responsive design</span>
+          <h2 class="cs-reveal cs-reveal-delay-1">Laptop, tablet, mobile — every device is a <span class="ink">deployment target.</span></h2>
+          <p class="cs-reveal cs-reveal-delay-2">Edge AI's whole point is that the model runs anywhere. The product surface had to match — so the Playground, landing page, and docs were designed responsively from the start, not retrofitted later.</p>
+        </div>
+
+        <div class="octo-responsive-grid">
+          <figure class="octo-responsive-figure cs-reveal">
+            <img src="/assets/projects/octopus-ai/Frame_2087324966.png" alt="Octopus AI · responsive layout across tablet and mobile breakpoints" loading="lazy">
+            <figcaption>Playground &amp; landing page — tablet + mobile breakpoints sharing the same hierarchy as the desktop view.</figcaption>
+          </figure>
+          <figure class="octo-responsive-figure cs-reveal cs-reveal-delay-1">
+            <img src="/assets/projects/octopus-ai/Frame_2087324967.png" alt="Octopus AI · documentation and supporting surfaces across breakpoints" loading="lazy">
+            <figcaption>Documentation &amp; supporting surfaces — built so a developer can scan specs on mobile and write code on desktop without context loss.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- 7. SCATTER — chips collage with italic headline -->
-    <section style="background: var(--cs-cream); padding: 60px 0 120px;">
-      <div class="container">
-        <div class="cs-scatter">
-          <div class="cs-scatter-stage cs-reveal">
-            <span class="cs-chip purple"  style="top: 4%; left: 32%;">SCHOOL</span>
-            <span class="cs-chip peri"    style="top: 12%; left: 8%;">Tech-savvy</span>
-            <span class="cs-chip pink"    style="top: 26%; left: 20%;">Newcomer</span>
-            <span class="cs-chip yellow"  style="top: 8%; right: 8%;">Designer</span>
-            <span class="cs-chip orange"  style="top: 32%; right: 22%;">PM</span>
-            <span class="cs-chip maroon"  style="bottom: 12%; right: 30%;">Researcher</span>
-            <span class="cs-chip coral"   style="bottom: 8%; right: 6%;">Founder</span>
-            <span class="cs-chip lilac"   style="bottom: 18%; left: 4%;">Engineer</span>
-            <div class="cs-mockup" style="margin-top:60px;"></div>
-          </div>
-          <div class="cs-scatter-text cs-reveal cs-reveal-delay-1">
-            <span class="cs-eyebrow">Personas</span>
-            <h2 style="margin-top: 16px;">Two audiences, two on-ramps.</h2>
-            <p>Tech-savvy professionals wanted code-level access and deep documentation. Practical newcomers from business and design needed a no-friction first impression. The same product had to land twice.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. FEATURE FLIPPED — second design solution -->
-    <section style="background: var(--cs-cream);">
-      <div class="container">
-        <div class="cs-feature flip">
-          <div class="cs-feature-text cs-reveal">
-            <span class="cs-eyebrow">Iteration</span>
-            <h2>Different audiences, different on-ramps.</h2>
-            <p>For non-technical users: redesigned IA, optimized visualization, refined copy. Researched four popular industries and prototyped video scenarios showing edge-AI experiences in context.</p>
-            <p>For technical users: comprehensive documentation matching developer expectations, plus revised playground interaction logic for model selection and execution.</p>
-          </div>
-          <div class="cs-mockup cs-reveal cs-reveal-delay-1" aria-label="Documentation + revised playground mockup"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 9. BREATHER -->
-    <section class="cs-breather" style="background: var(--cs-cream);">
-      <div class="ghost cs-reveal">Edge AI</div>
-    </section>
-
-    <!-- 10. RESULTS — dark with periwinkle stats -->
+    <!-- Results -->
     <section class="cs-dark">
       <div class="container">
         <p class="cs-eyebrow cs-reveal">Results</p>
-        <h2 class="cs-reveal cs-reveal-delay-1">Once the value became experiential, momentum followed.</h2>
+        <h2 class="cs-reveal cs-reveal-delay-1">Once users could <em>feel</em> the model in seconds, <span class="ink">adoption followed quickly.</span></h2>
+        <p class="cs-sub cs-reveal cs-reveal-delay-2">The iteration validated the bet. We hit #1 Product of the Day on Product Hunt, crossed 10,000 API calls in the first month, and the clarity layer — videos, documentation, the Playground itself — became part of the investor story behind our $10M seed close.</p>
 
         <div class="cs-stats">
           <article class="cs-stat-card cs-reveal cs-reveal-delay-1">
@@ -248,21 +491,21 @@
           </article>
           <article class="cs-stat-card cs-reveal cs-reveal-delay-3">
             <p class="label">Funding</p>
-            <h4>Seed round closed — clarity through videos &amp; docs contributed directly</h4>
+            <h4>Seed round closed — clarity through videos &amp; documentation contributed directly</h4>
             <p class="big-number">$10M<sup></sup></p>
-            <p class="stat-foot">Closed Q3</p>
+            <p class="stat-foot">Closed</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- 11. REFLECTION — quiet cream -->
-    <section style="background: var(--cs-cream); padding: 140px 0;">
+    <!-- Reflection -->
+    <section class="octo-reflection">
       <div class="container">
-        <div style="max-width: 720px; margin: 0 auto; text-align: center;">
-          <p class="cs-eyebrow cs-reveal">Reflection</p>
-          <h2 class="cs-display cs-reveal cs-reveal-delay-1" style="font-size: clamp(36px, 5vw, 64px); margin: 18px 0 24px;">When a technology is new, clarity matters more than completeness.</h2>
-          <p class="cs-reveal cs-reveal-delay-2" style="font-size: 18px; line-height: 1.65; color: var(--muted);">By prioritizing how users naturally evaluate models — through direct interaction — we reduced friction, accelerated team alignment, and shipped meaningful results under extreme constraints.</p>
+        <div class="octo-reflection-inner">
+          <p class="cs-eyebrow cs-reveal">Reflections</p>
+          <h2 class="cs-display cs-reveal cs-reveal-delay-1">When a technology is new, <span class="ink">clarity</span> matters more than completeness.</h2>
+          <p class="cs-reveal cs-reveal-delay-2">A lesson I've kept seeing in early-stage work: shipping less, but legibly, beats shipping more that no one understands. By designing for how users actually evaluate new models — by trying them — we reduced friction, aligned the team fast, and shipped a meaningful MVP under a two-week clock. The product wasn't finished. It was <em>understandable</em>. That was enough.</p>
         </div>
       </div>
     </section>
@@ -289,25 +532,24 @@
             <li><a href="/">Home</a></li>
             <li><a href="/contact.html">Contact</a></li>
             <li><a href="/designs.html">Designs</a></li>
-            <li><a href="#">Research</a></li>
+            <li><a href="/research/museum-of-flight.html">Research</a></li>
           </ul>
         </div>
         <div>
           <p class="footer-heading">Projects</p>
           <ul class="footer-list">
             <li><a href="/projects/octopus-ai.html">Edge AI</a></li>
-            <li><a href="#">2C AI</a></li>
-            <li><a href="#">HMI</a></li>
-            <li><a href="#">2C Web</a></li>
-            <li><a href="#">2C App</a></li>
+            <li><a href="/projects/nexa-ai-tools.html">2C AI</a></li>
+            <li><a href="/projects/smart-brook.html">HMI</a></li>
+            <li><a href="/projects/mentorup.html">2C Web</a></li>
+            <li><a href="/projects/espoirer.html">2C App</a></li>
           </ul>
         </div>
         <div>
           <p class="footer-heading">Connect</p>
           <ul class="footer-list">
             <li><a href="mailto:loricai1017@gmail.com">Email</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Resume</a></li>
+            <li><a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Resume</a></li>
           </ul>
         </div>
       </div>
