@@ -2650,10 +2650,10 @@ body.theme-brook { background: #0A0A0A; }
   gap: 24px;
   font-size: 12px;
   letter-spacing: 0.04em;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.78);
   margin-bottom: 64px;
 }
-.brook-meta .dots { text-align: center; letter-spacing: 0.55em; color: rgba(255,255,255,0.32); font-size: 13px; }
+.brook-meta .dots { text-align: center; letter-spacing: 0.55em; color: rgba(255,255,255,0.5); font-size: 13px; }
 .brook-meta .right { text-align: right; }
 .brook-meta strong { color: #fff; font-weight: 500; }
 
@@ -2672,7 +2672,7 @@ body.theme-brook { background: #0A0A0A; }
   gap: 40px;
   margin-top: 64px;
   font-size: 13px;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.8);
   line-height: 1.5;
 }
 .brook-hero-corners .left { max-width: 28ch; }
@@ -2837,9 +2837,9 @@ body.theme-brook { background: #0A0A0A; }
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   gap: 56px;
-  align-items: start;
+  align-items: center;
 }
-.brook-persona-bio { padding-top: 12px; }
+.brook-persona-bio { padding-top: 0; }
 .brook-persona-bio .name {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(48px, 6vw, 72px);
@@ -2853,12 +2853,12 @@ body.theme-brook { background: #0A0A0A; }
   font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: var(--cs-accent);
   font-weight: 600;
 }
 .brook-persona-bio .age {
   font-size: 13px;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.78);
   margin-bottom: 20px;
   display: flex;
   gap: 10px;
@@ -3047,8 +3047,9 @@ body.theme-brook { background: #0A0A0A; }
   font-family: 'Plus Jakarta Sans', monospace;
   font-size: 14px;
   font-weight: 500;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 0.06em;
+  color: var(--cs-accent);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 .brook-section-head h2 {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -3123,7 +3124,7 @@ body.theme-brook { background: #0A0A0A; }
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.75);
 }
 .brook-hero-strap strong { color: #fff; font-weight: 500; margin-right: 8px; }
 
@@ -3268,7 +3269,7 @@ body.theme-brook { background: #0A0A0A; }
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.72);
 }
 
 /* ----- 04 · The trust loop (signature) ----- */
@@ -3550,7 +3551,7 @@ body.theme-brook { background: #0A0A0A; }
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.72);
   white-space: nowrap;
 }
 .brook-spectrum-ends {
@@ -3729,6 +3730,1375 @@ body.theme-brook { background: #0A0A0A; }
     margin-bottom: 18px;
   }
   .brook-loop-node:hover { transform: none !important; }
+}
+
+/* ============================================
+   Brook · revised components (cinematic, goals,
+   rules, flows, multimodal, system, animated loop)
+   ============================================ */
+
+/* ----- Cinematic GIF opener ----- */
+.brook-cinematic {
+  background: #0A0A0A;
+  padding: 24px 0 100px;
+  color: #fff;
+}
+.brook-cinematic-frame {
+  position: relative;
+  margin: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: #050505;
+  box-shadow: 0 60px 120px -50px rgba(0,0,0,0.7), 0 0 0 1px rgba(104,255,126,0.04);
+}
+.brook-cinematic-frame > img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: contrast(1.04) saturate(1.05);
+}
+.brook-cinematic-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.brook-cinematic-callout {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 16px 14px;
+  background: rgba(10,10,10,0.78);
+  border: 1px solid rgba(104,255,126,0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.45;
+  max-width: 250px;
+  letter-spacing: -0.005em;
+  box-shadow: 0 16px 40px -20px rgba(0,0,0,0.8);
+}
+.brook-cinematic-callout .lbl {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cs-accent);
+}
+.brook-cinematic-callout.tl { top: 24px; left: 24px; }
+.brook-cinematic-callout.br { bottom: 70px; right: 24px; }
+.brook-cinematic-frame figcaption {
+  padding: 22px 28px 26px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.7);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: linear-gradient(180deg, rgba(10,10,10,0.4), rgba(10,10,10,0.95));
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.brook-cinematic-frame figcaption .lbl {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cs-accent);
+}
+@media (max-width: 720px) {
+  .brook-cinematic-callout { max-width: 180px; font-size: 11.5px; padding: 10px 12px 12px; }
+  .brook-cinematic-callout.tl { top: 14px; left: 14px; }
+  .brook-cinematic-callout.br { bottom: 80px; right: 14px; }
+}
+
+/* ----- 01 · Goals (4-card grid) ----- */
+.brook-goals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 56px 0 40px;
+}
+.brook-goal {
+  padding: 26px 22px 28px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.3s, transform 0.3s, background 0.3s;
+}
+.brook-goal:hover {
+  border-color: rgba(104,255,126,0.4);
+  transform: translateY(-3px);
+  background: rgba(104,255,126,0.03);
+}
+.brook-goal .ix {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cs-accent);
+}
+.brook-goal h5 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  margin: 2px 0 0;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.brook-goal p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .brook-goals { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .brook-goals { grid-template-columns: 1fr; }
+}
+
+/* ----- Stat methodology note ----- */
+.brook-stat-note {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 11px !important;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.68) !important;
+  margin: 12px 0 0 !important;
+  line-height: 1.6 !important;
+}
+
+/* ----- Research artifact figure ----- */
+.brook-research-artifact {
+  margin: 60px 0 0;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+}
+.brook-research-artifact img {
+  width: 100%;
+  display: block;
+}
+.brook-research-artifact figcaption {
+  padding: 18px 24px 22px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.brook-research-artifact figcaption .lbl {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cs-accent);
+}
+
+/* Dissenting quote — slightly different accent */
+.brook-quote-dissent {
+  border-left-color: rgba(255,180,80,0.55) !important;
+}
+.brook-quote-dissent cite {
+  color: rgba(255,210,140,0.7) !important;
+}
+
+/* ----- 04 · Trust loop — animated pulse ----- */
+.brook-loop-pulse {
+  transform-origin: 380px 380px;
+  animation: brook-loop-pulse-spin 14s linear infinite;
+  filter: drop-shadow(0 0 12px rgba(104,255,126,0.55));
+}
+@keyframes brook-loop-pulse-spin {
+  from { transform: rotate(-90deg); }
+  to   { transform: rotate(270deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brook-loop-pulse { animation: none; opacity: 0.5; }
+}
+
+/* ----- 06 · Three Rules (design contract) ----- */
+.brook-rules-section {
+  background: #0A0A0A;
+  color: #fff;
+  padding: 120px 0;
+}
+.brook-rules-lede {
+  max-width: 64ch;
+  margin: 32px 0 56px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+}
+.brook-rules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  counter-reset: brook-rule;
+}
+.brook-rule {
+  position: relative;
+  padding: 32px 26px 32px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.005));
+  transition: border-color 0.3s, transform 0.3s;
+}
+.brook-rule:hover {
+  border-color: rgba(104,255,126,0.4);
+  transform: translateY(-3px);
+}
+.brook-rule::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 28px;
+  right: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cs-accent), transparent);
+  opacity: 0.55;
+}
+.brook-rule .ix {
+  display: block;
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cs-accent);
+  margin-bottom: 14px;
+}
+.brook-rule h5 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+  line-height: 1.28;
+}
+.brook-rule p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.72);
+  margin: 0;
+}
+
+/* ----- Persona photo (monogram fallback) ----- */
+.brook-persona-photo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 18px;
+  text-align: center;
+}
+.brook-persona-photo::after { display: none; }
+.brook-persona-monogram {
+  display: inline-grid;
+  place-items: center;
+  width: 64%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(104,255,126,0.22), rgba(104,255,126,0.04) 60%, transparent 70%),
+              radial-gradient(circle at 70% 70%, rgba(255,255,255,0.06), transparent 50%),
+              #0F0F12;
+  border: 1px solid rgba(104,255,126,0.25);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(72px, 9vw, 128px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.92);
+  letter-spacing: -0.04em;
+  box-shadow: inset 0 0 40px rgba(104,255,126,0.08);
+}
+.brook-persona-meta {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.72);
+  font-weight: 600;
+}
+
+/* ----- Three riders block ----- */
+.brook-three-riders {
+  margin-top: 80px;
+  padding-top: 50px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.brook-three-riders-eyebrow {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.78);
+  margin: 0 0 28px;
+  font-style: italic;
+  max-width: 60ch;
+}
+.brook-three-riders-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.brook-rider {
+  padding: 24px 22px 26px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.015);
+  transition: border-color 0.3s, transform 0.3s;
+}
+.brook-rider:hover { border-color: rgba(104,255,126,0.3); transform: translateY(-2px); }
+.brook-rider .ix {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cs-accent);
+  display: block;
+  margin-bottom: 10px;
+}
+.brook-rider h5 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.brook-rider p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+}
+@media (max-width: 800px) {
+  .brook-three-riders-grid { grid-template-columns: 1fr; }
+}
+
+/* ----- Persona artifacts (2-up) ----- */
+.brook-persona-artifacts {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.brook-persona-artifacts figure {
+  margin: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+}
+.brook-persona-artifacts figure img {
+  width: 100%;
+  display: block;
+}
+.brook-persona-artifacts figcaption {
+  padding: 14px 20px 18px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.78);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+@media (max-width: 800px) {
+  .brook-persona-artifacts { grid-template-columns: 1fr; }
+}
+
+/* ----- 08 · Flows in action ----- */
+.brook-flows-section {
+  background: #0A0A0A;
+  color: #fff;
+  padding: 120px 0;
+}
+.brook-flows-lede {
+  max-width: 64ch;
+  margin: 32px 0 64px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+}
+.brook-flow {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 64px;
+  align-items: center;
+  padding: 48px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.brook-flow:last-child {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.brook-flow-rev {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+.brook-flow-rev .brook-flow-text { order: 2; }
+.brook-flow-rev .brook-flow-screens { order: 1; }
+.brook-flow-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 6px 12px;
+  border: 1px solid rgba(104,255,126,0.35);
+  border-radius: 999px;
+  color: var(--cs-accent);
+  background: rgba(104,255,126,0.05);
+  margin-bottom: 18px;
+}
+.brook-flow-text h3 {
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 18px;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+.brook-flow-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+  margin: 0 0 20px;
+}
+.brook-flow-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.brook-flow-text li {
+  padding-left: 22px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.7);
+}
+.brook-flow-text li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  top: -2px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--cs-accent);
+}
+.brook-flow-screens {
+  margin: 0;
+  position: relative;
+  display: grid;
+  gap: 14px;
+}
+.brook-flow-screens img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: #050505;
+  box-shadow: 0 40px 80px -40px rgba(0,0,0,0.7);
+}
+.brook-flow-screens .brook-flow-screen-secondary {
+  width: 60%;
+  margin-left: auto;
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
+  border-color: rgba(104,255,126,0.25);
+}
+@media (max-width: 900px) {
+  .brook-flow,
+  .brook-flow-rev { grid-template-columns: 1fr; gap: 28px; padding: 36px 0; }
+  .brook-flow-rev .brook-flow-text { order: 1; }
+  .brook-flow-rev .brook-flow-screens { order: 2; }
+  .brook-flow-screens .brook-flow-screen-secondary { width: 70%; }
+}
+
+/* ----- 09 · Multimodal trio ----- */
+.brook-multimodal-section {
+  background: #0F0F12;
+  color: #fff;
+  padding: 120px 0;
+}
+.brook-multimodal-lede {
+  max-width: 64ch;
+  margin: 32px 0 18px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+}
+.brook-multimodal-task {
+  margin: 0 0 56px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+  font-style: italic;
+}
+.brook-multimodal-task .lbl {
+  display: inline-block;
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cs-accent);
+  margin-right: 14px;
+  font-style: normal;
+}
+.brook-multimodal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.brook-modality {
+  padding: 28px 24px 30px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.brook-modality:hover { border-color: rgba(104,255,126,0.35); transform: translateY(-3px); }
+.brook-modality-tag {
+  align-self: flex-start;
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cs-accent);
+  padding: 6px 12px;
+  border: 1px solid rgba(104,255,126,0.35);
+  border-radius: 999px;
+  background: rgba(104,255,126,0.05);
+}
+.brook-modality figure {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #050505;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.brook-modality figure img {
+  width: 100%;
+  display: block;
+}
+.brook-modality p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .brook-multimodal-grid { grid-template-columns: 1fr; }
+}
+
+/* ----- 10 · Design system strip ----- */
+.brook-system-section {
+  background: #0A0A0A;
+  color: #fff;
+  padding: 120px 0;
+}
+.brook-system-lede {
+  max-width: 64ch;
+  margin: 32px 0 56px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+}
+.brook-system-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+.brook-system-strip figure {
+  margin: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+  transition: border-color 0.3s, transform 0.3s;
+}
+.brook-system-strip figure:hover {
+  border-color: rgba(104,255,126,0.4);
+  transform: translateY(-3px);
+}
+.brook-system-strip figure img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: #050505;
+}
+.brook-system-strip figcaption {
+  padding: 10px 12px 12px;
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255,255,255,0.78);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+@media (max-width: 900px) {
+  .brook-system-strip { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 520px) {
+  .brook-system-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============================================
+   02 · Meet Brook — virtual companion / local guide
+   ============================================ */
+.brook-character-section {
+  background: #0F0F12;
+  color: #fff;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+.brook-character-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(700px 500px at 80% 20%, rgba(104,255,126,0.08), transparent 60%),
+    radial-gradient(500px 400px at 10% 90%, rgba(104,255,126,0.04), transparent 60%);
+}
+.brook-character-section > .container { position: relative; }
+.brook-character-lede {
+  max-width: 64ch;
+  margin: 32px 0 56px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.8);
+}
+.brook-character {
+  display: grid;
+  grid-template-columns: 0.7fr 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.brook-character-avatar {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  text-align: center;
+  border: 1px solid rgba(104,255,126,0.35);
+  background:
+    radial-gradient(circle at 40% 35%, rgba(104,255,126,0.22), rgba(104,255,126,0.04) 55%, transparent 75%),
+    #0A0A0A;
+  box-shadow:
+    inset 0 0 60px rgba(104,255,126,0.08),
+    0 0 100px -20px rgba(104,255,126,0.3);
+  padding: 28px;
+}
+.brook-character-monogram {
+  display: inline-grid;
+  place-items: center;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255,255,255,0.12), transparent 60%),
+    linear-gradient(135deg, rgba(104,255,126,0.4), rgba(104,255,126,0.06));
+  border: 1px solid rgba(104,255,126,0.6);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(80px, 11vw, 150px);
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  text-shadow: 0 0 28px rgba(104,255,126,0.55);
+}
+.brook-character-meta {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255,255,255,0.78);
+}
+.brook-character-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(104,255,126,0.4);
+  pointer-events: none;
+  animation: brook-character-pulse-anim 3.2s ease-in-out infinite;
+}
+@keyframes brook-character-pulse-anim {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50%      { transform: scale(1.04); opacity: 0.15; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brook-character-pulse { animation: none; }
+}
+
+.brook-character-bio .label {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cs-accent);
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+.brook-character-bio .name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(52px, 7.4vw, 92px);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  color: #fff;
+  margin: 0 0 10px;
+  line-height: 1;
+}
+.brook-character-bio .role {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--cs-accent);
+  font-weight: 600;
+  margin: 0 0 22px;
+}
+.brook-character-bio > p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  margin: 0 0 18px;
+  font-style: italic;
+}
+.brook-character-bio h6 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  margin: 24px 0 8px;
+  letter-spacing: 0.01em;
+}
+.brook-character-bio h6 + p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.78);
+  margin: 0;
+  font-style: normal;
+}
+
+.brook-character-capabilities h6 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 14px;
+}
+.brook-character-capabilities h6 + ul + h6 { margin-top: 32px; }
+.brook-character-capabilities ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.brook-character-capabilities li {
+  padding-left: 20px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.78);
+}
+.brook-character-capabilities li::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  top: -2px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--cs-accent);
+}
+
+.brook-character-foot {
+  margin: 64px auto 0;
+  max-width: 72ch;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .brook-character { grid-template-columns: 1fr; gap: 40px; }
+  .brook-character-avatar { max-width: 280px; margin: 0 auto; }
+}
+
+/* ============================================
+   Brook · varied image treatments
+   Each artifact gets a distinct presentation
+   ============================================ */
+
+/* ----- Survey viz (Frame_1707479169) — already-dark image, full-width inset ----- */
+.brook-survey-viz {
+  margin: 60px 0 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(104,255,126,0.15);
+  background: #000;
+  position: relative;
+  box-shadow: 0 0 0 1px rgba(104,255,126,0.05), 0 50px 100px -50px rgba(0,0,0,0.7);
+}
+.brook-survey-viz::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(800px 400px at 20% 60%, rgba(104,255,126,0.05), transparent 70%);
+  pointer-events: none;
+}
+.brook-survey-viz img {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.brook-survey-viz figcaption {
+  padding: 22px 28px 26px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.7);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: rgba(10,10,10,0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.brook-survey-viz figcaption .lbl {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cs-accent);
+}
+
+/* ----- Affinity diagram (Group_964_1) — wide scrollable ----- */
+.brook-affinity {
+  margin: 60px 0 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+  box-shadow: 0 50px 100px -50px rgba(0,0,0,0.7);
+}
+.brook-affinity-stage {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.18) transparent;
+  background: linear-gradient(180deg, #fafafa, #f0f0f0);
+  padding: 28px 28px 32px;
+}
+.brook-affinity-stage::-webkit-scrollbar { height: 8px; }
+.brook-affinity-stage::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.18); border-radius: 4px; }
+.brook-affinity-stage img {
+  display: block;
+  height: 420px;
+  max-height: 60vh;
+  width: auto;
+  max-width: none;
+  border-radius: 4px;
+}
+.brook-affinity-hint {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #0b0b0b;
+  padding: 7px 12px;
+  background: #fff;
+  border: 1px solid rgba(11,11,11,0.18);
+  border-radius: 999px;
+  pointer-events: none;
+  animation: brook-affinity-hint-pulse 2.4s ease-in-out infinite;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+@keyframes brook-affinity-hint-pulse {
+  0%, 100% { transform: translateX(0); opacity: 0.7; }
+  50%      { transform: translateX(6px); opacity: 1; }
+}
+.brook-affinity figcaption {
+  padding: 22px 28px 26px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(11,11,11,0.7);
+  border-top: 1px solid rgba(0,0,0,0.06);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.brook-affinity figcaption .lbl {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--cs-ink, #0b0b0b);
+}
+.brook-affinity figcaption em { color: var(--cs-ink, #0b0b0b); font-style: italic; font-weight: 500; }
+
+/* ----- Whiteboard polaroid (IMG_6269_2) ----- */
+.brook-research-polaroid-row {
+  margin: 80px 0 0;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.brook-research-polaroid-text p {
+  font-size: 16.5px !important;
+  line-height: 1.7 !important;
+  color: rgba(255,255,255,0.78) !important;
+  font-style: italic;
+  margin: 0 !important;
+}
+.brook-polaroid {
+  margin: 0;
+  background: #fafafa;
+  padding: 18px 18px 64px;
+  border-radius: 4px;
+  transform: rotate(-2deg);
+  box-shadow: 0 50px 80px -30px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.05);
+  transition: transform 0.5s ease;
+  position: relative;
+}
+.brook-polaroid:hover { transform: rotate(0deg) scale(1.02); }
+.brook-polaroid img {
+  width: 100%;
+  display: block;
+  filter: grayscale(0.18) contrast(1.05);
+}
+.brook-polaroid figcaption {
+  position: absolute;
+  bottom: 14px;
+  left: 18px;
+  right: 18px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.brook-polaroid-handwritten {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  color: #0b0b0b;
+  line-height: 1;
+  transform: rotate(-1.5deg);
+  transform-origin: left bottom;
+}
+@media (max-width: 800px) {
+  .brook-research-polaroid-row { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* ============================================
+   08 · From Sketch to System
+   ============================================ */
+.brook-sketch-section {
+  background: #0F0F12;
+  color: #fff;
+  padding: 120px 0;
+}
+.brook-sketch-lede {
+  max-width: 64ch;
+  margin: 32px 0 56px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+}
+
+/* IA stack — three large flow diagrams on light canvas */
+.brook-ia-stack {
+  display: grid;
+  gap: 28px;
+  margin-bottom: 80px;
+}
+.brook-ia-doc {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 0.32fr 1fr;
+  gap: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.02);
+}
+.brook-ia-doc-meta {
+  padding: 32px 28px;
+  background: rgba(104,255,126,0.04);
+  border-right: 1px solid rgba(104,255,126,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.brook-ia-doc-label {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cs-accent);
+}
+.brook-ia-doc-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.brook-ia-doc-sub {
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.78);
+}
+.brook-ia-doc-canvas {
+  position: relative;
+  background:
+    linear-gradient(180deg, #fff, #f6f6f6);
+  background-image:
+    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-color: #fff;
+  padding: 22px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.brook-ia-doc-canvas img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+@media (max-width: 900px) {
+  .brook-ia-doc { grid-template-columns: 1fr; }
+  .brook-ia-doc-meta { border-right: none; border-bottom: 1px solid rgba(104,255,126,0.15); }
+}
+
+/* Card iteration before / after */
+.brook-iteration {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  gap: 48px;
+  padding-top: 56px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.brook-iteration-label {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 6px 12px;
+  border: 1px solid rgba(104,255,126,0.35);
+  border-radius: 999px;
+  color: var(--cs-accent);
+  background: rgba(104,255,126,0.05);
+  margin-bottom: 18px;
+}
+.brook-iteration-meta h4 {
+  font-size: clamp(22px, 2.2vw, 28px);
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.brook-iteration-meta p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+  margin: 0;
+}
+.brook-iteration-frame {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(180deg, #fff, #f4f4f4);
+  position: relative;
+}
+.brook-iteration-frame::before,
+.brook-iteration-frame::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 28px;
+  pointer-events: none;
+}
+.brook-iteration-frame::before {
+  top: 0;
+  background: linear-gradient(180deg, rgba(15,15,18,0.18), transparent);
+}
+.brook-iteration-frame::after {
+  bottom: 36px;
+  background: linear-gradient(0deg, rgba(15,15,18,0.18), transparent);
+}
+.brook-iteration-frame img {
+  width: 100%;
+  display: block;
+  padding: 14px 14px 0;
+  box-sizing: border-box;
+}
+.brook-iteration-frame figcaption {
+  padding: 14px 22px 16px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: rgba(11,11,11,0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+.brook-iteration-frame figcaption .lbl {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--cs-ink, #0b0b0b);
+}
+@media (max-width: 900px) {
+  .brook-iteration { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* ============================================
+   09 · Flows in Action — additions
+   ============================================ */
+/* 4-up panel teaser */
+.brook-flow-panels {
+  margin: 0 0 28px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: #050505;
+  box-shadow: 0 40px 80px -40px rgba(0,0,0,0.7);
+}
+.brook-flow-panels img { width: 100%; display: block; }
+.brook-flow-panels figcaption {
+  padding: 16px 22px 20px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.8);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.brook-flow-panels figcaption .lbl {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cs-accent);
+}
+
+/* Dual-screen flow variant — light + dark cluster side by side */
+.brook-flow-dual img {
+  background: #fff;
+  border-color: rgba(255,255,255,0.12);
+}
+
+/* ============================================
+   10 · Feature Spotlight (Ride & Discover)
+   ============================================ */
+.brook-spotlight-section {
+  background: #0A0A0A;
+  color: #fff;
+  padding: 120px 0;
+}
+.brook-spotlight-lede {
+  max-width: 64ch;
+  margin: 32px 0 56px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+}
+.brook-spotlight-lede em { color: #fff; font-style: italic; font-weight: 500; }
+.brook-spotlight-hero {
+  position: relative;
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(900px 500px at 60% 40%, rgba(104,255,126,0.08), transparent 60%),
+    linear-gradient(180deg, #16161c, #0a0a0a);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 48px;
+  box-shadow: 0 60px 120px -50px rgba(0,0,0,0.8);
+}
+.brook-spotlight-hero img {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6));
+}
+.brook-spotlight-callouts { position: absolute; inset: 48px; pointer-events: none; }
+.brook-spotlight-callout {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 14px 12px;
+  max-width: 220px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #fff;
+  background: rgba(10,10,10,0.86);
+  border: 1px solid rgba(104,255,126,0.35);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 18px 40px -16px rgba(0,0,0,0.8);
+}
+.brook-spotlight-callout .lbl {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cs-accent);
+}
+.brook-spotlight-callout.c1 { top: 6%; left: -4%; }
+.brook-spotlight-callout.c2 { bottom: 8%; right: -2%; }
+@media (max-width: 900px) {
+  .brook-spotlight-hero { padding: 24px; }
+  .brook-spotlight-callouts { inset: 24px; }
+  .brook-spotlight-callout { max-width: 160px; font-size: 11px; }
+  .brook-spotlight-callout.c1 { top: 4%; left: 0; }
+  .brook-spotlight-callout.c2 { bottom: 6%; right: 0; }
+}
+
+/* ============================================
+   11 · Design System — featured slide
+   ============================================ */
+.brook-system-featured {
+  margin: 0 0 32px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 50px 100px -50px rgba(0,0,0,0.7);
+}
+.brook-system-featured img {
+  width: 100%;
+  display: block;
+}
+.brook-system-featured figcaption {
+  padding: 18px 24px 22px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(11,11,11,0.7);
+  border-top: 1px solid rgba(0,0,0,0.06);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.brook-system-featured figcaption .lbl {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--cs-ink, #0b0b0b);
+}
+
+/* ============================================
+   Closing cinematic (door_clean.png)
+   ============================================ */
+.brook-closing-section {
+  background: #0A0A0A;
+  color: #fff;
+  padding: 40px 0 40px;
+}
+.brook-closing {
+  position: relative;
+  margin: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(104,255,126,0.18);
+  background: #050505;
+  box-shadow:
+    0 80px 160px -60px rgba(0,0,0,0.85),
+    0 0 120px -30px rgba(104,255,126,0.18);
+}
+.brook-closing img {
+  width: 100%;
+  display: block;
+  filter: contrast(1.04) saturate(1.05);
+}
+.brook-closing::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(closest-side at 50% 50%, transparent 50%, rgba(0,0,0,0.32) 100%);
+}
+.brook-closing figcaption {
+  padding: 28px 32px 34px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: linear-gradient(180deg, rgba(10,10,10,0.4), rgba(10,10,10,0.95));
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.brook-closing-eyebrow {
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cs-accent);
+}
+.brook-closing figcaption p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.78);
+  margin: 0;
+  font-style: italic;
+  max-width: 60ch;
 }
 
 /* ============================================
