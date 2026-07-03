@@ -39,6 +39,8 @@ function initArm() {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
 
+  let raf = 0;  // render-loop handle — declared early; resize() below calls wake()
+
   // Lights — soft three-point + a mint accent rim
   scene.add(new THREE.AmbientLight(0xffffff, 0.55));
 
@@ -61,6 +63,7 @@ function initArm() {
     renderer.setSize(r.width, r.height, false);
     camera.aspect = r.width / r.height;
     camera.updateProjectionMatrix();
+    wake();
   }
   resize();
   new ResizeObserver(resize).observe(stage);
@@ -112,6 +115,7 @@ function initArm() {
 
       state.pivot = pivot;
       stage.classList.add('is-loaded');
+      wake();
     },
     undefined,
     (err) => {
@@ -125,21 +129,27 @@ function initArm() {
     const r = stage.getBoundingClientRect();
     const nx = ((e.clientX - r.left) / r.width) * 2 - 1;  // -1 .. +1
     state.targetYaw = nx * (Math.PI / 2.2);   // ±~80° — wider so left/right is unmistakable
+    wake();
   });
   stage.addEventListener('mouseleave', () => {
     state.targetYaw = 0;
+    wake();
   });
 
-  // Render loop
+  // Render loop — only runs while the arm is still easing toward the cursor;
+  // parks itself once settled so an idle hero doesn't burn GPU frames.
   function tick() {
+    raf = 0;
     if (state.pivot) {
       state.yaw += (state.targetYaw - state.yaw) * 0.14;  // snappier
+      if (Math.abs(state.targetYaw - state.yaw) < 0.0005) state.yaw = state.targetYaw;
       state.pivot.rotation.y = state.yaw;
     }
     renderer.render(scene, camera);
-    requestAnimationFrame(tick);
+    if (state.pivot && state.yaw !== state.targetYaw) raf = requestAnimationFrame(tick);
   }
-  tick();
+  function wake() { if (!raf) raf = requestAnimationFrame(tick); }
+  wake();
 }
 
 // ===========================================================

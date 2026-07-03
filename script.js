@@ -35,17 +35,6 @@ if (revealEls.length && 'IntersectionObserver' in window) {
   revealEls.forEach(el => io.observe(el));
 }
 
-// Subtle parallax on case-study hero
-const csHero = document.querySelector('.cs-hero');
-if (csHero) {
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y < 800) {
-      csHero.style.backgroundPosition = `50% ${y * 0.3}px`;
-    }
-  }, { passive: true });
-}
-
 // ====================================================================
 // INTERACTIVE LAYER · cursor, magnetic, ripple, typewriter, time-tint
 // ====================================================================
@@ -82,16 +71,27 @@ if (fineCursor) {
 
   let mx = innerWidth / 2, my = innerHeight / 2;
   let rx = mx, ry = my;
+  // Ring growth is a lerped scale baked into the transform (GPU) rather than
+  // a width/height transition (layout). Loop parks itself once settled.
+  let scale = 1, targetScale = 1;
+  let raf = 0;
 
-  addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
-
-  (function tick() {
+  function tick() {
     rx += (mx - rx) * 0.18;
     ry += (my - ry) * 0.18;
+    scale += (targetScale - scale) * 0.18;
     dot.style.transform  = `translate3d(${mx}px, ${my}px, 0) translate(-50%, -50%)`;
-    ring.style.transform = `translate3d(${rx}px, ${ry}px, 0) translate(-50%, -50%)`;
-    requestAnimationFrame(tick);
-  })();
+    ring.style.transform = `translate3d(${rx}px, ${ry}px, 0) translate(-50%, -50%) scale(${scale.toFixed(3)})`;
+    if (Math.abs(mx - rx) > 0.15 || Math.abs(my - ry) > 0.15 || Math.abs(targetScale - scale) > 0.005) {
+      raf = requestAnimationFrame(tick);
+    } else {
+      raf = 0;
+    }
+  }
+  const wake = () => { if (!raf) raf = requestAnimationFrame(tick); };
+
+  addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; wake(); }, { passive: true });
+  wake();
 
   document.addEventListener('pointerover', e => {
     const t = e.target.closest('[data-cursor], a, button');
@@ -101,30 +101,56 @@ if (fineCursor) {
       ring.textContent = label;
       ring.classList.add('has-label');
       ring.classList.remove('is-link');
+      targetScale = 1;
     } else {
       ring.classList.add('is-link');
       ring.classList.remove('has-label');
       ring.textContent = '';
+      targetScale = 1.75;
     }
+    wake();
   });
   document.addEventListener('pointerout', e => {
     const t = e.target.closest('[data-cursor], a, button');
     if (!t) return;
     ring.classList.remove('is-link', 'has-label');
     ring.textContent = '';
+    targetScale = 1;
+    wake();
   });
 }
 
-// --- Magnetic buttons ---
+// --- Magnetic buttons — lerped follow (interruptible) + press scale ---
 if (fineCursor && !reducedMotion) {
   document.querySelectorAll('.btn').forEach(btn => {
+    let tx = 0, ty = 0, cx = 0, cy = 0;
+    let ts = 1, cs = 1;
+    let raf = 0;
+
+    function loop() {
+      cx += (tx - cx) * 0.22;
+      cy += (ty - cy) * 0.22;
+      cs += (ts - cs) * 0.3;
+      btn.style.transform = `translate(${cx.toFixed(2)}px, ${cy.toFixed(2)}px) scale(${cs.toFixed(3)})`;
+      if (Math.abs(tx - cx) > 0.1 || Math.abs(ty - cy) > 0.1 || Math.abs(ts - cs) > 0.003) {
+        raf = requestAnimationFrame(loop);
+      } else {
+        raf = 0;
+        if (!tx && !ty && ts === 1) btn.style.transform = '';
+      }
+    }
+    const wake = () => { if (!raf) raf = requestAnimationFrame(loop); };
+
     btn.addEventListener('mousemove', e => {
       const r = btn.getBoundingClientRect();
-      const dx = (e.clientX - (r.left + r.width / 2)) * 0.22;
-      const dy = (e.clientY - (r.top + r.height / 2)) * 0.4;
-      btn.style.transform = `translate(${dx}px, ${dy}px)`;
+      tx = (e.clientX - (r.left + r.width / 2)) * 0.22;
+      ty = (e.clientY - (r.top + r.height / 2)) * 0.4;
+      wake();
     });
-    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+    btn.addEventListener('mouseleave', () => { tx = 0; ty = 0; wake(); });
+    btn.addEventListener('pointerdown', () => { ts = 0.97; wake(); });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(t =>
+      btn.addEventListener(t, () => { ts = 1; wake(); }));
   });
 }
 
@@ -298,7 +324,7 @@ if (!reducedMotion) {
         if (win) {
           win.classList.add('is-shown');
           setTimeout(() => {
-            win.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            win.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
           }, 100);
         }
       }
