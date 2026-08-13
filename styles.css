@@ -10135,6 +10135,13 @@ body.has-custom-cursor *:not(input):not(textarea) { cursor: none !important; }
   margin-left: 5px;
   color: var(--accent);
 }
+.now-strip .now-link {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease;
+}
+.now-strip .now-link:hover { border-bottom-color: var(--accent); }
+.hero-intro a:hover .ink { color: var(--text); }
 
 /* --- Hero 2-col grid (text + arm canvas) --- */
 
