@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <title>Family Hub · Lori Cai</title>
+  <meta name="description" content="Design lead on a three-person team that took a wall-mounted family hub from zero to shipping in eight weeks. Designers writing production code, prototypes inside the shipping binary, agents building an agent.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.leicai99.com/projects/family-hub.html">
+  <meta property="og:title" content="Family Hub · Lori Cai">
+  <meta property="og:description" content="Design didn't hand off. It shipped. 0 to 1 hardware in eight weeks.">
+  <meta property="og:image" content="https://www.leicai99.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.leicai99.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+  /* ==========================================================
+     Nestify Family Hub · case study
+     Least text, most evidence. Every image is a capture off the
+     running device; every number comes from the repo.
+     Scoped to this page. styles.css untouched.
+     ========================================================== */
+
+  body.theme-nes {
+    --pp:   #F4F1EA;          /* paper */
+    --pp2:  #EAE6DA;          /* paper, recessed */
+    --ink:  #14161A;
+    --dim:  #6B7176;
+    --line: #DCD7CA;
+    --bl:   #1E88E5;          /* the one accent */
+    --night:#101215;
+    /* recessive greys for chart segments that are not the point */
+    --g1: #B9B3A3; --g2: #CBC5B6; --g3: #D2CCBD;
+
+    --accent: var(--bl); --accent-soft:#DCEBFA;
+    --cs-accent: var(--bl); --cs-accent-soft:#DCEBFA;
+    --cs-periwinkle: var(--bl); --cs-periwinkle-soft:#DCEBFA;
+    --cs-cream: var(--pp); --cs-ink: var(--ink); --ink-color: var(--bl);
+
+    background: var(--pp); color: var(--ink);
+    font-family: 'Inter', -apple-system, sans-serif;
+  }
+
+  .w { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+  .d { font-family:'Outfit',sans-serif; font-weight:500; letter-spacing:-.035em;
+       line-height:1.0; color:var(--ink); text-wrap:balance; }
+  .d1 { font-size: clamp(48px, 8.4vw, 132px); }
+  .d2 { font-size: clamp(34px, 5.2vw, 78px); }
+  .d3 { font-size: clamp(22px, 2.4vw, 34px); letter-spacing:-.03em; line-height:1.12; }
+  .bl { color: var(--bl); }
+
+  .t { font-size: clamp(16px,1.25vw,18.5px); line-height:1.58; color:var(--dim); max-width:56ch; }
+  .t b { color:var(--ink); font-weight:600; }
+  .lab { font-size:11.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--dim); }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .cap { margin-top:14px; font-size:13.5px; line-height:1.45; color:var(--dim); }
+  .cap b { color:var(--ink); font-weight:600; }
+
+  .chip { display:inline-block; height:.7em; width:1.26em; vertical-align:-.04em; margin:0 .1em;
+          border-radius:.14em; object-fit:cover; box-shadow:0 6px 20px -6px rgba(20,22,26,.34); }
+
+  /* --- device --- */
+  .u { position:relative; border-radius:20px; padding:12px;
+       background:linear-gradient(168deg,#262A2C,#121516 58%,#1F2325);
+       box-shadow:0 46px 84px -34px rgba(20,22,26,.5), 0 3px 10px rgba(20,22,26,.14); }
+  .u::after { content:''; position:absolute; inset:0; border-radius:20px; pointer-events:none;
+              box-shadow:inset 0 1px 0 rgba(255,255,255,.15), inset 0 0 0 1px rgba(255,255,255,.05); }
+  .u img { width:100%; border-radius:9px; display:block; }
+  .u .m { position:absolute; left:50%; top:5px; transform:translateX(-50%);
+          width:38px; height:3px; border-radius:3px; background:rgba(255,255,255,.12); }
+  .u.s { border-radius:13px; padding:6px; } .u.s img { border-radius:5px; } .u.s .m { width:22px;height:2px;top:3px; }
+
+  /* --- hero --- */
+  .hero { padding:168px 0 74px; }
+  .meta { display:flex; gap:22px; flex-wrap:wrap; font-size:13px; font-weight:500; color:var(--dim); margin-bottom:38px; }
+  .meta a { color:var(--ink); border-bottom:1px solid var(--line); }
+  .meta a:hover { color:var(--bl); border-color:var(--bl); }
+  .hero .t { margin-top:34px; font-size:clamp(17px,1.45vw,21px); max-width:50ch; }
+
+  .nums { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; margin-top:56px;
+          background:var(--line); border:1px solid var(--line); border-radius:20px; overflow:hidden; }
+  .n { background:var(--pp); padding:26px 26px 28px; }
+  .n b { display:block; font-family:'Outfit',sans-serif; font-weight:500;
+         font-size:clamp(32px,3.4vw,50px); letter-spacing:-.04em; line-height:1; }
+  .n span { display:block; margin-top:8px; font-size:13px; line-height:1.4; color:var(--dim); }
+  .n.on { background:var(--bl); } .n.on b { color:#fff; } .n.on span { color:rgba(255,255,255,.86); }
+
+  /* --- sections --- */
+  .sec { padding:110px 0; }
+  .sec.tint { background:var(--pp2); }
+  .stage { max-width:1120px; margin:0 auto; }
+  .rail { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:52px; }
+  .rail .cap { margin-top:11px; font-size:13px; }
+
+  /* --- agent interaction modes --- */
+  .modes { display:grid; grid-template-columns:1fr 1fr; gap:0 56px; margin-top:48px; }
+  .mode { display:grid; grid-template-columns:26px 1fr; gap:16px; align-items:baseline;
+          padding:16px 0; border-top:1px solid var(--line); }
+  .mode .i { font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--bl); }
+  .mode b { font-family:'Outfit',sans-serif; font-size:18px; font-weight:500; letter-spacing:-.02em;
+            display:block; margin-bottom:3px; }
+  .mode span { font-size:14px; line-height:1.5; color:var(--dim); }
+  .strip { display:grid; grid-template-columns:1fr 1fr; gap:34px 26px; margin-top:52px; }
+  .cards4 { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:52px; }
+  .card4 img { width:100%; display:block; border-radius:12px;
+               box-shadow:0 14px 30px -16px rgba(20,22,26,.34); }
+  .room { border-radius:20px; overflow:hidden; }
+  .room img { width:100%; display:block; }
+
+  /* --- chart: proportion --- */
+  .prop { margin-top:40px; }
+  .prop-bar { display:grid; gap:3px; grid-template-columns:71fr 29fr; height:20px; margin-top:26px; }
+  .prop-bar span { border-radius:3px; }
+  .prop-key { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:26px; }
+  .prop-key div { font-size:13px; line-height:1.4; color:var(--dim); padding-right:14px; }
+  .prop-key b { display:block; color:var(--ink); font-weight:600; font-size:15px; margin-bottom:3px; }
+
+  /* --- routes --- */
+  .rts { display:grid; gap:12px; margin-top:44px; }
+  .rt { display:grid; grid-template-columns:40px 1fr 1.1fr; gap:26px; align-items:center;
+        padding:24px 30px; border-radius:20px; border:1px solid var(--line); background:#fff; }
+  .rt .k { font-family:'Outfit',sans-serif; font-size:20px; font-weight:500; color:var(--bl); }
+  .rt h4 { font-size:16.5px; font-weight:600; line-height:1.35; }
+  .rt .fl { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink); }
+  .rt .fl em { font-style:normal; color:var(--dim); }
+
+  /* --- split --- */
+  .sp { display:grid; grid-template-columns:1fr 1.2fr; gap:56px; align-items:center; }
+  .sp.rev { grid-template-columns:1.2fr 1fr; } .sp.rev .spc { order:2; }
+  .duo { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+
+  /* --- dark --- */
+  .dk { background:var(--night); color:#F2F3F4; padding:112px 0 120px; }
+  .dk .d { color:#F7F8F8; } .dk .t { color:rgba(242,243,244,.6); } .dk .lab { color:var(--bl); }
+  .tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:52px; }
+  .tile { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
+          border-radius:20px; padding:28px 26px 30px; }
+  .tile b { display:block; font-family:'Outfit',sans-serif; font-weight:500;
+            font-size:clamp(30px,3vw,44px); letter-spacing:-.04em; line-height:1; color:#fff; }
+  .tile h4 { font-size:16px; font-weight:600; margin:14px 0 8px; color:#F7F8F8; }
+  .tile p { font-size:14.5px; line-height:1.55; color:rgba(242,243,244,.58); }
+  .tile.on { background:var(--bl); border-color:transparent; }
+  .tile.on h4 { color:#fff; } .tile.on p { color:rgba(255,255,255,.88); }
+
+  /* --- decisions --- */
+  .calls { display:grid; gap:14px; margin-top:44px; }
+  .call { display:grid; grid-template-columns:1fr 1fr 1fr 300px; gap:26px; align-items:center;
+          padding:24px 30px; border-radius:20px; border:1px solid var(--line); background:#fff; }
+  .call .st { font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700;
+              color:var(--dim); margin-bottom:7px; }
+  .call .st.hit { color:var(--bl); }
+  .call p { font-size:15px; line-height:1.5; color:var(--dim); }
+  .call p b { color:var(--ink); font-weight:600; }
+  .call .sh { border-radius:9px; overflow:hidden; box-shadow:0 10px 24px -12px rgba(20,22,26,.4); }
+  .call .sh img { width:100%; display:block; }
+
+  /* --- three versions, scrollable long shots --- */
+  .vers { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:52px; align-items:start; }
+  .vers.two { grid-template-columns:repeat(2,1fr); gap:28px; }
+  .vers.two .win { height:660px; }
+  .ver .win {
+    height:600px; overflow-y:auto; overflow-x:hidden; border-radius:14px;
+    border:1px solid var(--line); background:#fff;
+    box-shadow:0 18px 40px -22px rgba(20,22,26,.34);
+    scrollbar-width:thin;
+  }
+  .ver .win img { width:100%; display:block; }
+  .ver .tag {
+    display:flex; align-items:baseline; gap:10px; margin-bottom:12px;
+  }
+  .ver .tag i { font-family:'JetBrains Mono',monospace; font-style:normal; font-size:11.5px; color:var(--bl); }
+  .ver .tag b { font-family:'Outfit',sans-serif; font-size:18px; font-weight:500; letter-spacing:-.02em; }
+  .ver p { margin-top:12px; font-size:14px; line-height:1.5; color:var(--dim); }
+  .ver p em { font-style:normal; color:var(--ink); font-weight:600; }
+  .vers-hint { margin-top:26px; font-size:13.5px; color:var(--dim); }
+
+  /* --- impact --- */
+  .pil { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:44px; }
+  .p1 { border-radius:20px; padding:32px 30px 36px; background:#fff; border:1px solid var(--line); }
+  .p1.on { background:var(--bl); border-color:transparent; }
+  .p1 h4 { font-family:'Outfit',sans-serif; font-size:clamp(20px,1.8vw,25px); font-weight:500;
+           letter-spacing:-.025em; margin:10px 0 12px; line-height:1.2; }
+  .p1.on h4 { color:#fff; } .p1.on .lab { color:rgba(255,255,255,.74); }
+  .p1 p { font-size:15px; line-height:1.55; color:var(--dim); }
+  .p1.on p { color:rgba(255,255,255,.9); }
+
+  /* --- close --- */
+  .cl { padding:104px 0 120px; }
+  .ls { margin-top:40px; }
+  .l1 { padding:22px 0; border-top:1px solid var(--line); display:grid;
+        grid-template-columns:1fr 1.4fr; gap:36px; }
+  .l1 h4 { font-family:'Outfit',sans-serif; font-size:clamp(18px,1.6vw,22px); font-weight:500; letter-spacing:-.02em; }
+  .l1 p { font-size:15px; line-height:1.55; color:var(--dim); }
+  .hon { margin-top:44px; padding-top:24px; border-top:1px solid var(--line);
+         font-size:14.5px; line-height:1.6; color:var(--dim); max-width:66ch; }
+  .hon b { color:var(--ink); font-weight:600; }
+
+  /* --- reveal --- */
+  .r { opacity:0; transform:translateY(18px); }
+  .r.is-visible { opacity:1; transform:none; }
+  @media (prefers-reduced-motion:no-preference) {
+    .r { transition:opacity .6s cubic-bezier(.22,1,.36,1), transform .6s cubic-bezier(.22,1,.36,1); }
+    .r.a { transition-delay:.06s } .r.b { transition-delay:.12s }
+  }
+  @media (prefers-reduced-motion:reduce) { .r { opacity:1; transform:none; } }
+
+  @media (max-width:1000px) {
+    .w { padding:0 22px; }
+    .hero { padding:126px 0 58px; }
+    .nums, .rail, .tiles, .pil { grid-template-columns:1fr 1fr; }
+    .rt { grid-template-columns:1fr; gap:12px; padding:22px; }
+    .sp, .sp.rev { grid-template-columns:1fr; gap:30px; } .sp.rev .spc { order:0; }
+    .call { grid-template-columns:1fr; gap:14px; padding:22px; }
+    .l1 { grid-template-columns:1fr; gap:8px; }
+
+    .prop-key { grid-template-columns:1fr 1fr; gap:18px; }
+    .modes { grid-template-columns:1fr; gap:0; }
+    .cards4 { grid-template-columns:1fr 1fr; }
+    .vers { grid-template-columns:1fr; }
+    .ver .win { height:460px; }
+    .strip { grid-template-columns:1fr; }
+    .sec { padding:74px 0; } .dk { padding:80px 0 84px; } .cl { padding:80px 0 90px; }
+    .chip { width:1.18em; height:.68em; }
+  }
+  @media (max-width:620px) { .rail, .nums, .tiles, .pil, .duo { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body class="cs-page theme-nes">
+  <header class="site-header">
+    <div class="nav-pill">
+      <nav class="nav">
+        <a href="/" class="logo"><span class="logo-monogram">LC</span><span class="logo-name">Lori<span class="dot">.</span> Cai</span></a>
+        <div class="nav-center">
+          <a href="/">Home</a><a href="/about.html">About</a><a href="/designs.html">Designs</a>
+          <a href="/research/">Research</a><a href="/contact.html">Contact</a>
+        </div>
+        <div class="nav-right">
+          <a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" class="btn-resume">Check Resume <span class="btn-resume-arrow">→</span></a>
+          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="w">
+        <p class="meta r">
+          <span>Nestify Family Hub</span><span>Design lead, three-person team</span><span>2026</span>
+          <a href="https://www.nestifyapp.org/" target="_blank" rel="noopener">nestifyapp.org ↗</a>
+        </p>
+        <h1 class="d d1 r a">Design didn't hand off.<br>It
+          <img class="chip" src="../assets/projects/family-hub/chip-art.jpg" alt="">
+          <span class="bl">shipped.</span></h1>
+        <p class="t r b">Three designers took a wall-mounted family hub from zero to a device on the wall, in eight weeks.</p>
+
+        <div class="nums r b">
+          <div class="n"><b>8</b><span>weeks, first commit to first homes</span></div>
+          <div class="n on"><b>71%</b><span>of the code I wrote was prototypes</span></div>
+          <div class="n"><b>377</b><span>commits from the design team</span></div>
+          <div class="n"><b>17/53</b><span>shipped specs are agent surface</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The thing -->
+    <section class="sec" style="padding-top:26px;">
+      <div class="w">
+        <div class="stage r">
+          <div class="u"><span class="m"></span>
+            <img src="../assets/projects/family-hub/site-home.png" alt="The Nestify Hub home screen: the family week, today's chores by member, and the shared lists">
+          </div>
+          <p class="cap"><b>Home.</b> The product prototype, as it stands on nestifyapp.org.</p>
+        </div>
+
+        <div class="room r a" style="margin-top:58px;">
+          <img src="../assets/projects/family-hub/room.png" alt="The Nestify Hub mounted on a bedroom wall, showing the family week">
+        </div>
+        <p class="cap" style="max-width:1120px;margin-left:auto;margin-right:auto;"><b>One screen, wherever family life happens.</b> Product render from nestifyapp.org. 1920 x 1080, landscape, mains-powered, never off.</p>
+
+        <div class="rail">
+          <figure class="r"><div class="u s"><span class="m"></span><img src="../assets/projects/family-hub/chores.png" alt="Chores board"></div><figcaption class="cap">Chores</figcaption></figure>
+          <figure class="r a"><div class="u s"><span class="m"></span><img src="../assets/projects/family-hub/activity.png" alt="Activity centre"></div><figcaption class="cap">Voice, with a trace</figcaption></figure>
+          <figure class="r b"><div class="u s"><span class="m"></span><img src="../assets/projects/family-hub/rewards.png" alt="Rewards board"></div><figcaption class="cap">Rewards</figcaption></figure>
+          <figure class="r b"><div class="u s"><span class="m"></span><img src="../assets/projects/family-hub/screensaver.jpg" alt="Screensaver"></div><figcaption class="cap">At rest</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agent interaction modes -->
+    <section class="sec tint">
+      <div class="w">
+        <h2 class="d d2 r" style="max-width:17ch;">Ten ways the agent <span class="bl">can answer you.</span></h2>
+        <p class="t r a" style="margin-top:22px;">A generated reply has no fixed layout, so we specified the shapes it is allowed to take. This is the catalogue we designed to, and it ships as a scenario library inside the product.</p>
+
+        <div class="modes r a">
+          <div class="mode"><span class="i">01</span><div><b>Voice lifecycle</b><span>Wake, listen, think, speak, complete. The full motion sequence.</span></div></div>
+          <div class="mode"><span class="i">06</span><div><b>Ordered mixed results</b><span>Reply and cards kept in the order they streamed in.</span></div></div>
+          <div class="mode"><span class="i">02</span><div><b>Action receipt</b><span>A finished action, re-checked against local truth before it shows.</span></div></div>
+          <div class="mode"><span class="i">07</span><div><b>Safe fallback</b><span>A malformed response still renders something recoverable.</span></div></div>
+          <div class="mode"><span class="i">03</span><div><b>Choice request</b><span>Disambiguation. Which Alex did you mean.</span></div></div>
+          <div class="mode"><span class="i">08</span><div><b>Long scrollable result</b><span>Ten cards and long content at constrained pad height.</span></div></div>
+          <div class="mode"><span class="i">04</span><div><b>High-risk confirmation</b><span>Destructive action, with a local cancel path.</span></div></div>
+          <div class="mode"><span class="i">09</span><div><b>Error state</b><span>Terminal failure, with the transcript preserved.</span></div></div>
+          <div class="mode"><span class="i">05</span><div><b>Phone portal</b><span>A result that continues in the phone app.</span></div></div>
+          <div class="mode"><span class="i">10</span><div><b>Non-blocking notices</b><span>Busy turn, audio-only degradation. Never a dead end.</span></div></div>
+        </div>
+
+        <div class="strip">
+          <figure class="r">
+            <div class="u"><span class="m"></span><img src="../assets/projects/family-hub/vs-listen.png" alt="Listening: the dashboard dims and a rainbow glow runs the whole screen edge"></div>
+            <figcaption class="cap"><b>Listening.</b> The dashboard dims and the entire screen edge lights, so it reads from across the room.</figcaption>
+          </figure>
+          <figure class="r a">
+            <div class="u"><span class="m"></span><img src="../assets/projects/family-hub/vs-think.png" alt="Thinking: the same bubble with a different verb while the request is processed"></div>
+            <figcaption class="cap"><b>Thinking.</b> Same bubble, different verb. Never a spinner.</figcaption>
+          </figure>
+          <figure class="r b">
+            <div class="u"><span class="m"></span><img src="../assets/projects/family-hub/vs-speak.png" alt="Working on it: the bubble shows what it heard while it works"></div>
+            <figcaption class="cap"><b>Working on it.</b> It shows what it heard while it works, so a mishearing is caught before the write.</figcaption>
+          </figure>
+          <figure class="r b">
+            <div class="u"><span class="m"></span><img src="../assets/projects/family-hub/vs-done.png" alt="Answered: Nestie speaks the confirmation and the glow recedes to the corner"></div>
+            <figcaption class="cap"><b>Answered.</b> Spoken and written at once, then the glow recedes to the corner.</figcaption>
+          </figure>
+        </div>
+
+        <div class="cards4">
+          <figure class="card4 r"><img src="../assets/projects/family-hub/ag-choice.png" alt="Choice request: which Alex did you mean"><figcaption class="cap"><b>Choice.</b> Who did you mean.</figcaption></figure>
+          <figure class="card4 r a"><img src="../assets/projects/family-hub/ag-confirm.png" alt="High-risk confirmation: delete the recurring event"><figcaption class="cap"><b>Confirmation.</b> Destructive, so it asks.</figcaption></figure>
+          <figure class="card4 r b"><img src="../assets/projects/family-hub/ag-portal.png" alt="Phone portal: continue on phone"><figcaption class="cap"><b>Portal.</b> This one belongs on a phone.</figcaption></figure>
+          <figure class="card4 r b"><img src="../assets/projects/family-hub/ag-receipt.png" alt="Activity centre: a receipt with a change notice and the updated card"><figcaption class="cap"><b>Receipt.</b> The card, with a change notice above it.</figcaption></figure>
+        </div>
+        <p class="cap" style="margin-top:22px;">All eight are the production agent UI rendered on the device, driven by the scenario library rather than a live turn. No account, network or family data. That is the point of it: every state is reviewable on demand, including the ones a real conversation almost never reaches.</p>
+      </div>
+    </section>
+
+    <!-- Prototypes -->
+    <section class="sec">
+      <div class="w">
+        <h2 class="d d2 r" style="max-width:18ch;">The prototypes are <span class="bl">screens in the real app.</span></h2>
+        <p class="t r a" style="margin-top:22px;">Not files. They ship inside the production binary behind a debug panel, so engineering reviews a running thing on real hardware.</p>
+
+        <div class="prop r a">
+          <div class="prop-bar">
+            <span style="background:var(--bl)"></span>
+            <span style="background:var(--g1)"></span>
+          </div>
+          <div class="prop-key">
+            <div><b>58,423</b>Prototypes, in the shipping app</div>
+            <div><b>8,939</b>The pad app itself</div>
+            <div><b>7,115</b>Agent skills and rules</div>
+            <div><b>7,910</b>Everything else</div>
+          </div>
+          <p class="cap">Lines of code I inserted, by destination. 82,387 across 713 files.</p>
+        </div>
+
+        <div style="margin-top:84px;">
+          <h3 class="d d3 r" style="max-width:24ch;">One step, two treatments, both running on the device.</h3>
+          <p class="t r a" style="margin-top:16px;">Voice enrolment, grid versus carousel. Both are mock-only prototypes running on the real device; the scrubber on the right walks the flow, so a reviewer needs no build.</p>
+          <div class="duo r a" style="margin-top:34px;">
+            <figure><div class="u"><span class="m"></span><img src="../assets/projects/family-hub/proto-a.png" alt="Voice enrolment prototype, grid treatment"></div><figcaption class="cap">Grid</figcaption></figure>
+            <figure><div class="u"><span class="m"></span><img src="../assets/projects/family-hub/proto-b.png" alt="Voice enrolment prototype, carousel treatment"></div><figcaption class="cap">Carousel</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="sp" style="margin-top:64px;">
+          <div class="spc">
+            <h3 class="d d3 r" style="max-width:22ch;">A control panel for the agent's interface.</h3>
+            <p class="t r a" style="margin-top:18px;">Six voice states, driven by hand, no account and no network. Twenty more prototypes live in the mobile app, eight of them mine.</p>
+          </div>
+          <div class="r a">
+            <div class="u"><span class="m"></span><img src="../assets/projects/family-hub/protoharness.png" alt="The design team's prototype harness driving the production agent interface, step by step"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Routes -->
+    <section class="sec tint">
+      <div class="w">
+        <h2 class="d d2 r" style="max-width:16ch;">Design has commit rights.</h2>
+        <p class="t r a" style="margin-top:22px;">I negotiated the access, then wrote the rules that made engineering willing to grant it. They are an executable agent skill, not a wiki page.</p>
+
+        <div class="rts">
+          <article class="rt r"><p class="k">A</p>
+            <h4>Visual change, no new behaviour</h4>
+            <p class="fl">main <em>→</em> gate <em>→</em> preflight <em>→</em> push</p></article>
+          <article class="rt r a"><p class="k">B</p>
+            <h4>Real front-end work, no backend</h4>
+            <p class="fl">branch <em>→</em> spec + prototype <em>→</em> PR <em>→</em> me</p></article>
+          <article class="rt r b"><p class="k">C</p>
+            <h4>Touches data, sync, permissions, native</h4>
+            <p class="fl">branch <em>→</em> PR <em>→</em> me + eng owner</p></article>
+        </div>
+        <p class="cap" style="margin-top:22px;">The gates are mechanical, so nobody argues past one. Designers can write code; we cannot approve it.</p>
+      </div>
+    </section>
+
+    <!-- Agents -->
+    <section class="dk">
+      <div class="w">
+        <p class="lab r">The part worth talking about</p>
+        <h2 class="d d2 r a" style="margin-top:16px; max-width:16ch;">We used agents to build an agent.</h2>
+
+        <div class="tiles">
+          <article class="tile r"><b>17/53</b>
+            <h4>You cannot redline a generated screen</h4>
+            <p>So we specify behaviour and boundaries: what it may write, what it must ask, what it does when unsure.</p></article>
+          <article class="tile on r a"><b>33+91</b>
+            <h4>The spec became the interface</h4>
+            <p>Skills and rule files. A decision written precisely enough is executable: agents route it, build it, refuse it.</p></article>
+          <article class="tile r b"><b>117</b>
+            <h4>The AI is a contributor</h4>
+            <p>Of 7,380 commits in the repo. The bar moved from can you build it to can you decide it.</p></article>
+        </div>
+
+        <p class="t r a" style="margin-top:46px; max-width:52ch; font-size:clamp(18px,1.7vw,24px); line-height:1.4; color:rgba(242,243,244,.82);">
+          The bottleneck stopped being production. It became judgement.
+        </p>
+      </div>
+    </section>
+
+    <!-- Decisions -->
+    <section class="sec">
+      <div class="w">
+        <h2 class="d d2 r">Believed. Broke. Shipped.</h2>
+
+        <div class="calls">
+          <article class="call r">
+            <div><p class="st">Believed</p><p>The hub runs as whoever set it up.</p></div>
+            <div><p class="st">Broke</p><p>A child's chore said <b>created by Dad</b>. That account leaves, the wall dies.</p></div>
+            <div><p class="st hit">Shipped</p><p>A family-owned device identity. It asks who a list belongs to; it never guesses.</p></div>
+            <div class="sh"><img src="../assets/projects/family-hub/activity.png" alt="Activity centre, where device actions are attributed"></div>
+          </article>
+          <article class="call r a">
+            <div><p class="st">Believed</p><p>Check the voiceprint, then answer.</p></div>
+            <div><p class="st">Broke</p><p>A device that silently refuses is not secure. Nobody debugs a threshold in a kitchen.</p></div>
+            <div><p class="st hit">Shipped</p><p><b>It always answers.</b> Recognition only resolves "me" and clears the lock.</p></div>
+            <div class="sh"><img src="../assets/projects/family-hub/security.png" alt="Security settings on the pad"></div>
+          </article>
+          <article class="call r b">
+            <div><p class="st">Believed</p><p>A PIN on the pad keeps the kids out.</p></div>
+            <div><p class="st">Broke</p><p>Twice. They watch you type it, and the lock's own settings sit behind it.</p></div>
+            <div><p class="st hit">Shipped</p><p>Settings moved to the phone. The pad page has <b>no controls at all</b>.</p></div>
+            <div class="sh"><img src="../assets/projects/family-hub/chores.png" alt="Chores board, where checking off is never locked"></div>
+          </article>
+        </div>
+        <p class="cap" style="margin-top:22px;">The rule underneath: <b>the wall does, the phone decides.</b></p>
+      </div>
+    </section>
+
+    <!-- Site generations -->
+    <section class="sec">
+      <div class="w">
+        <h2 class="d d2 r" style="max-width:15ch;">The marketing site, before and after.</h2>
+        <p class="t r a" style="margin-top:22px;">Same company, two visual languages, about four months apart. Each window scrolls the whole page.</p>
+
+        <div class="vers two">
+          <div class="ver r">
+            <p class="tag"><i>BEFORE</i><b>Product shot</b></p>
+            <div class="win"><img src="../assets/projects/family-hub/site-before.jpg" alt="The earlier marketing site: an uppercase claim over a family photo, tablet and phone on a table" loading="lazy"></div>
+            <p>Rounded sans, an uppercase claim, hardware on a table. Reads like <em>a spec sheet with a family in it.</em></p>
+          </div>
+          <div class="ver r a">
+            <p class="tag"><i>NOW</i><b>Parent Copilot</b></p>
+            <div class="win"><img src="../assets/projects/family-hub/site-now.jpg" alt="The current marketing site: warm paper, one sentence per screen, video set inside the headline" loading="lazy"></div>
+            <p>Warm paper, one sentence per screen, video set inside the headline, the device shown in rooms. Sells <em>a feeling.</em></p>
+          </div>
+        </div>
+        <p class="vers-hint r">The earlier build is still serving on the preview domain. The current one is production, stitched from viewport frames because a scroll-pinned page will not screenshot in one pass.</p>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="sec tint">
+      <div class="w">
+        <h2 class="d d2 r">What changed.</h2>
+        <div class="pil">
+          <article class="p1 on r"><p class="lab">The function</p>
+            <h4>Design became a shipping team.</h4>
+            <p>Three designers, 377 commits into the product repo. The routes and review ownership are written down, so the model survives me.</p></article>
+          <article class="p1 r a"><p class="lab">The product</p>
+            <h4>0 to 1 hardware in eight weeks.</h4>
+            <p>First commit 27 June, v1.0.0 in first homes by late August. 53 specs, 579 commits on the device app.</p></article>
+          <article class="p1 r b"><p class="lab">The method</p>
+            <h4>A repeatable way to design agent products.</h4>
+            <p>Prototype inside the binary. Specify behaviour, not layout. Write decisions precisely enough for agents to execute.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Close -->
+    <section class="cl">
+      <div class="w" style="max-width:900px;">
+        <h2 class="d d2 r">Three things I got wrong first.</h2>
+        <div class="ls">
+          <div class="l1 r"><h4>I optimised for output before judgement.</h4>
+            <p>With agents, making things stopped being the constraint. I made more options than the team could evaluate.</p></div>
+          <div class="l1 r"><h4>I defended designs I had already finished.</h4>
+            <p>The welcome animation, the pairing flow, the on-device PIN. The demo was fine. The kitchen was not.</p></div>
+          <div class="l1 r"><h4>I asked for capacity when I needed permission.</h4>
+            <p>What unblocked the team was write access plus a rule set strict enough for engineering to accept.</p></div>
+        </div>
+        <p class="hon r"><b>It is early.</b> The hub is with first families; retention numbers do not exist yet. Every number here comes from the repo. On the screens: the module shots are live captures off the device with dev test data; the agent states come from the production UI driven by the scenario library; the prototypes are marked mock-only; the two clean product shots are renders from nestifyapp.org.</p>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container">
+        <h2>See more projects.</h2>
+        <p>Each one a different shape of ambiguity.</p>
+        <a href="/designs.html" class="btn btn-primary">Back to all projects <span class="arrow">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo">LORI<span class="dot">.</span></a>
+          <p>Product designer turning complexity into clarity through human-centered, AI-native experiences.</p>
+        </div>
+        <div><p class="footer-heading">Pages</p>
+          <ul class="footer-list"><li><a href="/">Home</a></li><li><a href="/contact.html">Contact</a></li>
+          <li><a href="/designs.html">Designs</a></li><li><a href="/research/">Research</a></li></ul></div>
+        <div><p class="footer-heading">Projects</p>
+          <ul class="footer-list"><li><a href="/projects/family-hub.html">Family Hub</a></li>
+          <li><a href="/projects/octopus-ai.html">Octopus AI</a></li><li><a href="/projects/nexa-ai-tools.html">Nexa</a></li>
+          <li><a href="/projects/smart-brook.html">Smart Brook</a></li><li><a href="/projects/mentorup.html">MentorUp</a></li>
+          <li><a href="/projects/espoirer.html">Espoirer</a></li></ul></div>
+        <div><p class="footer-heading">Connect</p>
+          <ul class="footer-list"><li><a href="mailto:loricai1017@gmail.com">Email</a></li>
+          <li><a href="https://docs.google.com/document/d/1YYCmqkbBz23IVgeAIkrZoWJfuecsSlBc/edit?usp=sharing&amp;ouid=109984980377119589344&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Resume</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Lori Cai. All rights reserved.</span><span>UW · Seattle, WA</span></div>
+    </div>
+    <div class="footer-wordmark" aria-hidden="true">Lori Cai<span class="dot">.</span></div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.r');
+      if (!('IntersectionObserver' in window) ||
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        els.forEach(function (el) { el.classList.add('is-visible'); }); return;
+      }
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
