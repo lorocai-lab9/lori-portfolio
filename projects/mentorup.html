@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MentorUp · Lori Cai</title>
   <meta name="description" content="Case study — Better mentorship for STEMs. PM & founding designer for a 0→1 mentorship platform with AI-supported emotional companion.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.leicai99.com/projects/mentorup.html">
+  <meta property="og:title" content="MentorUp · Lori Cai">
+  <meta property="og:description" content="Case study — Better mentorship for STEMs. PM & founding designer for a 0→1 mentorship platform with AI-supported emotional companion.">
+  <meta property="og:image" content="https://www.leicai99.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.leicai99.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
@@ -22,7 +34,7 @@
           <a href="/">Home</a>
           <a href="/about.html">About</a>
           <a href="/designs.html">Designs</a>
-          <a href="/research/museum-of-flight.html">Research</a>
+          <a href="/research/">Research</a>
           <a href="/contact.html">Contact</a>
         </div>
         <div class="nav-right">
@@ -45,8 +57,8 @@
             <p class="lede">PM &amp; founding designer for MentorUp — a 0→1 platform built to match mentees with the right mentors, then keep them company through the <span class="ink">emotional gap</span> between sessions. A community for job seekers and early-career designers when the search gets long.</p>
             <a href="https://www.mentorup.info/" target="_blank" rel="noopener" class="pill-btn">Visit MentorUp <span>↗</span></a>
           </div>
-          <div class="mentor-hero-art cs-reveal cs-reveal-delay-1" aria-label="MentorUp · mentor profile screen">
-            <img class="fill" src="/assets/projects/mentorup/Mentor_Profile_-_edit.png" alt="MentorUp · mentor profile screen" loading="lazy">
+          <div class="mentor-hero-art cs-reveal cs-reveal-delay-1" aria-label="MentorUp · live product on desktop and mobile">
+            <img class="fill" src="/assets/projects/mentorup/hero-shot.jpg" alt="MentorUp · live mentor browsing on desktop and mobile" loading="eager" fetchpriority="high">
             <div class="floating-card fc1">
               <span class="who">@Mia · Mentor</span>
               "You don't have to figure it out alone — let's break it down together."
@@ -221,9 +233,9 @@
               </li>
             </ol>
           </div>
-          <div class="mentor-phone cs-reveal cs-reveal-delay-1" aria-label="MentorUp · browse mentors screen">
-            <img class="fill" src="/assets/projects/mentorup/Our_Mentors_-_Mentee_View.png" alt="MentorUp · browse mentors screen" loading="lazy">
-          </div>
+          <figure class="mentor-system-visual cs-reveal cs-reveal-delay-1" style="align-self: center;">
+            <img src="/assets/projects/mentorup/Shot.png" alt="MentorUp · mobile screens for browsing, onboarding, and availability" loading="lazy">
+          </figure>
         </div>
       </div>
     </section>
@@ -236,24 +248,24 @@
             <p class="eyebrow">06 / Supporting flows</p>
             <h2>Even a "simple" MVP <span class="ink">runs on invisible flows.</span></h2>
           </div>
-          <p class="sub cs-reveal cs-reveal-delay-1">As the first designer, I quickly realized the four-step main journey only worked because of dozens of supporting flows behind it — the quiet plumbing that makes a product feel coherent end-to-end.</p>
+          <p class="sub cs-reveal cs-reveal-delay-1">As the first designer, I quickly realized the four-step main journey only worked because of dozens of supporting flows behind it. Below: the structural wireframes where each flow was worked out before any visual polish.</p>
         </div>
 
         <div class="mentor-supporting-grid">
           <article class="mentor-support-card cs-reveal">
-            <div class="mentor-support-img"><img src="/assets/projects/mentorup/Search_page.png" alt="Search and filter flow" loading="lazy"></div>
-            <h5>Search &amp; filter</h5>
-            <p>Combinable filters, empty states, "no results" recovery, and recently-viewed memory.</p>
+            <div class="mentor-support-img"><img src="/assets/projects/mentorup/Search_page.png" alt="Search and filter wireframe" loading="lazy"></div>
+            <h5>Search &amp; filter <span style="font-size:11px; color:var(--muted); font-weight:500;">· wireframe</span></h5>
+            <p>Combinable filters, price range, and a card grid tuned for comparison before commitment.</p>
           </article>
           <article class="mentor-support-card cs-reveal cs-reveal-delay-1">
-            <div class="mentor-support-img"><img src="/assets/projects/mentorup/booking_2.png" alt="Booking confirmation flow" loading="lazy"></div>
-            <h5>Booking &amp; confirmation</h5>
-            <p>Time-zone handling, reschedules, payment edge cases, and confirmation states that reassure rather than confuse.</p>
+            <div class="mentor-support-img"><img src="/assets/projects/mentorup/booking_2.png" alt="Pre-session info handoff wireframe" loading="lazy"></div>
+            <h5>Booking &amp; handoff <span style="font-size:11px; color:var(--muted); font-weight:500;">· wireframe</span></h5>
+            <p>Before payment, the mentee frames their ask — topic, context, optional resume — so the session starts prepared, not cold.</p>
           </article>
           <article class="mentor-support-card cs-reveal cs-reveal-delay-2">
-            <div class="mentor-support-img"><img src="/assets/projects/mentorup/Mentor_1.png" alt="Mentor onboarding flow" loading="lazy"></div>
-            <h5>Mentor onboarding</h5>
-            <p>Profile review, calendar sync, payout setup, and a tone-of-voice prompt that shaped how mentors introduced themselves.</p>
+            <div class="mentor-support-img"><img src="/assets/projects/mentorup/Mentor_1.png" alt="Mentor profile and availability wireframe" loading="lazy"></div>
+            <h5>Mentor profile &amp; availability <span style="font-size:11px; color:var(--muted); font-weight:500;">· wireframe</span></h5>
+            <p>Services, tags, and a calendar that turns "when are you free?" into one tap.</p>
           </article>
           <article class="mentor-support-card cs-reveal cs-reveal-delay-3">
             <div class="mentor-support-img alt"><div class="mentor-support-placeholder">
@@ -271,18 +283,18 @@
       <div class="container">
         <div class="mentor-system-grid">
           <div class="cs-reveal">
-            <p class="eyebrow">07 / Design system</p>
-            <h2>A system <span class="ink">that scales</span> with the team.</h2>
-            <p class="lede">With the core journey defined, the next challenge was ensuring the product could grow with clarity and consistency. So I built MentorUp's design system from the ground up — tokens, components, patterns, and writing principles — small enough to ship fast, structured enough to outlive any single screen.</p>
+            <p class="eyebrow">07 / Product logic</p>
+            <h2>The flows <span class="ink">before the pixels</span>.</h2>
+            <p class="lede">With the core journey defined, I mapped the complete product logic end-to-end — both roles' onboarding, scheduling, booking, payment, confirmation, and the reschedule and refund paths where products usually leak trust. Every screen that followed inherited its decisions from this map, alongside a lightweight token-and-component kit that kept the visuals consistent.</p>
             <ul class="mentor-system-list">
-              <li><strong>Tokens.</strong> Color, type, spacing, radius, elevation — one source of truth.</li>
-              <li><strong>Components.</strong> Buttons, profile cards, filter chips, message bubbles, empty states.</li>
-              <li><strong>Patterns.</strong> Booking flow, onboarding, notification states, mentor/mentee dual views.</li>
+              <li><strong>Two onboardings.</strong> Mentor and mentee enter differently — the map keeps them converging on one session.</li>
+              <li><strong>Booking &amp; payment.</strong> Confirmation states, email handoffs, and what happens when a mentor can't make it.</li>
+              <li><strong>Reschedule &amp; refund.</strong> The unhappy paths, designed on purpose instead of discovered in support tickets.</li>
               <li><strong>Voice.</strong> Warm, plain-spoken, encouraging — never corporate.</li>
             </ul>
           </div>
           <div class="mentor-system-visual cs-reveal cs-reveal-delay-1">
-            <img src="/assets/projects/mentorup/MentorUp_Design.png" alt="MentorUp design system overview" loading="lazy">
+            <img src="/assets/projects/mentorup/MentorUp_Design.png" alt="MentorUp end-to-end user flow map — onboarding, scheduling, booking, and reschedule paths" loading="lazy">
           </div>
         </div>
       </div>
@@ -302,7 +314,6 @@
         <div class="mentor-dual-grid">
           <article class="mentor-dual-card mentee cs-reveal">
             <div class="mentor-dual-tag">Mentee view</div>
-            <div class="mentor-dual-img"><img src="/assets/projects/mentorup/Our_Mentors_-_Mentee_View.png" alt="Mentee view of mentor browsing" loading="lazy"></div>
             <ul>
               <li>Discovery, comparison, trust-building.</li>
               <li>"Become a Mentor" CTA visible at the top.</li>
@@ -312,7 +323,6 @@
           </article>
           <article class="mentor-dual-card mentor cs-reveal cs-reveal-delay-1">
             <div class="mentor-dual-tag">Mentor view</div>
-            <div class="mentor-dual-img"><img src="/assets/projects/mentorup/Mentor_1.png" alt="Mentor view of dashboard" loading="lazy"></div>
             <ul>
               <li>Schedule, requests, earnings, growth.</li>
               <li>No "Become a Mentor" CTA — they already are.</li>
@@ -366,9 +376,9 @@
               <li>Optimized profile media so trust still built in 4G conditions.</li>
             </ul>
           </div>
-          <div class="mentor-responsive-art cs-reveal cs-reveal-delay-1">
-            <img class="fill" src="/assets/projects/mentorup/Search_page.png" alt="MentorUp mobile search" loading="lazy">
-          </div>
+          <figure class="mentor-system-visual cs-reveal cs-reveal-delay-1" style="align-self: center;">
+            <img src="/assets/mentorup.png" alt="MentorUp on mobile — onboarding, browsing, profile, and availability screens" loading="lazy">
+          </figure>
         </div>
       </div>
     </section>
@@ -435,9 +445,9 @@
 
         <div class="mentor-tone-demo cs-reveal cs-reveal-delay-2"
              data-personas='[
-               {"q":"I don'\''t know if I'\''m good enough for this.","a":"That voice in your head isn'\''t the truth — it'\''s the cost of growing fast. Pick one thing you finished this week, however small, and let'\''s start there.","tone":"Patient · gentle · validating","suggestion":"Try the &quot;one win a day&quot; framework"},
-               {"q":"Another rejection email. What am I missing?","a":"Rejections aren'\''t verdicts, they'\''re data. Want to walk through the last one together? Sometimes the lesson is hidden in the timing, not the answer.","tone":"Direct · analytical · supportive","suggestion":"Open the interview reflection template"},
-               {"q":"I'\''ve been searching for months and I'\''m exhausted.","a":"I hear you. The fatigue is real — and it'\''s also data. Tell me what changed in the last week, no matter how small. We'\''ll work from there.","tone":"Quiet · reflective · grounding","suggestion":"Schedule a 15-min weekly anchor"}
+               {"q":"I don&#39;t know if I&#39;m good enough for this.","a":"That voice in your head isn&#39;t the truth — it&#39;s the cost of growing fast. Pick one thing you finished this week, however small, and let&#39;s start there.","tone":"Patient · gentle · validating","suggestion":"Try the &quot;one win a day&quot; framework"},
+               {"q":"Another rejection email. What am I missing?","a":"Rejections aren&#39;t verdicts, they&#39;re data. Want to walk through the last one together? Sometimes the lesson is hidden in the timing, not the answer.","tone":"Direct · analytical · supportive","suggestion":"Open the interview reflection template"},
+               {"q":"I&#39;ve been searching for months and I&#39;m exhausted.","a":"I hear you. The fatigue is real — and it&#39;s also data. Tell me what changed in the last week, no matter how small. We&#39;ll work from there.","tone":"Quiet · reflective · grounding","suggestion":"Schedule a 15-min weekly anchor"}
              ]'>
 
           <div class="mentor-tone-personas">
@@ -462,7 +472,7 @@
             </div>
           </div>
 
-          <p class="mentor-tone-foot">Concept prototype · models the persona-aware tone-shift logic the live MentorUp AI mentor uses.</p>
+          <p class="mentor-tone-foot">Concept prototype · how the AI mentor's persona-aware tone-shift was designed to work.</p>
         </div>
       </div>
     </section>
@@ -484,8 +494,8 @@
             <p class="label">Early-stage users onboarded</p>
           </div>
           <div class="mentor-result cs-reveal cs-reveal-delay-2">
-            <span class="num">2<em>/2</em></span>
-            <p class="label">Layers validated · core flow + AI</p>
+            <span class="num">5<em></em></span>
+            <p class="label">AI surfaces designed into the MVP</p>
           </div>
         </div>
       </div>
@@ -506,7 +516,7 @@
             <li class="cs-reveal cs-reveal-delay-2" style="padding: 16px 0; border-bottom: 1px solid var(--border); display:flex; gap:14px; color: var(--text); font-size: 16px; line-height: 1.55;"><span style="color:var(--cs-accent); font-weight:700;">—</span>AI is most effective when it complements human connection rather than replacing it.</li>
             <li class="cs-reveal cs-reveal-delay-3" style="padding: 16px 0; border-bottom: 1px solid var(--border); display:flex; gap:14px; color: var(--text); font-size: 16px; line-height: 1.55;"><span style="color:var(--cs-accent); font-weight:700;">—</span>Community is a feature. Belonging is the deliverable.</li>
           </ul>
-          <p class="cs-reveal cs-reveal-delay-3" style="margin-top: 36px; font-size: 17px; line-height: 1.65; color: var(--muted); text-align:center;"><em>"If given more time, future iterations would focus on deeper personalization and long-term support — turning the platform from a place you visit into a community you belong to."</em></p>
+          <p class="cs-reveal cs-reveal-delay-3" style="margin-top: 36px; font-size: 17px; line-height: 1.65; color: var(--muted); text-align:center;">Next: deeper personalization and long-term support — turning the platform from a place you visit into a community you belong to.</p>
         </div>
       </div>
     </section>
@@ -533,17 +543,17 @@
             <li><a href="/">Home</a></li>
             <li><a href="/contact.html">Contact</a></li>
             <li><a href="/designs.html">Designs</a></li>
-            <li><a href="/research/museum-of-flight.html">Research</a></li>
+            <li><a href="/research/">Research</a></li>
           </ul>
         </div>
         <div>
           <p class="footer-heading">Projects</p>
           <ul class="footer-list">
-            <li><a href="/projects/octopus-ai.html">Edge AI</a></li>
-            <li><a href="/projects/nexa-ai-tools.html">2C AI</a></li>
-            <li><a href="/projects/smart-brook.html">HMI</a></li>
-            <li><a href="/projects/mentorup.html">2C Web</a></li>
-            <li><a href="/projects/espoirer.html">2C App</a></li>
+            <li><a href="/projects/octopus-ai.html">Octopus AI</a></li>
+            <li><a href="/projects/nexa-ai-tools.html">Nexa</a></li>
+            <li><a href="/projects/smart-brook.html">Smart Brook</a></li>
+            <li><a href="/projects/mentorup.html">MentorUp</a></li>
+            <li><a href="/projects/espoirer.html">Espoirer</a></li>
           </ul>
         </div>
         <div>
@@ -554,14 +564,12 @@
           </ul>
         </div>
       </div>
-      <div class="keywords">
-        <span>Human</span><span>Intent</span><span>Strategy</span><span>Focus</span><span>Scalable</span><span>Impact</span><span>Clear</span><span>Value</span><span>Efficient</span><span>Solving</span><span>Useful</span><span>Longterm</span>
-      </div>
       <div class="footer-bottom">
         <span>© 2026 Lori Cai. All rights reserved.</span>
         <span>UW · Seattle, WA</span>
       </div>
     </div>
+    <div class="footer-wordmark" aria-hidden="true">Lori Cai<span class="dot">.</span></div>
   </footer>
 
   <script src="../script.js"></script>

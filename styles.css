@@ -10,6 +10,7 @@
   --text:      #0B0B0B;   /* near-black */
   --muted:     #666666;   /* neutral mid gray */
   --border:    #EEEEEE;   /* neutral light */
+  --shell-radius: clamp(28px, 3.4vw, 56px);  /* page panel lifting off the footer */
   --accent:    #68FF7E;   /* signature mint green */
   --accent-soft: #DCFEE2; /* very soft mint */
 
@@ -692,7 +693,11 @@ body.nav-scrolled .nav-toggle span { background: #fff; }
   content: '';
   position: absolute;
   inset: 0;
+  border-radius: inherit;
   background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.18), transparent 60%);
+  /* Hairline edge. Translucent ink so it vanishes on dark covers and defines
+     the boundary on pale ones — some tones sit within 2% of the page bg. */
+  box-shadow: inset 0 0 0 1px rgba(11, 11, 11, 0.09);
   pointer-events: none;
   z-index: 2;
 }
@@ -719,6 +724,42 @@ body.nav-scrolled .nav-toggle span { background: #fff; }
 .project-cover[data-tone="terracotta"] { background: var(--terracotta); }
 .project-cover[data-tone="cream"]      { background: var(--cream); }
 .project-cover[data-tone="slate"]      { background: var(--slate); }
+
+/* Cards with no destination yet — unpublished work.
+   No hover response at all; the badge explains why there is nowhere to click. */
+.project.is-static { cursor: default; }
+@media (hover: hover) and (pointer: fine) {
+  .project.is-static:hover { transform: none; }
+  .project.is-static:hover .project-cover img { transform: none; }
+}
+.project-status {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: rgba(11, 11, 11, 0.84);
+  color: #FAF9F6;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.project-status::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.project .more.is-quiet {
+  color: var(--muted);
+  font-style: italic;
+}
 
 .project-tag {
   font-size: 12px;
@@ -1002,10 +1043,25 @@ body.nav-scrolled .nav-toggle span { background: #fff; }
    Footer
    ============================================ */
 
+/* The page sits as a panel that lifts off the footer: main gets rounded bottom
+   corners, the footer is pulled up underneath so its tint shows through them. */
+main {
+  position: relative;
+  z-index: 1;
+  background: var(--bg);
+  border-bottom-left-radius: var(--shell-radius);
+  border-bottom-right-radius: var(--shell-radius);
+  overflow: clip;   /* clip, not hidden, so descendants keep position: sticky */
+}
+/* main's own edge is curved now — a straight hairline would collide with it */
+main > *:last-child { border-bottom: none; }
+
 .site-footer {
-  border-top: 1px solid var(--border);
-  margin-top: 80px;
-  padding: 60px 0 24px;
+  position: relative;
+  overflow: hidden;
+  margin-top: calc(var(--shell-radius) * -1);
+  padding: calc(var(--shell-radius) + 76px) 0 0;
+  background: linear-gradient(180deg, var(--bg) 0%, #EDFBF0 26%, var(--accent-soft) 60%, #BFF5CD 100%);
 }
 
 .footer-top {
@@ -1015,7 +1071,8 @@ body.nav-scrolled .nav-toggle span { background: #fff; }
   margin-bottom: 56px;
 }
 
-.footer-brand .logo { font-size: 14px; }
+/* gap: 12px on .logo is for the nav's monogram + name; here it splits "LORI" from its dot */
+.footer-brand .logo { font-size: 14px; gap: 0; }
 .footer-brand p {
   margin-top: 12px;
   font-size: 14px;
@@ -1068,6 +1125,22 @@ body.nav-scrolled .nav-toggle span { background: #fff; }
   flex-wrap: wrap;
   gap: 12px;
 }
+
+/* Oversized signature. Decorative — sized in vw so it spans the viewport, and
+   allowed to run past the footer's bottom edge so it reads as a cropped mark. */
+.footer-wordmark {
+  margin: 56px 0 -0.16em;   /* baseline runs just past the edge — a cropped mark */
+  font-size: 24vw;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+  user-select: none;
+  pointer-events: none;
+}
+.footer-wordmark .dot { color: var(--accent); }
 
 /* ============================================
    Responsive
@@ -6822,14 +6895,15 @@ body.theme-brook { background: #0A0A0A; }
 .mentor-hero .pill-btn:hover { background: #2b2b2b; }
 .mentor-hero-art {
   position: relative;
-  aspect-ratio: 9/19;
-  max-width: 280px;
+  width: 100%;
+  aspect-ratio: 1600/1035;
+  max-width: 580px;
   margin: 0 auto;
-  border-radius: 36px;
+  border-radius: 24px;
   background:
     radial-gradient(circle at 50% 25%, #fff, transparent 55%),
     linear-gradient(180deg, #FFFAF0, #F2EAD6);
-  border: 8px solid var(--text);
+  border: 1px solid var(--border);
   box-shadow: 0 30px 60px -24px rgba(0,0,0,0.18);
   overflow: hidden;
 }
@@ -6855,8 +6929,8 @@ body.theme-brook { background: #0A0A0A; }
   font-size: 12px;
   line-height: 1.4;
 }
-.mentor-hero-art .floating-card.fc1 { top: 24%; left: -12%; min-width: 60%; }
-.mentor-hero-art .floating-card.fc2 { bottom: 12%; right: -16%; min-width: 70%; }
+.mentor-hero-art .floating-card.fc1 { top: 10%; left: 5%; max-width: 44%; }
+.mentor-hero-art .floating-card.fc2 { bottom: 8%; left: 5%; max-width: 46%; }
 .mentor-hero-art .floating-card .who {
   display: block;
   font-size: 10px;
@@ -8592,8 +8666,8 @@ body.theme-brook { background: #0A0A0A; }
 }
 .esp-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -8606,13 +8680,44 @@ body.theme-brook { background: #0A0A0A; }
 .esp-gallery-grid img {
   display: block;
   width: 100%;
-  aspect-ratio: 9 / 19;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
   border-radius: 14px;
   border: 1px solid var(--border);
   background: #fff;
   box-shadow: 0 18px 36px -18px rgba(0, 0, 0, 0.16);
+}
+/* Wide process artifacts — flow maps, research tables, style guidelines */
+.esp-artifact {
+  margin: 56px auto 0;
+  max-width: 1100px;
+}
+.esp-artifact .esp-artifact-stage {
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.16);
+  overflow-x: auto;
+}
+.esp-artifact .esp-artifact-stage img {
+  display: block;
+  min-width: 900px;
+  width: 100%;
+  height: auto;
+}
+.esp-artifact figcaption {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+.esp-artifact figcaption .lbl {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text);
+  margin-right: 10px;
 }
 .esp-gallery-grid figcaption {
   font-size: 11px;
@@ -9229,7 +9334,7 @@ body.aboutos .site-header { display: none; }
 
 @media (max-width: 960px) {
   .mentor-hero-grid { grid-template-columns: 1fr; }
-  .mentor-hero-art { max-width: 240px; }
+  .mentor-hero-art { max-width: 100%; }
   .mentor-path-head { grid-template-columns: 1fr; gap: 16px; }
   .mentor-path-grid { grid-template-columns: 1fr; }
   .mentor-journey-grid { grid-template-columns: 1fr; gap: 40px; }

@@ -33,3 +33,9 @@ build/
 *.fbx
 *.bin
 !assets/robot-arm.optimized.glb
+
+# Quarantined for manual deletion — must never ship (see _DELETE_ME/README)
+_DELETE_ME/
+
+# Local pre-downscale backups of committed images (large, redundant)
+assets/_originals/

@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Espoirer · Lori Cai</title>
   <meta name="description" content="Case study — Designing a 0→1 driver app to improve last-mile delivery accuracy in Japan. 92% → 97% delivery success.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.leicai99.com/projects/espoirer.html">
+  <meta property="og:title" content="Espoirer · Lori Cai">
+  <meta property="og:description" content="Case study — Designing a 0→1 driver app to improve last-mile delivery accuracy in Japan. 92% → 97% delivery success.">
+  <meta property="og:image" content="https://www.leicai99.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.leicai99.com/assets/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
@@ -22,7 +34,7 @@
           <a href="/">Home</a>
           <a href="/about.html">About</a>
           <a href="/designs.html">Designs</a>
-          <a href="/research/museum-of-flight.html">Research</a>
+          <a href="/research/">Research</a>
           <a href="/contact.html">Contact</a>
         </div>
         <div class="nav-right">
@@ -124,6 +136,18 @@
           Drivers <em>don't read</em> the app — they scan, memorize, and act.
         </blockquote>
         <p class="attr cs-reveal cs-reveal-delay-2">Field observation · ride-along with 8 Japanese couriers</p>
+      </div>
+    </section>
+
+    <!-- 3b. COMPETITIVE SCAN -->
+    <section style="background: #FAFAFA; padding: 72px 0;">
+      <div class="container">
+        <figure class="esp-artifact cs-reveal" style="margin-top: 0;">
+          <div class="esp-artifact-stage">
+            <img src="/assets/projects/espoirer/image_402.png" alt="Competitive analysis — scanning, query, and account flows across Track-POD, Ninow, and Amazon Flex" loading="lazy">
+          </div>
+          <figcaption><span class="lbl">Artifact · Competitive scan</span>Track-POD, Ninow, and Amazon Flex, broken down by scanning, query, and account flows — error-prevention on failed scans and package-level clarity emerged as the gaps worth designing for.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -279,22 +303,21 @@
 
         <div class="esp-gallery-grid">
           <figure class="cs-reveal">
-            <img src="/assets/projects/espoirer/Group_1000004620.png" alt="Espoirer · main delivery list" loading="lazy">
-            <figcaption>Delivery list · main</figcaption>
+            <img src="/assets/ESP.png" alt="Espoirer · task list, map view, and Japanese localization in production" loading="lazy">
+            <figcaption>Task list · map view · Japanese localization</figcaption>
           </figure>
           <figure class="cs-reveal cs-reveal-delay-1">
-            <img src="/assets/projects/espoirer/Route_planning_after_scanning.png" alt="Espoirer · route planning after scanning" loading="lazy">
-            <figcaption>Route planning</figcaption>
-          </figure>
-          <figure class="cs-reveal cs-reveal-delay-2">
-            <img src="/assets/projects/espoirer/image_402.png" alt="Espoirer · driver app screen" loading="lazy">
-            <figcaption>Map view</figcaption>
-          </figure>
-          <figure class="cs-reveal cs-reveal-delay-3">
-            <img src="/assets/projects/espoirer/Library_1.png" alt="Espoirer · library / settings" loading="lazy">
-            <figcaption>Library &amp; settings</figcaption>
+            <img src="/assets/projects/espoirer/Group_1000004620.png" alt="Espoirer · map view with stops clustered by building" loading="lazy">
+            <figcaption>Map view · stops clustered by building</figcaption>
           </figure>
         </div>
+
+        <figure class="esp-artifact cs-reveal cs-reveal-delay-2">
+          <div class="esp-artifact-stage">
+            <img src="/assets/projects/espoirer/Final.png" alt="Espoirer · complete end-to-end user flow map, 102 steps across scanning, routing, delivery, and exception handling" loading="lazy">
+          </div>
+          <figcaption><span class="lbl">Artifact · Flow map</span>The complete end-to-end flow — 102 steps across scanning, route planning, delivery, and exception handling. Every screen above resolves to a node on this map.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -323,6 +346,22 @@
       </div>
     </section>
 
+    <!-- 6b. DESIGN SYSTEM -->
+    <section style="background: #FAFAFA; padding: 72px 0 88px;">
+      <div class="container">
+        <div class="head" style="text-align: center; margin-bottom: 8px;">
+          <p class="eyebrow cs-reveal">Design system</p>
+          <h2 class="cs-reveal cs-reveal-delay-1" style="font-size: clamp(26px, 3.4vw, 38px);">One kit, built for <span class="ink">kanji and Latin</span> side by side.</h2>
+        </div>
+        <figure class="esp-artifact cs-reveal cs-reveal-delay-2">
+          <div class="esp-artifact-stage">
+            <img src="/assets/projects/espoirer/Library_1.png" alt="Espoirer style guidelines — Noto Sans JP typography, color tokens, icons, buttons, and components" loading="lazy">
+          </div>
+          <figcaption><span class="lbl">Artifact · Style guidelines</span>Noto Sans JP typography tuned for mixed kanji-Latin addresses, status colors mapped to delivery states, and the component set every screen was assembled from.</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <!-- 7. RESULTS -->
     <section class="esp-results">
       <div class="container">
@@ -339,8 +378,8 @@
             <p class="label">Order volume<br>more than doubled</p>
           </div>
           <div class="esp-result cs-reveal cs-reveal-delay-2">
-            <span class="num">102<em></em></span>
-            <p class="label">Steps in the complete<br>end-to-end user flow</p>
+            <span class="num">0→1<em></em></span>
+            <p class="label">Shipped from scratch<br>on iOS &amp; Android</p>
           </div>
         </div>
       </div>
@@ -351,10 +390,10 @@
       <div class="container">
         <div style="max-width: 760px; margin: 0 auto;">
           <p class="cs-eyebrow cs-reveal" style="text-align:center;">Takeaways</p>
-          <h2 class="cs-display cs-reveal cs-reveal-delay-1" style="font-size: clamp(30px, 4.4vw, 50px); margin: 18px 0 36px; text-align:center;">2B internal logic is a <span class="ink">different shape of complexity.</span></h2>
-          <p class="cs-reveal cs-reveal-delay-2" style="font-size: 17px; line-height: 1.7; color: var(--muted); margin-bottom: 20px;">"The internal business logic of 2B products is very complex, with many intersection points. The hard part is ensuring data and process correctness end-to-end — even when each team is responsible for a different feature set."</p>
-          <p class="cs-reveal cs-reveal-delay-3" style="font-size: 17px; line-height: 1.7; color: var(--muted); margin-bottom: 20px;"><em>Example —</em> when scanning packages before delivery, if the driver scans several in a certain range in advance, location accuracy drops and an error fires. Should the system judge the error after the delivery method, or give the driver authority to override? Decisions like this don't sit in any wireframe.</p>
-          <p class="cs-reveal cs-reveal-delay-3" style="font-size: 17px; line-height: 1.7; color: var(--muted);">"To design a 0→1 product, you also design the seams between feature sets owned by other groups. The synchronous design considers smooth flow of connection — not just your own surface."</p>
+          <h2 class="cs-display cs-reveal cs-reveal-delay-1" style="font-size: clamp(30px, 4.4vw, 50px); margin: 18px 0 36px; text-align:center;">B2B logic is a <span class="ink">different shape of complexity.</span></h2>
+          <p class="cs-reveal cs-reveal-delay-2" style="font-size: 17px; line-height: 1.7; color: var(--muted); margin-bottom: 20px;">The hard part of a driver tool isn't any single screen — it's keeping data and process correct end-to-end, across features owned by different teams. Every intersection point is a place the product can silently break.</p>
+          <p class="cs-reveal cs-reveal-delay-3" style="font-size: 17px; line-height: 1.7; color: var(--muted); margin-bottom: 20px;"><em>Example —</em> when a driver batch-scans packages ahead of arrival, location accuracy drops and the system flags an error. Should the system decide, or should the driver get the authority to override? Decisions like this live in no wireframe — and they shaped more of the product than the screens did.</p>
+          <p class="cs-reveal cs-reveal-delay-3" style="font-size: 17px; line-height: 1.7; color: var(--muted);">Designing a 0→1 product means designing the seams — the handoffs between your surface and everyone else's. That's where trust is kept or lost.</p>
         </div>
       </div>
     </section>
@@ -381,17 +420,17 @@
             <li><a href="/">Home</a></li>
             <li><a href="/contact.html">Contact</a></li>
             <li><a href="/designs.html">Designs</a></li>
-            <li><a href="/research/museum-of-flight.html">Research</a></li>
+            <li><a href="/research/">Research</a></li>
           </ul>
         </div>
         <div>
           <p class="footer-heading">Projects</p>
           <ul class="footer-list">
-            <li><a href="/projects/octopus-ai.html">Edge AI</a></li>
-            <li><a href="/projects/nexa-ai-tools.html">2C AI</a></li>
-            <li><a href="/projects/smart-brook.html">HMI</a></li>
-            <li><a href="/projects/mentorup.html">2C Web</a></li>
-            <li><a href="/projects/espoirer.html">2C App</a></li>
+            <li><a href="/projects/octopus-ai.html">Octopus AI</a></li>
+            <li><a href="/projects/nexa-ai-tools.html">Nexa</a></li>
+            <li><a href="/projects/smart-brook.html">Smart Brook</a></li>
+            <li><a href="/projects/mentorup.html">MentorUp</a></li>
+            <li><a href="/projects/espoirer.html">Espoirer</a></li>
           </ul>
         </div>
         <div>
@@ -402,14 +441,12 @@
           </ul>
         </div>
       </div>
-      <div class="keywords">
-        <span>Human</span><span>Intent</span><span>Strategy</span><span>Focus</span><span>Scalable</span><span>Impact</span><span>Clear</span><span>Value</span><span>Efficient</span><span>Solving</span><span>Useful</span><span>Longterm</span>
-      </div>
       <div class="footer-bottom">
         <span>© 2026 Lori Cai. All rights reserved.</span>
         <span>UW · Seattle, WA</span>
       </div>
     </div>
+    <div class="footer-wordmark" aria-hidden="true">Lori Cai<span class="dot">.</span></div>
   </footer>
 
   <script src="../script.js"></script>
