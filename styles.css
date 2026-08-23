@@ -1230,6 +1230,20 @@ main > *:last-child { border-bottom: none; }
 }
 
 /* ============================================
+   Site chrome accent lock
+   Case-study pages override --accent on <body> to
+   theme their own content. The nav and footer are
+   site chrome, not page content, so they keep the
+   portfolio's own accent on every page.
+   ============================================ */
+
+.site-header,
+.site-footer {
+  --accent: #68FF7E;
+  --accent-soft: #DCFEE2;
+}
+
+/* ============================================
    Per-page accent themes
    Override the accent without touching the rest
    of the design system.
