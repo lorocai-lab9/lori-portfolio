@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 
   <style>
@@ -50,6 +50,11 @@
     background: var(--pp); color: var(--ink);
     font-family: 'Inter', -apple-system, sans-serif;
   }
+
+  /* Site chrome keeps the portfolio's own accent; the blue is content-only. */
+  body.theme-nes .site-header,
+  body.theme-nes .site-footer,
+  body.theme-nes .cta-strip { --accent: #68FF7E; --accent-soft: #DCFEE2; }
 
   .w { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
 
